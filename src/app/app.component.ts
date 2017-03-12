@@ -49,8 +49,15 @@ export class AppComponent implements AfterViewInit {
     }
     
     onTabClick(event: Event, index: number) {
-        this.activeTabIndex = index;
-        this.sidebarActive = true;
+        if(this.activeTabIndex === index) {
+            this.sidebarActive = !this.sidebarActive;
+        }
+        else {
+            this.activeTabIndex = index;
+            this.sidebarActive = true;
+        }
+        
+        event.preventDefault();
     }
     
     closeSidebar(event: Event) {

@@ -16,24 +16,12 @@ body {
     
     .ui-widget-header {
         background-color: $primaryColor;
-        color: $headerTextColor;
+        color: $primaryTextColor;
         border: 1px solid $primaryColor;
         
         .fa {
-            color: $headerTextColor;
+            color: $primaryTextColor;
         }
-    }
-
-    .ui-state-default {
-
-    }
-
-    .ui-state-hover {
-
-    }
-
-    .ui-state-focus {
-
     }
 
     .ui-state-active, .ui-state-highlight {
@@ -41,7 +29,7 @@ body {
         color: $accentTextColor;
         
         .fa {
-            color: #ffffff;
+            color: $accentTextColor;
         }
     }
 
@@ -76,13 +64,5 @@ body {
     .ui-widget-overlay {
         background-color: #58575c;
         opacity: .8;
-    }
-    
-    .ui-shadow {
-
-    }
-    
-    a {
-        
     }
 }

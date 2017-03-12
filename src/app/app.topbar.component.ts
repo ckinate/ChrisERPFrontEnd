@@ -17,9 +17,8 @@ import {AppComponent} from './app.component';
                 <i class="material-icons">menu</i>
             </a>
             
-            <ul class="topbar-menu animated fadeInDown" [ngClass]="{'topbar-menu-visible': app.topbarMenuActive}">
+            <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-visible': app.topbarMenuActive}">
                 <li #profile class="profile-item" [ngClass]="{'active-topmenuitem':app.activeTopbarItem === profile}">
-
                     <a href="#" (click)="app.onTopbarItemClick($event,profile)">                            
                         <div class="profile-image">
                             <img src="../assets/layout/images/profile-image.png">
@@ -30,7 +29,7 @@ import {AppComponent} from './app.component';
                         </div>
                     </a>
                     
-                    <ul class="animated">
+                    <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#">
                                 <i class="material-icons">person</i>
@@ -64,7 +63,7 @@ import {AppComponent} from './app.component';
                         <i class="topbar-icon material-icons">settings</i>
                         <span class="topbar-item-name">Settings</span>
                     </a>
-                    <ul class="ultima-menu animated fadeInDown">
+                    <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#">
                                 <i class="material-icons">palette</i>
@@ -93,11 +92,11 @@ import {AppComponent} from './app.component';
                 </li>
                 <li #messages [ngClass]="{'active-topmenuitem':app.activeTopbarItem === messages}">
                     <a href="#" (click)="app.onTopbarItemClick($event,messages)"> 
-                        <i class="topbar-icon material-icons animated swing">message</i>
-                        <span class="topbar-badge animated rubberBand">5</span>
+                        <i class="topbar-icon material-icons">message</i>
+                        <span class="topbar-badge">5</span>
                         <span class="topbar-item-name">Messages</span>
                     </a>
-                    <ul class="ultima-menu animated fadeInDown">
+                    <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#" class="topbar-message">
                                 <img src="assets/layout/images/avatar1.png" width="35"/>
@@ -133,10 +132,10 @@ import {AppComponent} from './app.component';
                 <li #notifications [ngClass]="{'active-topmenuitem':app.activeTopbarItem === notifications}">
                     <a href="#" (click)="app.onTopbarItemClick($event,notifications)"> 
                         <i class="topbar-icon material-icons">timer</i>
-                        <span class="topbar-badge animated rubberBand">4</span>
+                        <span class="topbar-badge">4</span>
                         <span class="topbar-item-name">Notifications</span>
                     </a>
-                    <ul class="ultima-menu animated fadeInDown">
+                    <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#">
                                 <i class="material-icons">bug_report</i>

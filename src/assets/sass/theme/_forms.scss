@@ -151,7 +151,7 @@ body {
     .ui-button, .ui-datepicker-buttonpane > button {
         overflow: hidden;
         background-color: $primaryColor;
-        color: $buttonTextColor;
+        color: $primaryTextColor;
         font-size: $buttonFontSize;
         height: 2.25em;
         padding: 0 1em;
@@ -176,7 +176,7 @@ body {
         }
         
         .fa {
-            color: $buttonTextColor;
+            color: $primaryTextColor;
         }
 
         &.ui-button-icon-only {
