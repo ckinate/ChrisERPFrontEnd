@@ -9,7 +9,7 @@ import {AppMenuComponent}  from './app.menu.component';
     selector: 'app-sidebar',
     template: `
         <div class="layout-sidebar" [ngStyle]="{'overflow':app.sidebarActive ? 'hidden' : 'visible'}"
-                                    [ngClass]="{'layout-sidebar-dark':app.darkMenu}">
+                                    [ngClass]="{'layout-sidebar-dark':app.darkMenu}" (click)="app.onSidebarClick($event)">
             <div class="layout-tabmenu">
                 <ul class="layout-tabmenu-nav">
                     <li [ngClass]="{'active-item':app.activeTabIndex === 0}">
@@ -57,7 +57,7 @@ import {AppMenuComponent}  from './app.menu.component';
                         <div class="layout-submenu-content">
                             <div #layoutMenuScroller class="nano">
                                 <div class="nano-content menu-scroll-content">
-                                    <app-menu [reset]="resetMenu"></app-menu>
+                                    <app-menu></app-menu>
                                 </div>
                             </div>
                         </div>

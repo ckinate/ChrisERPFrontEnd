@@ -10,7 +10,7 @@ enum MenuOrientation {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
     
     activeTabIndex: number;
     
@@ -22,7 +22,7 @@ export class AppComponent {
     
     topbarMenuActive: boolean;
 
-    menuClick: boolean;
+    sidebarClick: boolean;
 
     topbarItemClick: boolean;
 
@@ -30,13 +30,29 @@ export class AppComponent {
 
     documentClickListener: Function;
 
-    resetMenu: boolean;
-
     constructor(public renderer: Renderer) {}
+    
+    ngAfterViewInit() {
+        this.documentClickListener = this.renderer.listenGlobal('body', 'click', (event) => {            
+            if(!this.topbarItemClick) {
+                this.activeTopbarItem = null;
+                this.topbarMenuActive = false;
+            }
+            
+            if(!this.sidebarClick && this.isOverlay()) {
+                this.sidebarActive = false;
+            }
+
+            this.topbarItemClick = false;
+            this.sidebarClick = false;
+        });
+    }
     
     onTabClick(event: Event, index: number) {
         this.activeTabIndex = index;
         this.sidebarActive = true;
+        this.activeTopbarItem = null;
+        this.topbarMenuActive = null;
     }
     
     closeSidebar(event: Event) {
@@ -44,9 +60,8 @@ export class AppComponent {
         event.preventDefault();
     }
 
-    onMenuClick($event) {
-        this.menuClick = true;
-        this.resetMenu = false;
+    onSidebarClick($event) {
+        this.sidebarClick = true;
     }
 
     onTopbarMenuButtonClick(event) {

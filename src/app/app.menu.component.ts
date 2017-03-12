@@ -7,12 +7,10 @@ import {AppComponent} from './app.component';
 @Component({
     selector: 'app-menu',
     template: `
-        <ul app-submenu [item]="model" root="true" class="navigation-menu" [reset]="reset" visible="true"></ul>
+        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true"></ul>
     `
 })
 export class AppMenuComponent implements OnInit {
-
-    @Input() reset: boolean;
 
     private model: any[];
 
@@ -147,7 +145,7 @@ export class AppMenuComponent implements OnInit {
                     <span>{{child.label}}</span>
                     <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
-                <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ? 'visible' : 'hidden'" [visible]="isActive(i)" [reset]="reset"></ul>
+                <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ? 'visible' : 'hidden'" [visible]="isActive(i)"></ul>
             </li>
         </template>
     `,
@@ -171,8 +169,6 @@ export class AppSubMenu {
     @Input() root: boolean;
     
     @Input() visible: boolean;
-
-    _reset: boolean;
         
     activeIndex: number;
 
@@ -207,22 +203,12 @@ export class AppSubMenu {
         }
         
         //hide menu
-        if(!item.items) {
-            this.app.resetMenu = false;
-                
+        if(!item.items) {                
             this.app.sidebarActive = false;
         }
     }
     
     isActive(index: number): boolean {
         return this.activeIndex === index;
-    }
-
-    @Input() get reset(): boolean {
-        return this._reset;
-    }
-
-    set reset(val:boolean) {
-        this._reset = val;
     }
 }
