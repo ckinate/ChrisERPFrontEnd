@@ -8,7 +8,8 @@ import {AppMenuComponent}  from './app.menu.component';
 @Component({
     selector: 'app-sidebar',
     template: `
-        <div class="layout-sidebar" [ngStyle]="{'overflow':app.sidebarActive ? 'hidden' : 'visible'}">
+        <div class="layout-sidebar" [ngStyle]="{'overflow':app.sidebarActive ? 'hidden' : 'visible'}"
+                                    [ngClass]="{'layout-sidebar-dark':app.darkMenu}">
             <div class="layout-tabmenu">
                 <ul class="layout-tabmenu-nav">
                     <li [ngClass]="{'active-item':app.activeTabIndex === 0}">
