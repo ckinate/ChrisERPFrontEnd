@@ -220,7 +220,7 @@ body {
         
         .ui-datatable-thead {
             > tr {
-                 border-color: $dividerLightColor;
+                 border-color: $dataTableBorderColor;
 
                  th {
                     padding: .625em .875em;
@@ -292,7 +292,7 @@ body {
             }
                                
             tr {
-                border: 1px solid $dividerLightColor;
+                border: 1px solid $dataTableBorderColor;
 
                 td {
                     padding: .625em .875em;

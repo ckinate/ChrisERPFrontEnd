@@ -228,8 +228,8 @@
         }
         
         .knob {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             line-height: 120px;
             margin-top: 20px;
             font-size: 30px;
@@ -269,12 +269,12 @@
             padding: 15px 0 9px 9px;
             
             .count {
+                display: inline-block;
                 font-size: 24px;
                 color: #ffffff;
                 background-color: #03A9F4;
                 font-weight: bold;
-                width: 60px;
-                padding: 5px;
+                padding: 6px;
                 @include border-radius(2px);
             }
             
