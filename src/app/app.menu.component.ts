@@ -210,8 +210,7 @@ export class AppSubMenu {
         if(!item.items) {
             this.app.resetMenu = false;
                 
-            this.app.overlayMenuActive = false;
-            this.app.staticMenuMobileActive = false;
+            this.app.sidebarActive = false;
         }
     }
     

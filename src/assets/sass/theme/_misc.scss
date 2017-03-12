@@ -1,53 +1,91 @@
 body {
-    .ui-draggable-dragging.ui-state-default {
-        padding: $headerPadding !important;
-        background-color: $primaryColor;
-    }
-    
     .jqplot-target {
-        font-family: "Roboto","Helvetica Neue",sans-serif;
+        font-family: $fontFamily;
     }
     
     .ui-progressbar {
-        height: .5em;
-        background-color: $primaryLightColor;
-        overflow: hidden;
-        border: 0 none;
+        height: 16px;
+        padding: 0;
+        border-color: $contentBorderColor;
         
         .ui-progressbar-value {
-            height: .5em;
+            height: 16px;
+            padding: 0;
         }
         
         .ui-progressbar-label {
-            color: #ffffff;
-            display: none !important;
+            color: $accentColor;
         }
     }
     
     .ui-galleria {
+        padding: 0;
+        
         .ui-galleria-nav-prev {
-            left: 0;
+            left: 2px;
         }
         
         .ui-galleria-nav-next {
-            right: 0;
+            right: 2px;
         }
     }
     
-    .ui-inplace {
-        .ui-inplace-display {
-            @include transition(background-color .3s);
-            @include border-radius(3px);
+    .ui-log {
+        .ui-log-header {
+            padding: $headerPadding;
+            height: auto;
             
-            &:hover {
-                background-color: $hoverBgColor;
+            > .ui-log-button {
+                line-height: 16px;
+                position: static;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 4px;
+                border: 1px solid transparent;
+                padding: 1px 3px;
+                @include border-radius(50%);
+                @include transition(background-color .3s);
+                
+                &.ui-state-hover {
+                    background-color: $primaryLightColor;
+                }
             }
         }
     }
     
-    .ui-terminal {
-        .ui-terminal-input {
-            font-size: $fontSize;
+    .ui-tagcloud {
+        li {
+            margin: 4px 0px;
+            
+            a {
+                @include transition(background-color .3s);
+                @include border-radius(3px);
+                
+                &:hover {
+                    @include hover-element();
+                }
+            } 
+        }
+    }
+    
+    .timeline-frame {
+        .timeline-event {
+            border-color: $contentBorderColor;
+            background-color: $contentBgColor;
+            
+            &.ui-state-active {
+                background-color: $accentColor;
+                border-color: $accentColor;
+                color: $accentTextColor;
+            }
+        }
+        
+        .timeline-axis {
+            border-color: $dividerColor;
+        }
+        
+        .timeline-navigation {
+            height: 36px;
         }
     }
 }

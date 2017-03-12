@@ -16,23 +16,11 @@ export class AppComponent {
     
     sidebarActive: boolean;
     
-    layoutCompact: boolean = false;
-
     layoutMode: MenuOrientation = MenuOrientation.STATIC;
     
     darkMenu: boolean = false;
     
-    profileMode: string = 'inline';
-
-    rotateMenuButton: boolean;
-
     topbarMenuActive: boolean;
-
-    overlayMenuActive: boolean;
-
-    staticMenuDesktopInactive: boolean;
-
-    staticMenuMobileActive: boolean;
 
     menuClick: boolean;
 
@@ -56,23 +44,6 @@ export class AppComponent {
         event.preventDefault();
     }
 
-    onMenuButtonClick(event) {
-        this.rotateMenuButton = !this.rotateMenuButton;
-        this.topbarMenuActive = false;
-
-        if(this.layoutMode === MenuOrientation.OVERLAY) {
-            this.overlayMenuActive = !this.overlayMenuActive;
-        }
-        else {
-            if(this.isDesktop())
-                this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
-            else
-                this.staticMenuMobileActive = !this.staticMenuMobileActive;
-        }
-
-        event.preventDefault();
-    }
-
     onMenuClick($event) {
         this.menuClick = true;
         this.resetMenu = false;
@@ -82,10 +53,8 @@ export class AppComponent {
         this.topbarItemClick = true;
         this.topbarMenuActive = !this.topbarMenuActive;
         
-        if(this.overlayMenuActive || this.staticMenuMobileActive) {
-            this.rotateMenuButton = false;
-            this.overlayMenuActive = false;
-            this.staticMenuMobileActive = false;
+        if(this.sidebarActive) {
+            this.sidebarActive = false;
         }
         
         event.preventDefault();

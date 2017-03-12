@@ -1,58 +1,44 @@
 body {
     .ui-widget,
     .ui-widget .ui-widget {
-        font-family: "Roboto","Helvetica Neue",sans-serif;
+        font-family:$fontFamily;
         text-decoration: none;
     }
 
     .ui-widget-content {
-        background-color: #ffffff;
-        font-size: $contentFontSize;
-        border: 1px solid $dividerColor;
+        background-color: $contentBgColor;
+        border: 1px solid $contentBorderColor;
+        padding: $contentPadding;
         
-        .fa {
-            color: #757575;
+        .ui-icon {
+            color: $textSecondaryColor;
         }
     }
     
     .ui-widget-header {
         background-color: $primaryColor;
-        color: #ffffff;
-        font-size: $headerFontSize;
+        color: $headerTextColor;
         border: 1px solid $primaryColor;
+        padding: $headerPadding;
         
-        .fa {
-            color: #ffffff;
+        .ui-icon {
+            color: $headerTextColor;
         }
-    }
-
-    .ui-state-default {
-
-    }
-
-    .ui-state-hover {
-
-    }
-
-    .ui-state-focus {
-
     }
 
     .ui-state-active, .ui-state-highlight {
         background-color: $accentColor;
         color: $accentTextColor;
         
-        .fa {
-            color: #ffffff;
+        .ui-icon {
+            color: $accentTextColor;
         }
     }
 
-    .ui-widget:disabled,
     .ui-state-disabled {
         opacity: .35;
         filter: Alpha(Opacity=35);
         background-image: none;
-        cursor: auto !important;
     }
 
     .ui-corner-all {
@@ -77,14 +63,48 @@ body {
 
     .ui-widget-overlay {
         background-color: #58575c;
-        opacity: .8;
+        @include opacity(.8);
     }
     
     .ui-shadow {
 
     }
+
+    .ui-icon {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: $iconFontSize;
+        display: inline-block;
+        width: $iconWidth;
+        height: $iconHeight;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        text-indent: 0;
+        overflow: visible;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+    
+    .fa {
+        font-family: 'FontAwesome';
+    }
     
     a {
-        
+        color: $primaryColor;
     }
+    
 }
