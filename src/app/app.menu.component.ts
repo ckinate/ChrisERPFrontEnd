@@ -1,4 +1,4 @@
-import {Component,Input,OnInit,EventEmitter,ViewChild,trigger,state,transition,style,animate,Inject,forwardRef} from '@angular/core';
+import {Component,Input,OnInit,OnDestroy,EventEmitter,ViewChild,trigger,state,transition,style,animate,Inject,forwardRef} from '@angular/core';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {MenuItem} from 'primeng/primeng';
@@ -162,7 +162,7 @@ export class AppMenuComponent implements OnInit {
         ])
     ]
 })
-export class AppSubMenu {
+export class AppSubMenu implements OnDestroy {
 
     @Input() item: MenuItem;
     
@@ -203,12 +203,32 @@ export class AppSubMenu {
         }
         
         //hide menu
-        if(!item.items) {                
+        if(!item.items && this.app.isOverlay()) {                
             this.app.sidebarActive = false;
         }
     }
     
     isActive(index: number): boolean {
         return this.activeIndex === index;
+    }
+    
+    unsubscribe(item: any) {
+        if(item.eventEmitter) {
+            item.eventEmitter.unsubscribe();
+        }
+        
+        if(item.items) {
+            for(let childItem of item.items) {
+                this.unsubscribe(childItem);
+            }
+        }
+    }
+        
+    ngOnDestroy() {        
+        if(this.item && this.item.items) {
+            for(let item of this.item.items) {
+                this.unsubscribe(item);
+            }
+        }
     }
 }
