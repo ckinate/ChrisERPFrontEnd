@@ -51,8 +51,6 @@ export class AppComponent implements AfterViewInit {
     onTabClick(event: Event, index: number) {
         this.activeTabIndex = index;
         this.sidebarActive = true;
-        this.activeTopbarItem = null;
-        this.topbarMenuActive = null;
     }
     
     closeSidebar(event: Event) {
@@ -67,11 +65,7 @@ export class AppComponent implements AfterViewInit {
     onTopbarMenuButtonClick(event) {
         this.topbarItemClick = true;
         this.topbarMenuActive = !this.topbarMenuActive;
-        
-        if(this.sidebarActive) {
-            this.sidebarActive = false;
-        }
-        
+                
         event.preventDefault();
     }
 
@@ -84,19 +78,6 @@ export class AppComponent implements AfterViewInit {
             this.activeTopbarItem = item;
 
         event.preventDefault();
-    }
-
-    isTablet() {
-        let width = window.innerWidth;
-        return width <= 1024 && width > 640;
-    }
-
-    isDesktop() {
-        return window.innerWidth > 1024;
-    }
-
-    isMobile() {
-        return window.innerWidth <= 640;
     }
 
     isOverlay() {
