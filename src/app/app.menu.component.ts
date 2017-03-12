@@ -133,16 +133,20 @@ export class AppMenuComponent implements OnInit {
     template: `
         <template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
             <li [ngClass]="{'active-menuitem': isActive(i)}" *ngIf="child.visible === false ? false : true">
-                <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" class="ripplelink" *ngIf="!child.routerLink" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
+                <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" class="ripplelink" *ngIf="!child.routerLink" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
+                    (mouseenter)="hover=true" (mouseleave)="hover=false">
                     <i class="material-icons">{{child.icon}}</i>
                     <span>{{child.label}}</span>
+                    <span class="ink" *ngIf="hover"></span>
                     <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
 
                 <a (click)="itemClick($event,child,i)" class="ripplelink" *ngIf="child.routerLink"
-                    [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink" [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
+                    [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink" [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
+                    (mouseenter)="hover=true" (mouseleave)="hover=false">
                     <i class="material-icons">{{child.icon}}</i>
                     <span>{{child.label}}</span>
+                    <span class="ink" *ngIf="hover"></span>
                     <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
                 <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ? 'visible' : 'hidden'" [visible]="isActive(i)"></ul>
@@ -171,7 +175,9 @@ export class AppSubMenu implements OnDestroy {
     @Input() visible: boolean;
         
     activeIndex: number;
-
+    
+    hover: boolean;
+    
     constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent, public router: Router, public location: Location) {}
         
     itemClick(event: Event, item: MenuItem, index: number) {
