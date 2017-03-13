@@ -180,11 +180,14 @@
                                 }
                                 
                                 > *:last-child {
-                                    padding-bottom: 120px;
+                                    display: block;
+                                    padding-bottom: 150px;
                                 }
                             }
                             
                             > .nano-pane {
+                                background: transparent;
+                                
                                 > .nano-slider {
                                     background-color: #aaa;
                                     opacity: 0.4;

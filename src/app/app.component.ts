@@ -56,7 +56,7 @@ export class AppComponent implements AfterViewInit {
             this.activeTabIndex = index;
             this.sidebarActive = true;
         }
-        
+
         event.preventDefault();
     }
     

@@ -369,16 +369,18 @@
     
     <div class="ui-g-12 ui-md-8">
         <div class="card">
-            <p-dataTable [value]="cars" [style]="{'margin-bottom':'20px'}">
+            <p-dataTable [value]="cars" [style]="{'margin-bottom':'20px'}" selectionMode="single" [selection]="selectedCity">
                 <p-header>Recent Sales</p-header>
-                <p-column field="vin" header="Vin"></p-column>
-                <p-column field="year" header="Year"></p-column>
-                <p-column field="brand" header="Brand"></p-column>
-                <p-column field="color" header="Color"></p-column>
+                <p-column field="vin" header="Vin" sortable="true"></p-column>
+                <p-column field="year" header="Year" sortable="true"></p-column>
+                <p-column field="brand" header="Brand" sortable="true"></p-column>
+                <p-column field="color" header="Color" sortable="true"></p-column>
             </p-dataTable>
             
             <p-panel header="Sales Graph">
-                <p-chart type="line" [data]="chartData" responsive="true"></p-chart>
+                <div style="overflow:auto">
+                    <p-chart type="line" [data]="chartData" responsive="true"></p-chart>
+                </div>
             </p-panel>
         </div>
     </div>

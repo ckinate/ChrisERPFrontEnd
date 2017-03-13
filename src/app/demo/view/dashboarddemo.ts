@@ -13,6 +13,8 @@ export class DashboardDemo implements OnInit {
     
     cars: Car[];
     
+    selectedCar: Car;
+    
     chartData: any;
     
     events: any[];
