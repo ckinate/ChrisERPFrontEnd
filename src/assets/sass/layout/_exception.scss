@@ -62,8 +62,7 @@
     }
     
     &.error-body {
-        background: url("\#{resource['barcelona-layout:images/exception/error-image.png']}") no-repeat 0 -100px;
-        
+        background: url("../images/exception/error-image.png") no-repeat 0 -100px;
         .exception-panel {
             img {
                 width: 100%;
@@ -89,7 +88,7 @@
     }
     
     &.pagenotfound-body {
-        background: url("\#{resource['barcelona-layout:images/exception/404-image.png']}") no-repeat 0 -100px;
+        background: url("../images/exception/404-image.png") no-repeat 0 -100px;
 
         .exception-panel {
             img {
@@ -121,7 +120,7 @@
     }
     
     &.accessdenied-body {
-        background: url("\#{resource['barcelona-layout:images/exception/access-image.png']}") no-repeat 0 -100px;
+        background: url("../images/exception/access-image.png") no-repeat 0 -100px;
 
         .exception-panel {
             img {

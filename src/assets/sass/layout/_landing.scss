@@ -70,7 +70,7 @@
             .header-content {
                 height: 250px; 
                 text-align: center;
-                background: url("\#{resource['barcelona-layout:images/landing/landing-main.png']}") no-repeat $primaryLightColor;
+                background: url('../images/landing/landing-main.png') no-repeat $primaryLightColor;
                 background-size: cover;
                 padding: 150px 15px 0 15px;
                 
