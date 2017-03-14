@@ -162,9 +162,9 @@ body {
             a {
                 padding: 0;
                 color: #ffffff;
-                min-width: 1.5em;
-                min-height: 1.5em;
-                line-height: 1.5em;
+                min-width: 1.714em;
+                min-height: 1.714em;
+                line-height: 1.714em;
                 @include border-radius(50%);
                 @include transition(background-color .3s);
                 
@@ -222,7 +222,7 @@ body {
             > tr {
                  border-color: $dataTableBorderColor;
 
-                 th {
+                 > th {
                     padding: .625em .875em;
                     background-color: #ffffff;
                                     
@@ -239,13 +239,7 @@ body {
                         vertical-align: middle;
                         color: $textSecondaryColor;
                     }
-                    
-                    .ui-column-resizer {
-                        @include material-icon("code");
-                        font-size: 1em;
-                        color: $textSecondaryColor;
-                    }
-                    
+                                        
                     &.ui-state-active,&.ui-state-highlight {
                         background-color: $accentColor;
                         color: $accentTextColor;
@@ -273,11 +267,13 @@ body {
             }
         }
         
-        tfoot {
-            th {
-                padding: .625em .875em;
-                border: 1px solid #bdbdbd;
-                background-color: #ffffff;
+        .ui-datatable-tfoot {
+            > tr {
+                > td {
+                    padding: .625em .875em;
+                    border: 1px solid #bdbdbd;
+                    background-color: #ffffff;
+                }
             }
         }
         
@@ -388,8 +384,6 @@ body {
                 td {
                     a {
                         height: 1.5em;
-                        vertical-align: top;
-                        display: inline-block;
                     }
                 }
             }
@@ -491,6 +485,14 @@ body {
                     @include hover-element();
                 }
             }
+            
+            &.ui-treenode-dragover {
+                background: $primaryLightColor;
+                
+                > span {
+                    color: $primaryTextColor;
+                }
+            }
         }
                 
         &.ui-tree-horizontal {
@@ -530,12 +532,17 @@ body {
         .fc-button-group {            
             .ui-icon-circle-triangle-e {
                 @include material-icon("play_circle_outline");
-                margin-top: .25em;
+                text-indent: 0;
+                position: relative;
+                top: 2px;
             }
             
             .ui-icon-circle-triangle-w {
-                @include material-icon("play_circle_outline"); @include rotate(180deg);
-                margin-top: .25em;
+                @include material-icon("play_circle_outline"); 
+                @include rotate(180deg);
+                text-indent: 0;
+                position: relative;
+                top: 2px;
             }
             
             .ui-state-active {
@@ -550,6 +557,10 @@ body {
     
         table {
             box-sizing: border-box;
+            
+            th {
+                padding: $headerPadding;
+            }
         }
     }
     

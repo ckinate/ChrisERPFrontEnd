@@ -36,51 +36,6 @@
 .fa-arrow-down{ @include icon-override("arrow_downward"); } 
 .fa-arrow-up { @include icon-override("arrow_upward"); }
 
-.ui-icon-carat-2-n-s {@include icon-override("sort");}
-.ui-icon-triangle-1-n { @include icon-override("keyboard_arrow_up"); }
-.ui-icon-triangle-1-e { @include icon-override("keyboard_arrow_right"); }
-.ui-icon-triangle-1-s { @include icon-override("keyboard_arrow_down"); }
-.ui-icon-triangle-1-w { @include icon-override("keyboard_arrow_left"); }
-.ui-icon-carat-1-n { @include icon-override("keyboard_arrow_up"); }
-.ui-icon-carat-1-e { @include icon-override("keyboard_arrow_right"); }
-.ui-icon-carat-1-s { @include icon-override("keyboard_arrow_down"); }
-.ui-icon-carat-1-w { @include icon-override("keyboard_arrow_left"); }
-.ui-icon-arrow-1-n { @include icon-override("play_arrow"); @include rotate(-90deg);}
-.ui-icon-arrowstop-1-n { @include icon-override("skip_next"); @include rotate(-90deg);}
-.ui-icon-arrow-1-s { @include icon-override("play_arrow"); @include rotate(90deg);}
-.ui-icon-arrowstop-1-s { @include icon-override("skip_previous"); @include rotate(-90deg);}
-.ui-icon-arrow-1-w { @include icon-override("play_arrow"); @include rotate(180deg);}
-.ui-icon-arrowstop-1-w { @include icon-override("fast_rewind"); }
-.ui-icon-arrow-1-e { @include icon-override("play_arrow"); }
-.ui-icon-arrowstop-1-e { @include icon-override("fast_forward"); }
-.ui-icon-arrowthick-1-s { @include icon-override("play_arrow"); @include rotate(90deg);}
-.ui-icon-arrowthick-1-n { @include icon-override("play_arrow"); @include rotate(-90deg);}
-.ui-icon-circle-triangle-e {@include icon-override("play_circle_outline"); }
-.ui-icon-circle-triangle-w {@include icon-override("play_circle_outline"); @include rotate(180deg);}
-.ui-icon-circle-triangle-s {@include icon-override("play_circle_outline"); @include rotate(90deg);}
-.ui-icon-radio-off {@include icon-override("radio_button_unchecked");}
-.ui-icon-radio-on {@include icon-override("radio_button_checked");}
-.ui-icon-folder-collapsed {@include icon-override("folder");}
-.ui-icon-document {@include icon-override("content_paste");}
-.ui-icon-video {@include icon-override("movie");}
-.ui-icon-music {@include icon-override("music_note");}
-.ui-icon-plus {@include icon-override("add");}
-.ui-icon-minus {@include icon-override("remove");}
-.ui-icon-plusthick {@include icon-override("add");}
-.ui-icon-minusthick {@include icon-override("remove");}
-.ui-icon-pencil {@include icon-override("edit");}
-.ui-icon-closethick { @include icon-override("close"); }
-.ui-icon-circle-close { @include icon-override("cancel"); }
-.ui-icon-gear { @include icon-override("settings"); }
-.ui-icon-calendar { @include icon-override("date_range"); }
-.ui-icon-trash { @include icon-override("delete_forever"); }
-.ui-icon-notice { @include icon-override("error_outline"); }
-.ui-icon-alert { @include icon-override("warning"); }
-.ui-icon-circle-zoomin { @include icon-override("zoom_in"); }
-.ui-icon-circle-zoomout { @include icon-override("zoom_out"); }
-.ui-icon-circle-arrow-e { @include icon-override("play_circle_outline"); }
-.ui-icon-circle-arrow-w { @include icon-override("play_circle_outline"); @include rotate(180deg); }
-
 .ui-icon-3d-rotation { @include icon-override("3d_rotation"); }
 .ui-icon-ac-unit { @include icon-override("ac_unit"); }
 .ui-icon-access-alarm { @include icon-override("access_alarm"); }

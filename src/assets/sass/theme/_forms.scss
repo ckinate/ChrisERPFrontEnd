@@ -436,6 +436,10 @@ body {
             &.ui-state-active {
                 border-color: $primaryColor;
                 background-color: $primaryColor;
+                
+                .fa {
+                    color: $primaryTextColor;
+                }
             }
             
             &.ui-state-focus {
@@ -1015,7 +1019,7 @@ body {
                         
             .ui-datepicker-next {
                 cursor: pointer;
-                top: .5em;
+                top: .4em;
                 right: .2em;
                 @include material-icon("play_circle_outline");
                 color: #ffffff;
@@ -1027,7 +1031,7 @@ body {
             
             .ui-datepicker-prev {
                 cursor: pointer;
-                top: .5em;
+                top: .4em;
                 left: .2em;  
                 @include material-icon("play_circle_outline");
                 @include rotate(180deg);
@@ -1084,8 +1088,9 @@ body {
                     display: inline-block;
                     height: 2.250em;
                     width: 2.250em;
+                    line-height: 2em;
                     @include border-radius(50%);
-                                        
+                                                            
                     &.ui-state-active {
                         color: #ffffff;
                         background-color: $accentColor;
