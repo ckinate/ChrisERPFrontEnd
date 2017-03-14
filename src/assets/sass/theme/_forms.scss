@@ -361,6 +361,19 @@ body {
             }
         }
         
+        &.indigo-btn {
+            background-color: #3F51B5;
+            
+            &:enabled:not(:focus):hover {
+                background-color: #283593;   
+            }
+            
+            &:focus {
+                outline: 0 none;
+                background-color: lighten(#3F51B5,10%);
+            }
+        }
+        
         &.flat {
             @include no-shadow();
         }
