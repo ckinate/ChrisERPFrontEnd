@@ -430,6 +430,8 @@ body {
     }
     
     .ui-carousel {
+        padding: 0;
+        
         .ui-carousel-header{
             padding: $headerPadding;
             font-size: $headerFontSize;
@@ -441,6 +443,14 @@ body {
             
             .fa {
                 color: #ffffff;
+            }
+            
+            .ui-carousel-button {
+                margin: -.143em 0 0 0;
+            }
+            
+            .ui-carousel-page-links {
+                margin: -.143em 0 0 0;
             }
         }
     }
