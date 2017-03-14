@@ -109,14 +109,18 @@ body {
             @include rippleitem();
             @include transition(background-color .3s);
             @include border-radius(0);
-
-            &:not(.ui-state-highlight):hover {
-                @include hover-element();
-            }
             
             &.ui-state-highlight {
                 background-color: $accentColor;
                 color: $accentTextColor;
+            }
+        }
+        
+        &:not(.ui-state-disabled) {
+            .ui-listbox-item {
+                &:not(.ui-state-highlight):hover {
+                    @include hover-element();
+                }                
             }
         }
         
@@ -556,6 +560,10 @@ body {
                 &.ui-state-focus {
                     padding-bottom: 0;
                 }
+                
+                &.ui-state-disabled {
+                    border-bottom: 1px dotted;
+                }
             }
             
             .ui-autocomplete-input-token {
@@ -609,7 +617,7 @@ body {
         .ui-dropdown-trigger {
             height: 1.5em;
             width: 1.5em;
-            margin-top: 0;
+            margin-top: -1px;
             padding: 0;
             top: 0;
             margin-right: 0;
@@ -1166,6 +1174,13 @@ body {
             .ui-chips-input-token {
                 padding-bottom: 2px;
                 
+                > input {
+                    padding: 0;
+                    font-size: $fontSize;
+                    margin: 0;
+                    vertical-align: bottom;
+                }
+                
                 input.ui-state-disabled {
                     width: 0;
                 }
@@ -1181,6 +1196,10 @@ body {
                     display: inline-block;
                     vertical-align: middle;
                 }
+            }
+            
+            &.ui-state-disabled {
+                border-bottom: 1px dotted;
             }
         }
     }
