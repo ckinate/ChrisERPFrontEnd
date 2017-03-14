@@ -6,10 +6,17 @@ $(function() {
         var element = $(this);
         
         if(element.find(".ink").length === 0){
-            if(element.hasClass('ripplelink'))
-                element.children('span').after("<span class='ink'></span>");
-            else
+            if(element.hasClass('ripplelink')) {
+                if(element.hasClass('tabmenuitem-link')) {
+                    element.append("<span class='ink'></span>");
+                }
+                else {
+                    element.children('span').after("<span class='ink'></span>");
+                }
+            }
+            else {
                 element.append("<span class='ink'></span>");
+            }
         }
              
         ink = $(this).find(".ink");
