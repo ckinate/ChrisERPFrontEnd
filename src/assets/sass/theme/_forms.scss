@@ -388,9 +388,6 @@ body {
     
     .ui-splitbutton {
         @include border-radius($borderRadius + 1);
-        -moz-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
-        -webkit-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
-    	box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
 
         > .ui-button {
             @include no-shadow();
@@ -1091,7 +1088,7 @@ body {
                     display: inline-block;
                     height: 2.250em;
                     width: 2.250em;
-                    line-height: 2em;
+                    line-height: 1.7em;
                     @include border-radius(50%);
                                                             
                     &.ui-state-active {
