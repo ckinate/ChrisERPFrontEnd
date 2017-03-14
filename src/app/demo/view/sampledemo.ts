@@ -100,7 +100,7 @@ export class SampleDemo implements OnInit {
         this.menuItems = [{
             label: 'File',
             items: [
-                {label: 'New', icon: 'ui-icon-plus'},
+                {label: 'New', icon: 'ui-icon-add'},
                 {label: 'Open', icon: 'ui-icon-open-in-browser'}
             ]
         },
