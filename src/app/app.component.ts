@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit {
                 this.topbarMenuActive = false;
             }
             
-            if(!this.sidebarClick && this.isOverlay()) {
+            if(!this.sidebarClick && this.overlay {
                 this.sidebarActive = false;
             }
 
@@ -87,7 +87,7 @@ export class AppComponent implements AfterViewInit {
         event.preventDefault();
     }
 
-    isOverlay() {
+    get overlay(): boolean {
         return this.layoutMode === MenuOrientation.OVERLAY;
     }
 

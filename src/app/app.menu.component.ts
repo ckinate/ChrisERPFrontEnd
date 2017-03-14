@@ -209,7 +209,7 @@ export class AppSubMenu implements OnDestroy {
         }
         
         //hide menu
-        if(!item.items && this.app.isOverlay()) {                
+        if(!item.items && this.app.overlay) {                
             this.app.sidebarActive = false;
         }
     }
