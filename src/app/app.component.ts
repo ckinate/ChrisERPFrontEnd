@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit {
                 this.topbarMenuActive = false;
             }
             
-            if(!this.sidebarClick && this.overlay {
+            if(!this.sidebarClick && this.overlay) {
                 this.sidebarActive = false;
             }
 

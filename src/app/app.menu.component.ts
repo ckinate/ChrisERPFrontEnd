@@ -1,4 +1,5 @@
-import {Component,Input,OnInit,OnDestroy,EventEmitter,ViewChild,trigger,state,transition,style,animate,Inject,forwardRef} from '@angular/core';
+import {Component,Input,OnInit,OnDestroy,EventEmitter,ViewChild,Inject,forwardRef} from '@angular/core';
+import {trigger,state,style,transition,animate} from '@angular/animations';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {MenuItem} from 'primeng/primeng';
@@ -131,7 +132,7 @@ export class AppMenuComponent implements OnInit {
 @Component({
     selector: '[app-submenu]',
     template: `
-        <template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
+        <ng-template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
             <li [ngClass]="{'active-menuitem': isActive(i)}" *ngIf="child.visible === false ? false : true">
                 <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" class="ripplelink" *ngIf="!child.routerLink" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
                     (mouseenter)="hover=true" (mouseleave)="hover=false">
@@ -151,7 +152,7 @@ export class AppMenuComponent implements OnInit {
                 </a>
                 <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ? 'visible' : 'hidden'" [visible]="isActive(i)"></ul>
             </li>
-        </template>
+        </ng-template>
     `,
     animations: [
         trigger('children', [

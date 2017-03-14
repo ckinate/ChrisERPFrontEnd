@@ -20,14 +20,14 @@
                 <p-header>
                     Grid of Cars
                 </p-header>
-                <template let-car pTemplate="item">
+                <ng-template let-car pTemplate="item">
                     <div style="padding:3px" class="ui-g-12 ui-md-4">
                         <p-panel [header]="car.vin" [style]="{'text-align':'center'}">
                             <img src="assets/demo/images/car/{{car.brand}}.gif">
                             <div class="car-detail">{{car.year}} - {{car.color}}</div>
                         </p-panel>
                     </div>
-                </template>
+                </ng-template>
             </p-dataGrid>
         </div>
     </div>
@@ -37,12 +37,12 @@
             <h1>PickList</h1>
             <p-pickList [source]="sourceCars" [target]="targetCars" sourceHeader="Available" targetHeader="Selected" [responsive]="true"
                 [sourceStyle]="{'height':'250px'}" [targetStyle]="{'height':'250px'}">
-                <template let-car pTemplate="item">
+                <ng-template let-car pTemplate="item">
                     <div class="ui-helper-clearfix">
                         <img src="assets/demo/images/car/{{car.brand}}.gif" style="display:inline-block;margin:2px 0 2px 2px"/>
                         <div style="font-size:16px;float:right;margin:15px 5px 0 0">{{car.brand}}</div>
                     </div>
-                </template>
+                </ng-template>
             </p-pickList>
         </div>
     </div>
@@ -51,12 +51,12 @@
         <div class="card card-w-title">
             <h1>OrderList</h1>
             <p-orderList [value]="orderListCars" [listStyle]="{'height':'250px'}" [responsive]="true" header="OrderList">
-                <template let-car pTemplate="item">
+                <ng-template let-car pTemplate="item">
                     <div class="ui-helper-clearfix">
                         <img src="assets/demo/images/car/{{car.brand}}.gif" style="display:inline-block;margin:2px 0 2px 2px" />
                         <div style="font-size:16px;float:right;margin:15px 5px 0 0">{{car.brand}}</div>
                     </div>
-                </template>
+                </ng-template>
             </p-orderList>
         </div>
     </div>
@@ -80,7 +80,7 @@
                 <p-header>
                     List of Cars
                 </p-header>
-                <template let-car pTemplate="item">
+                <ng-template let-car pTemplate="item">
                     <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
                         <img src="assets/demo/images/car/{{car.brand}}.gif" width="48" style="display:inline-block;margin:24px;vertical-align:middle"/>
                         <div class="car-details" style="display:inline-block;vertical-align:middle">
@@ -89,7 +89,7 @@
                         </div>
                         <button type="button" pButton icon="ui-icon-search" style="margin:24px 24px 0 0;float:right"></button>
                     </div>
-                </template>
+                </ng-template>
             </p-dataList>
         </div>
     </div>
@@ -98,7 +98,7 @@
         <div class="card card-w-title">
             <h1>Carousel</h1>
             <p-carousel headerText="Cars" [value]="carouselCars">
-                <template let-car pTemplate="item">
+                <ng-template let-car pTemplate="item">
                     <div class="ui-g" style="text-align:center">
                         <div class="ui-g-12" style="text-align:Center">
                             <img src="assets/demo/images/car/{{car.brand}}.gif" />
@@ -115,7 +115,7 @@
                         <div class="ui-g-6">Color: </div>
                         <div class="ui-g-6" style="font-weight:bold">{{car.color}}</div>
                     </div>
-                </template>
+                </ng-template>
             </p-carousel>
         </div>
     </div>

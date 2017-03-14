@@ -2,6 +2,7 @@ import {NgModule}      from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule}    from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LocationStrategy,HashLocationStrategy} from '@angular/common';
 import {AppRoutes} from './app.routes';
 import 'rxjs/add/operator/toPromise';
@@ -102,6 +103,7 @@ import {NodeService} from './demo/service/nodeservice';
         FormsModule,
         AppRoutes,
         HttpModule,
+        BrowserAnimationsModule,
         AccordionModule,
         AutoCompleteModule,
         BreadcrumbModule,
