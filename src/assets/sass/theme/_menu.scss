@@ -32,9 +32,14 @@ body {
                     display: inline-block;
                     background-color: $grayBgColor;
                     @include border-radius(50%);
-                    padding: .25em .75em;
                     font-size: 1em;
                     color: #ffffff;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: 2em;
+                    height: 2em;
+                    padding: 0;
+                    line-height: 2em;
                 }
                 
                 .ui-steps-title {
@@ -188,6 +193,11 @@ body {
                     > .ui-menuitem-link {
                         .ui-menuitem-icon {
                             margin-right: 0;
+                        }
+                        
+                        > span {
+                            display: inline-block;
+                            vertical-align: middle;
                         }
                     }
                 }
