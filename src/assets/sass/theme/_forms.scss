@@ -133,9 +133,11 @@ body {
             .ui-listbox-filter-container {                
                 .ui-inputtext {
                     color: #ffffff;
+                    padding: 2px 2px 1px 2px;
                     padding-left: 1.5em;
 
                     &:focus {
+                        padding-bottom: 0;
                         border-bottom-color: #ffffff;
                     }
                 }
