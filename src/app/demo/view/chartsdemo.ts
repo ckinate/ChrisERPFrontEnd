@@ -23,13 +23,13 @@ export class ChartsDemo implements OnInit {
                     label: 'First Dataset',
                     data: [65, 59, 80, 81, 56, 55, 40],
                     fill: false,
-                    borderColor: '#607D8B'
+                    borderColor: '#03A9F4'
                 },
                 {
                     label: 'Second Dataset',
                     data: [28, 48, 40, 19, 86, 27, 90],
                     fill: false,
-                    borderColor: '#8BC34A'
+                    borderColor: '#FFC107'
                 }
             ]
         };

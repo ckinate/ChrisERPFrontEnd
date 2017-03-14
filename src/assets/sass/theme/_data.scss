@@ -105,6 +105,7 @@ body {
             .ui-button {
                 &.ui-button-icon-only {
                     width: 2.5em;
+                    margin-bottom: .5em;
                     margin-right: 0;
                     display: inline-block;
                 }
@@ -552,7 +553,7 @@ body {
         
         .fc-event {
             background-color: $primaryLightColor;
-            color: $textColor;
+            color: $primaryTextColor;
         }
     
         table {

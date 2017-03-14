@@ -56,12 +56,9 @@ export class DashboardDemo implements OnInit {
             ]
         }
         
-        this.items = [{
-            label: 'File',
-            items: [
-                {label: 'New', icon: 'ui-icon-plus'},
-                {label: 'Open', icon: 'ui-icon-archive'}
-            ]
-        }];
+        this.items = [
+            {label: 'New', icon: 'ui-icon-add'},
+            {label: 'Open', icon: 'ui-icon-archive'}
+        ];
     }
 }

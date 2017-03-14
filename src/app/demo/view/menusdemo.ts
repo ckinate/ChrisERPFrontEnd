@@ -51,7 +51,7 @@ export class MenusDemo implements OnInit {
                 icon: 'ui-icon-folder',
                 items: [{
                         label: 'New', 
-                        icon: 'ui-icon-plus',
+                        icon: 'ui-icon-add',
                         items: [
                             {label: 'Project'},
                             {label: 'Other'},
@@ -108,7 +108,7 @@ export class MenusDemo implements OnInit {
                     },
                     {
                         label: 'Other',
-                        icon: 'fa-phone',
+                        icon: 'ui-icon-call',
                         items: [
                             {label: 'Delete', icon: 'ui-icon-delete'}
                         ]
@@ -123,7 +123,7 @@ export class MenusDemo implements OnInit {
         this.items = [{
             label: 'File',
             items: [
-                {label: 'New', icon: 'ui-icon-plus'},
+                {label: 'New', icon: 'ui-icon-add'},
                 {label: 'Open', icon: 'ui-icon-open-in-browser'}
             ]
         },

@@ -33,7 +33,7 @@ body {
                     background-color: $grayBgColor;
                     @include border-radius(50%);
                     font-size: 1em;
-                    color: #ffffff;
+                    color: $accentTextColor;
                     vertical-align: middle;
                     text-align: center;
                     width: 2em;
