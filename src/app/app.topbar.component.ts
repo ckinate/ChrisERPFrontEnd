@@ -7,11 +7,11 @@ import {AppComponent} from './app.component';
         <div class="topbar clearfix">        
             <div class="logo">
                 <a href="#">
-                    <img src="../assets/layout/images/logo.png">
+                    <img src="assets/layout/images/logo.png">
                 </a>
             </div>
             
-            <img src="../assets/layout/images/logo-text.svg" class="app-name"/>
+            <img src="assets/layout/images/logo-text.svg" class="app-name"/>
             
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
                 <i class="material-icons">menu</i>
@@ -21,7 +21,7 @@ import {AppComponent} from './app.component';
                 <li #profile class="profile-item" [ngClass]="{'active-topmenuitem':app.activeTopbarItem === profile}">
                     <a href="#" (click)="app.onTopbarItemClick($event,profile)">                            
                         <div class="profile-image">
-                            <img src="../assets/layout/images/profile-image.png">
+                            <img src="assets/layout/images/profile-image.png">
                         </div>
                         <div class="profile-info">
                             <span class="topbar-item-name profile-name">Claire White</span>
