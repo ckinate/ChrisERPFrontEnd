@@ -1037,32 +1037,43 @@ body {
             border-color: $primaryDarkColor;
             @include border-radius-top(2px);
             @include border-radius-bottom(0);
-                        
-            .ui-datepicker-next {
-                cursor: pointer;
-                top: .4em;
-                right: .2em;
-                @include material-icon("play_circle_outline");
-                color: #ffffff;
-                
-                .fa {
-                    display: none;
-                }
-            }
             
             .ui-datepicker-prev {
                 cursor: pointer;
                 top: .4em;
                 left: .2em;  
-                @include material-icon("play_circle_outline");
-                @include rotate(180deg);
+                @include border-radius(50%);
+                @include material-icon("keyboard_arrow_left");                
+                @include transition(background-color .3s);
                 color: #ffffff;
                 
                 .fa {
                     display: none;
                 }
+                
+                &:hover {
+                    background-color: $primaryLightColor;                    
+                }
             }
-            
+                        
+            .ui-datepicker-next {
+                cursor: pointer;
+                top: .4em;
+                right: .2em;
+                @include material-icon("keyboard_arrow_right");
+                @include border-radius(50%);               
+                @include transition(background-color .3s);
+                color: #ffffff;
+                
+                .fa {
+                    display: none;
+                }
+                
+                &:hover {
+                    background-color: $primaryLightColor;                    
+                }
+            }
+                        
             select.ui-datepicker-month,
             select.ui-datepicker-year {
                 font-size: $fontSize - 2;   

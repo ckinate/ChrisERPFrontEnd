@@ -33,7 +33,7 @@ body {
                     background-color: $grayBgColor;
                     @include border-radius(50%);
                     font-size: 1em;
-                    color: $accentTextColor;
+                    color: #ffffff;
                     vertical-align: middle;
                     text-align: center;
                     width: 2em;
@@ -52,6 +52,7 @@ body {
             &.ui-state-highlight {                
                 .ui-steps-number {
                     background-color: $accentColor;
+                    color: $accentTextColor;
                 }
                 
                 .ui-steps-title { 
