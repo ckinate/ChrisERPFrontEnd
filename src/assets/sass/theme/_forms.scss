@@ -379,6 +379,20 @@ body {
         }
     }
     
+    .ui-fluid {
+        .ui-button {
+            &.ui-button-text-icon-left,
+            &.ui-button-text-icon-right {
+                padding-left: 0;
+                padding-right: 0;
+                
+                .ui-button-text {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
     .ui-buttonset {
         .ui-button {
             &:not(.ui-state-disabled):not(.ui-state-active):hover {
@@ -408,6 +422,7 @@ body {
 
         > .ui-button {
             @include no-shadow();
+            vertical-align: top;
             
             &:active {
                 background-color: lighten($primaryColor,10%);
