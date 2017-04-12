@@ -426,6 +426,22 @@ $dataTableRowBgColorEven:#f4f4f4;
             <h1>Customizing Styles</h1>
             <p>It is suggested to write your customizations in styles.scss file or another file instead of adding them to the
                 scss files under sass folders to avoid maintenance issues after an update.</p>
+            
+            <h1>PrimeNG 2 and Angular 2</h1>
+            <p>Barcelona is distributed with PrimeNG 4 and Angular 4 however it is also possible to use Atlantis with PrimeNG 2 and Angular 2, to do so there are two parts to change to run Atlantis with Angular 2.</p>
+            <ul>
+                <li>Use template element instead of ng-element in your application.</li>
+                <li>In Angular 4, animations have their own module so at app.menu.components.ts file import trigger,state,style,transition,animate apis from @angular/core instead of @angular/animations. Then remove 
+                BrowserAnimationsModule from app.module.ts.</li>
+            </ul>
+                
+            <h1>Migration Guide</h1>
+            
+            <p>1.0.0 to 1.0.1</p>
+            <ul>
+                <li>Update layout-*.css files.</li>
+                <li>Update app.components.ts file.</li>
+            </ul>
         </div>
     </div>
 </div>

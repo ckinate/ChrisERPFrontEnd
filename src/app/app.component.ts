@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit {
                 this.topbarMenuActive = false;
             }
             
-            if(!this.sidebarClick && this.overlay) {
+            if(!this.sidebarClick && (this.overlay || !this.isDesktop())) {
                 this.sidebarActive = false;
             }
 
@@ -97,6 +97,10 @@ export class AppComponent implements AfterViewInit {
 
     changeToOverlayMenu() {
         this.layoutMode = MenuOrientation.OVERLAY;
+    }
+    
+    isDesktop() {
+        return window.innerWidth > 1024;
     }
 
     ngOnDestroy() {

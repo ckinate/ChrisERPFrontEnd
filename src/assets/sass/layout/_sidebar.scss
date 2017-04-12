@@ -225,6 +225,14 @@
                                     &:hover {
                                         background-color:#E0E0E0;
                                     }
+                                    
+                                    &.active-menuitem-routerlink {
+                                        color: $activeMenuItemTextColor;
+                                        
+                                        i {
+                                            color: $activeMenuItemTextColor;
+                                        }
+                                    }
                                 }
                                 
                                 ul {
@@ -369,6 +377,14 @@
                                         
                                         i:first-child {
                                             color: $darkMenuItemTextColor;
+                                        }
+                                    }
+                                    
+                                    &.active-menuitem-routerlink {
+                                        color: lighten($darkActiveMenuItemTextColor, 15%);
+                                        
+                                        i {
+                                            color: lighten($darkActiveMenuItemTextColor, 15%);
                                         }
                                     }
                                 }
