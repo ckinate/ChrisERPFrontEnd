@@ -12,6 +12,8 @@ export class OverlaysDemo implements OnInit {
     cars: Car[];
     
     images: any[];
+    
+    display: boolean;
         
     constructor(private carService: CarService, private confirmationService: ConfirmationService) { }
 

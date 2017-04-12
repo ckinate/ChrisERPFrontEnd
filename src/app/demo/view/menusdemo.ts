@@ -12,19 +12,19 @@ import {MenuItem} from 'primeng/primeng';
 })
 export class MenusDemo implements OnInit {
 
-    private breadcrumbItems: MenuItem[];
+    breadcrumbItems: MenuItem[];
     
-    private tieredItems: MenuItem[];
+    tieredItems: MenuItem[];
     
-    private items: MenuItem[];
+    items: MenuItem[];
     
-    private tabMenuItems: MenuItem[];
+    tabMenuItems: MenuItem[];
     
-    private megaMenuItems: MenuItem[];
+    megaMenuItems: MenuItem[];
     
-    private panelMenuItems: MenuItem[];
+    panelMenuItems: MenuItem[];
     
-    private stepsItems: MenuItem[];
+    stepsItems: MenuItem[];
 
     ngOnInit() {
         this.breadcrumbItems = [];

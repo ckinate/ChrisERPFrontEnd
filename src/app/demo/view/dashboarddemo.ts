@@ -21,7 +21,7 @@ export class DashboardDemo implements OnInit {
     
     selectedCity: any;
     
-    private items: MenuItem[];
+    items: MenuItem[];
 
     constructor(private carService: CarService, private eventService: EventService) { }
     

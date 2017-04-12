@@ -46,6 +46,10 @@ export class FormsDemo implements OnInit {
     types: SelectItem[];
     
     splitButtonItems: MenuItem[];
+    
+    radioValue: string;
+    
+    selectedType: string;
             
     constructor(private countryService: CountryService) {}
     
@@ -113,7 +117,7 @@ export class FormsDemo implements OnInit {
         }
     }
     
-    handleACDropdownClick() {
+    handleACDropdownClick(event: Event) {
         this.filteredBrands = [];
         
         //mimic remote call

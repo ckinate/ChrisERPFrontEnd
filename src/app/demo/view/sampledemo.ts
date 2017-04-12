@@ -56,6 +56,10 @@ export class SampleDemo implements OnInit {
     
     maskValue: string;
     
+    toggleButtonChecked: boolean;
+    
+    selectedType: string;
+    
     constructor(private carService: CarService, private countryService: CountryService, private nodeService: NodeService) { }
     
     ngOnInit() {
