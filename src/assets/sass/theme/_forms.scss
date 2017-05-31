@@ -378,21 +378,7 @@ body {
             @include no-shadow();
         }
     }
-    
-    .ui-fluid {
-        .ui-button {
-            &.ui-button-text-icon-left,
-            &.ui-button-text-icon-right {
-                padding-left: 0;
-                padding-right: 0;
-                
-                .ui-button-text {
-                    padding: 0;
-                }
-            }
-        }
-    }
-    
+        
     .ui-buttonset {
         .ui-button {
             &:not(.ui-state-disabled):not(.ui-state-active):hover {
