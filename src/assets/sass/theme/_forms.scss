@@ -909,7 +909,7 @@ body {
         @include border-radius(8px);
     
         .ui-inputswitch-handle {
-            top: -3px;
+            top: -4px;
             background-color: #ffffff;
             @include border-radius(50%);
             @include transition(background-color .3s);
