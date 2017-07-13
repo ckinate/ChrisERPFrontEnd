@@ -120,12 +120,20 @@
         </div>
     </div>
         
-    <div class="ui-g-12">
+    <div class="ui-g-12 ">
         <div class="card card-w-title">
             <h1>Tree</h1>
             <p-tree [value]="files2"></p-tree>
         </div>
     </div>
+    
+    <div class="ui-g-12">
+        <div class="card card-w-title">
+            <h1>Organization Chart</h1>
+            <p-organizationChart [value]="data" selectionMode="single" [(selection)]="selectedNode"></p-organizationChart>
+        </div>
+    </div>
+    
     <div class="ui-g-12">
         <div class="card card-w-title">
             <h1>Schedule</h1>

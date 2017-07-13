@@ -50,6 +50,8 @@ export class FormsDemo implements OnInit {
     radioValue: string;
     
     selectedType: string;
+    
+    color: string;
             
     constructor(private countryService: CountryService) {}
     
