@@ -1,4 +1,4 @@
-import {Component,Input,OnInit,OnDestroy,EventEmitter,ViewChild,Inject,forwardRef} from '@angular/core';
+import {Component,Input,OnInit,EventEmitter,ViewChild,Inject,forwardRef} from '@angular/core';
 import {trigger,state,style,transition,animate} from '@angular/animations';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
@@ -167,7 +167,7 @@ export class AppMenuComponent implements OnInit {
         ])
     ]
 })
-export class AppSubMenu implements OnDestroy {
+export class AppSubMenu {
 
     @Input() item: MenuItem;
     
@@ -193,15 +193,7 @@ export class AppSubMenu implements OnDestroy {
                 
         //execute command
         if(item.command) {
-            if(!item.eventEmitter) {
-                item.eventEmitter = new EventEmitter();
-                item.eventEmitter.subscribe(item.command);
-            }
-            
-            item.eventEmitter.emit({
-                originalEvent: event,
-                item: item
-            });
+            item.command({originalEvent: event, item: item});
         }
 
         //prevent hash change
@@ -227,14 +219,6 @@ export class AppSubMenu implements OnDestroy {
         if(item.items) {
             for(let childItem of item.items) {
                 this.unsubscribe(childItem);
-            }
-        }
-    }
-        
-    ngOnDestroy() {        
-        if(this.item && this.item.items) {
-            for(let item of this.item.items) {
-                this.unsubscribe(item);
             }
         }
     }
