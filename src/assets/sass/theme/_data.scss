@@ -118,6 +118,14 @@ body {
             &.ui-organizationchart-selectable-node:not(.ui-state-highlight):hover {
                 @include hover-element();
             }
+            
+            &.ui-state-highlight {
+                .ui-node-toggler {
+                    i {
+                        color: darken($accentColor, 25%);
+                    }
+                }
+            }
         }
         .ui-organizationchart-line-down {
             background-color: darken($contentBorderColor, 10%);
@@ -141,7 +149,7 @@ body {
         
         .ui-organizationchart-node-content .ui-node-toggler {
             bottom: -1.143em;
-            margin-left: -.786em;
+            margin-left: -.825em;
             color: darken($contentBorderColor, 10%);
             
             .fa-chevron-down {
