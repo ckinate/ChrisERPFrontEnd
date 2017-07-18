@@ -98,6 +98,12 @@ body {
             }
         }
         
+        &.ui-orderlist-responsive {
+            .ui-orderlist-controls {
+                width: 3.75em;
+            }
+        }
+        
         .ui-orderlist-controls {
             width: 3.75em;
             text-align: center;
