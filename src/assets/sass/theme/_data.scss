@@ -113,7 +113,6 @@ body {
                     width: 2.5em;
                     margin-bottom: .5em;
                     margin-right: 0;
-                    display: inline-block;
                 }
             }
         }
@@ -748,6 +747,18 @@ body {
                 th {
                     background-color: #ffffff;
                     color: $textColor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 40em) {
+    body {
+        .ui-orderlist {
+            &.ui-orderlist-responsive {
+                .ui-orderlist-controls {
+                    width: 100%;
                 }
             }
         }
