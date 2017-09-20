@@ -1,9 +1,11 @@
-import {Component,AfterViewInit,ViewChild,OnDestroy,ElementRef} from '@angular/core';
+import {Component, AfterViewInit, ViewChild, OnDestroy, ElementRef} from '@angular/core';
 
 declare var jQuery: any;
 
 @Component({
+    /* tslint:disable:component-selector */
     selector: 'app-sidebarTabContent',
+    /* tslint:enable:component-selector */
     template: `
         <div class="layout-submenu-content" (click)="onClick($event)">
             <div #scroller class="nano">
@@ -14,19 +16,19 @@ declare var jQuery: any;
         </div>
     `
 })
-export class AppSidebarTabContent implements AfterViewInit,OnDestroy {
-    
+export class AppSidebartabcontentComponent implements AfterViewInit, OnDestroy {
+
     @ViewChild('scroller') layoutMenuScrollerViewChild: ElementRef;
-    
+
     scroller: HTMLDivElement;
-    
+
     ngAfterViewInit() {
         this.scroller = <HTMLDivElement> this.layoutMenuScrollerViewChild.nativeElement;
         setTimeout(() => {
-            jQuery(this.scroller).nanoScroller({flash:true});
+            jQuery(this.scroller).nanoScroller({flash: true});
         }, 10);
     }
-    
+
     onClick(event: Event) {
         setTimeout(() => {
             jQuery(this.scroller).nanoScroller();
@@ -34,6 +36,6 @@ export class AppSidebarTabContent implements AfterViewInit,OnDestroy {
     }
 
     ngOnDestroy() {
-        jQuery(this.scroller).nanoScroller({destroy:true});
+        jQuery(this.scroller).nanoScroller({destroy: true});
     }
 }

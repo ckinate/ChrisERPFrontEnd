@@ -1,10 +1,10 @@
-import {Component,Inject,forwardRef} from '@angular/core';
+import {Component, Inject, forwardRef} from '@angular/core';
 import {AppComponent} from './app.component';
 
 @Component({
     selector: 'app-topbar',
     template: `
-        <div class="topbar clearfix">        
+        <div class="topbar clearfix">
             <div class="logo">
                 <a href="#">
                     <img src="assets/layout/images/logo.png">
@@ -19,7 +19,7 @@ import {AppComponent} from './app.component';
             
             <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-visible': app.topbarMenuActive}">
                 <li #profile class="profile-item" [ngClass]="{'active-topmenuitem':app.activeTopbarItem === profile}">
-                    <a href="#" (click)="app.onTopbarItemClick($event,profile)">                            
+                    <a href="#" (click)="app.onTopbarItemClick($event,profile)">
                         <div class="profile-image">
                             <img src="assets/layout/images/profile-image.png">
                         </div>
@@ -59,7 +59,7 @@ import {AppComponent} from './app.component';
                     </ul>
                 </li>
                 <li #settings [ngClass]="{'active-topmenuitem':app.activeTopbarItem === settings}">
-                    <a href="#" (click)="app.onTopbarItemClick($event,settings)"> 
+                    <a href="#" (click)="app.onTopbarItemClick($event,settings)">
                         <i class="topbar-icon material-icons">settings</i>
                         <span class="topbar-item-name">Settings</span>
                     </a>
@@ -91,7 +91,7 @@ import {AppComponent} from './app.component';
                     </ul>
                 </li>
                 <li #messages [ngClass]="{'active-topmenuitem':app.activeTopbarItem === messages}">
-                    <a href="#" (click)="app.onTopbarItemClick($event,messages)"> 
+                    <a href="#" (click)="app.onTopbarItemClick($event,messages)">
                         <i class="topbar-icon material-icons">message</i>
                         <span class="topbar-badge">5</span>
                         <span class="topbar-item-name">Messages</span>
@@ -130,7 +130,7 @@ import {AppComponent} from './app.component';
                     </ul>
                 </li>
                 <li #notifications [ngClass]="{'active-topmenuitem':app.activeTopbarItem === notifications}">
-                    <a href="#" (click)="app.onTopbarItemClick($event,notifications)"> 
+                    <a href="#" (click)="app.onTopbarItemClick($event,notifications)">
                         <i class="topbar-icon material-icons">timer</i>
                         <span class="topbar-badge">4</span>
                         <span class="topbar-item-name">Notifications</span>
@@ -174,8 +174,8 @@ import {AppComponent} from './app.component';
         </div>
     `
 })
-export class AppTopBar {
+export class AppTopbarComponent {
 
-    constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent) {}
+    constructor(@Inject(forwardRef(() => AppComponent)) public app: AppComponent) {}
 
 }
