@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppTopbarComponent } from './app.topbar.component';
 import { AppSideBarComponent } from './app.sidebar.component';
 import { AppFooterComponent } from './app.footer.component';
+import {AppSidebartabcontentComponent} from './app.sidebartabcontent.component';
 import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
 
 describe('AppComponent', () => {
@@ -15,6 +16,7 @@ describe('AppComponent', () => {
         declarations: [ AppComponent,
                 AppTopbarComponent,
                 AppSideBarComponent,
+                AppSidebartabcontentComponent,
                 AppMenuComponent,
                 AppSubMenuComponent,
                 AppFooterComponent
