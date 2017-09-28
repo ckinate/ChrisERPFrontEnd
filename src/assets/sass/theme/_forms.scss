@@ -1102,10 +1102,10 @@ body {
                 box-sizing: border-box;
 
                 &.ui-datepicker-today {
-                    a,span {
+                    a {
                         color: #ffffff;
                         background: lighten($primaryColor,20%);
-
+                        
                         &.ui-state-active {
                             color: #ffffff;
                             background-color: $accentColor;
@@ -1113,8 +1113,8 @@ body {
                         }
                     }
                 }
-
-                a,span {
+                
+                a {
                     padding: .25em;
                     margin: 0;
                     text-align: center;
@@ -1122,9 +1122,9 @@ body {
                     display: inline-block;
                     height: 2.250em;
                     width: 2.250em;
-                    line-height: 1.7em;
                     @include border-radius(50%);
-
+                    line-height: 1.8em;
+                                        
                     &.ui-state-active {
                         color: #ffffff;
                         background-color: $accentColor;
@@ -1134,7 +1134,13 @@ body {
                     &:not(.ui-state-active):not(.ui-state-highlight):hover {
                         @include hover-element();
                     }
-                }
+                    
+                    span {
+                        display: inline;
+                        padding: 0;
+                        text-align: center;
+                    }
+                }                
             }
         }
 
