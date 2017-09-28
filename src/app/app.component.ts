@@ -3,7 +3,7 @@ import {Component, AfterViewInit, Renderer, OnDestroy} from '@angular/core';
 enum MenuOrientation {
     STATIC,
     OVERLAY
-};
+}
 
 @Component({
   selector: 'app-root',

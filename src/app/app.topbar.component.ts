@@ -1,4 +1,4 @@
-import {Component, Inject, forwardRef} from '@angular/core';
+import {Component} from '@angular/core';
 import {AppComponent} from './app.component';
 
 @Component({
@@ -10,13 +10,13 @@ import {AppComponent} from './app.component';
                     <img src="assets/layout/images/logo.png">
                 </a>
             </div>
-            
+
             <img src="assets/layout/images/logo-text.svg" class="app-name"/>
-            
+
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
                 <i class="material-icons">menu</i>
             </a>
-            
+
             <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-visible': app.topbarMenuActive}">
                 <li #profile class="profile-item" [ngClass]="{'active-topmenuitem':app.activeTopbarItem === profile}">
                     <a href="#" (click)="app.onTopbarItemClick($event,profile)">
@@ -28,7 +28,7 @@ import {AppComponent} from './app.component';
                             <span class="topbar-item-name profile-role">System Admin</span>
                         </div>
                     </a>
-                    
+
                     <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#">
@@ -176,6 +176,6 @@ import {AppComponent} from './app.component';
 })
 export class AppTopbarComponent {
 
-    constructor(@Inject(forwardRef(() => AppComponent)) public app: AppComponent) {}
+    constructor(public app: AppComponent) {}
 
 }
