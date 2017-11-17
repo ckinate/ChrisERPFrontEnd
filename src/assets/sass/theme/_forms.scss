@@ -1,50 +1,50 @@
 body {
     .ui-inputtext {
         background: transparent;
-        border-width: 0 0 1px 0;
+        border-width: 0 0 1px 0;  
         padding: 2px 2px 1px 2px;
         font-size: $inputFontSize;
         border-color: $inputBorderColor;
         border-style: solid;
         @include transition(border-color .3s);
         @include border-radius(0px);
-
+        
         &:focus,
         &.ui-state-focus {
             border-width: 0 0 2px 0;
-            border-color: $primaryColor;
+            border-color: $primaryColor;  
             padding-bottom: 0px;
         }
-
+        
         &:disabled {
             border-bottom: 1px dotted;
         }
-
+        
         &.ui-widget-content {
             border-width: 1px;
         }
-
+        
         &.ui-state-error {
-            border-color: #e62a10;
+            border-color: $invalidInputBorderColor;  
         }
     }
-
+    
     .md-inputfield {
         display: block;
-        position:relative;
-
+        position:relative; 
+        
         label {
-          color:#999;
+          color:#999; 
           font-weight:normal;
           position:absolute;
           pointer-events:none;
           left:5px;
           top:1px;
-          transition: 0.3s ease all;
-          -moz-transition: 0.3s ease all;
+          transition: 0.3s ease all; 
+          -moz-transition: 0.3s ease all; 
           -webkit-transition: 0.3s ease all;
         }
-
+        
         input:focus ~ label,
         input.ui-state-filled ~ label,
         .ui-inputwrapper-focus ~ label,
@@ -63,14 +63,51 @@ body {
         input.ng-dirty.ng-invalid ~ label {
             color: $invalidInputLabelColor;
         }
-
+        
         .ui-message {
             &.ui-messages-error {
                 background-color: transparent;
                 border: 0 none;
                 margin: 0px;
-                color: #e62a10;
+                color: $invalidInputLabelColor;
                 font-size: .75em;
+            }
+        }
+        
+        &.md-inputfield-fill {
+            input {
+                background-color: $textboxBgColor;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 4px;
+            }
+            
+            label {
+                top: 2px;
+            }
+        }
+        
+        &.md-inputfield-box {
+            input {
+                background-color: $textboxBgColor;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 24px;
+            }
+            
+            label {
+                top: 23px;
+            }
+            
+            input:focus ~ label,
+            input.ui-state-filled ~ label,
+            .ui-inputwrapper-focus ~ label,
+            .ui-inputwrapper-filled ~ label {
+              top:1px;
+            }
+
+            .input:-webkit-autofill ~ label {
+              top:1px;
             }
         }
     }
