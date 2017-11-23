@@ -3,29 +3,17 @@
     .footer {
         padding: .5em;
         
-        img {
-            width: 36px;
-            margin-right: 8px;
-            vertical-align: middle;
-            @include opacity(.6);
+        .footer-text-left {
+            float: left;
         }
         
-        span {
-            vertical-align: middle;
-        }
-        
-        a {
-            float: right;
-            margin-top: 4px;
-            font-size: $iconFontSize;
-            margin-left: 24px;
-            display: block;
+        .footer-text-right {
             color: $textSecondaryColor;
-        }
-        
-        .footer-content {
-            > div {
-                padding: 0;
+            float: right;
+            
+            span {
+                vertical-align: middle;
+                display: inline-block;
             }
         }
     }

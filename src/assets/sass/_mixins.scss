@@ -161,6 +161,12 @@
     overflow: hidden;
 }
 
+@mixin flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 @mixin animation($delay, $duration, $animation) {
     -webkit-animation-delay: $delay;
     -webkit-animation-duration: $duration;
