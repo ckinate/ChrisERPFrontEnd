@@ -176,9 +176,11 @@
 }
 
 .ui-g {
+    -ms-flex-wrap: wrap;
+    
     &.form-group {
         > div {
-            padding: .75em 1em;
+            padding: 1em;
         }
     }
     
