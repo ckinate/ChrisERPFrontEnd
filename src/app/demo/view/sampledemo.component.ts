@@ -38,6 +38,8 @@ export class SampleDemoComponent implements OnInit {
 
     cars: Car[];
 
+    cols: any[];
+
     carsLarge: Car[];
 
     selectedCar3: Car;
@@ -65,7 +67,13 @@ export class SampleDemoComponent implements OnInit {
     constructor(private carService: CarService, private countryService: CountryService, private nodeService: NodeService) { }
 
     ngOnInit() {
-        this.carService.getCarsSmall().then(cars => this.cars = cars);
+        this.carService.getCarsMedium().then(cars => this.cars = cars);
+        this.cols = [
+            { field: 'vin', header: 'Vin' },
+            { field: 'year', header: 'Year' },
+            { field: 'brand', header: 'Brand' },
+            { field: 'color', header: 'Color' }
+        ];
         this.carService.getCarsLarge().then(cars => this.carsLarge = cars);
         this.nodeService.getFiles().then(files => this.filesTree = files);
         this.carService.getCarsSmall().then(cars => this.sourceCars = cars);
