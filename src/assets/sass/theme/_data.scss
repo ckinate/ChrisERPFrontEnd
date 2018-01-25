@@ -260,7 +260,7 @@ body {
         .ui-table-summary {
           padding: $headerPadding;
           text-align: center;
-          font-weight: bold;
+          font-weight: normal;
         }
 
         .ui-table-caption {
@@ -275,6 +275,7 @@ body {
         .ui-table-tbody > tr > td,
         .ui-table-tfoot > tr > td {
           padding: $contentPadding;
+          font-weight: normal;
         }
 
         .ui-table-thead > tr > th,
@@ -284,9 +285,9 @@ body {
         }
 
         .ui-sortable-column {
-          color: #757575;
           .ui-sortable-column-icon {
             vertical-align: middle;
+            color: #757575;
           }
           &:not(.ui-state-highlight):hover {
             @include hover-element();
@@ -320,8 +321,8 @@ body {
             }
           }
 
-          > tr:nth-child(even) {
-            background-color: $dataTableRowBgColorEven;
+          > tr:nth-child(odd) {
+            background-color: $tableRowBgColorOdd;
 
             &.ui-state-highlight {
               background-color: $accentColor;
