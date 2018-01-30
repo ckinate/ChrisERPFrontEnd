@@ -1,10 +1,10 @@
 <div class="ui-g">
     <div class="ui-g-12">
-        <div class="card docs"> 
-            
+        <div class="card docs">
+
             <h1>Current Version</h1>
             <p>Angular 5 and PrimeNG 5</p>
-            
+
             <h1>Getting Started</h1>
             <p>Barcelona is a true native application template for Angular and is distributed as a CLI project. If you don't have CLI installed already run the following commands to set it up. In case
             you have an application that do not use CLI, skip the <a href="#noncli">Integration with an Existing Non CLI Application</a> part.</p>
@@ -12,7 +12,7 @@
 npm install -g @angular/cli
 </pre>
 
-            <p>Once CLI is ready in your system, extract the contents of the Barcelona zip file distribution, cd to the directory, 
+            <p>Once CLI is ready in your system, extract the contents of the Barcelona zip file distribution, cd to the directory,
             install the libraries from npm and then execute "ng serve" to run the application in your local environment at http://localhost:4200/.</p>
 <pre>
 cd Barcelona
@@ -36,11 +36,11 @@ Run 'ng test' to execute the unit tests via [Karma](https://karma-runner.github.
 Run 'ng e2e' to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 Run 'ng help' for more options.
-</pre>            
-                                    
+</pre>
+
             <h1>Structure</h1>
-            <p>Barcelona consists of 3 main parts; the application layout, layout resources and theme resources for PrimeNG components. <i>app.component.html</i> inside app folder is the html template for the base layout, 
-                required resources for the layout are placed inside the <i>src/assets/layout</i> folder and similarly theme resources are inside <i>src/assets/theme</i> folder. 
+            <p>Barcelona consists of 3 main parts; the application layout, layout resources and theme resources for PrimeNG components. <i>app.component.html</i> inside app folder is the html template for the base layout,
+                required resources for the layout are placed inside the <i>src/assets/layout</i> folder and similarly theme resources are inside <i>src/assets/theme</i> folder.
             </p>
 
             <h1>Template</h1>
@@ -52,13 +52,13 @@ Run 'ng help' for more options.
                                         'layout-overlay-menu':overlay&#125;"&gt;
 
     &lt;app-topbar&gt;&lt;/app-topbar&gt;
-    
+
     &lt;app-sidebar&gt;&lt;/app-sidebar&gt;
-    
+
     &lt;div class="layout-main"&gt;
         &lt;div class="layout-main-content"&gt;
             &lt;router-outlet&gt;&lt;/router-outlet&gt;
-            
+
             &lt;app-footer&gt;&lt;/app-footer&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -71,7 +71,7 @@ Run 'ng help' for more options.
             display custom content.</p>
 
             <h1>Menu</h1>
-            <p>Menu is a separate component defined in app.menu.component.ts file based on PrimeNG MenuModel API. In order to define the menuitems, 
+            <p>Menu is a separate component defined in app.menu.component.ts file based on PrimeNG MenuModel API. In order to define the menuitems,
             navigate to app.menu.component.ts and define your own model. Here is the menu component from the sample application. The helper
             app-submenu component is also available in the same file. Behavior and the UI of the menu can be fully customized within this component.</p>
 <pre>
@@ -86,7 +86,7 @@ export class AppMenuComponent implements OnInit &#123;
     private model: any[];
 
     constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent) &#123;&#125;
-    
+
     ngOnInit() &#123;
         this.model = [
             &#123;label: 'Dashboard', icon: 'dashboard', routerLink: ['/']&#125;,
@@ -193,29 +193,29 @@ export class AppMenuComponent implements OnInit &#123;
     changeTheme(theme) &#123;
         let themeLink: HTMLLinkElement = &lt;HTMLLinkElement&gt; document.getElementById('theme-css');
         let layoutLink: HTMLLinkElement = &lt;HTMLLinkElement&gt; document.getElementById('layout-css');
-        
+
         themeLink.href = 'assets/theme/theme-' + theme +'.css';
         layoutLink.href = 'assets/layout/css/layout-' + theme +'.css';
     &#125;
 &#125;
 </pre>
 
-            
+
             <h1>Integration with an Existing CLI Project</h1>
-            <p>To setup Barcelona in an existing project, copy the <i>src/assets</i> folder to your projects folder with the same name 
-                and replace the contents of app.component.ts, app.component.html with their counterparts in Barcelona under <i>src/app</i> folder. In addition, 
+            <p>To setup Barcelona in an existing project, copy the <i>src/assets</i> folder to your projects folder with the same name
+                and replace the contents of app.component.ts, app.component.html with their counterparts in Barcelona under <i>src/app</i> folder. In addition,
             copy all the components included by app.component.html such as topbar, footer, sidebar and menu.</p>
-            
+
             <p>Dependencies of Barcelona are listed below and needs to be added to package.json</p>
 <pre>
 "primeng": "^2.0.3",             //required: PrimeNG components
 "jquery": "^3.1.1",              //optional: schedule and nanoscroller
-"chart.js": "^2.4.0",            //optional: chart 
+"chart.js": "^2.4.0",            //optional: chart
 "fullcalendar": "^3.1.0",        //optional: schedule
 "moment": "^2.17.1",             //optional: chart and schedule
 "quill": "^1.1.8",               //optional: editor
 </pre>
-                        
+
             <p>Add PrimeNG CSS at styles section in angular-cli.json</p>
 
 <pre>
@@ -233,7 +233,6 @@ export class AppMenuComponent implements OnInit &#123;
 "scripts": [
     "../node_modules/jquery/dist/jquery.js",                                //optional: schedule and nanoscroller
     "../node_modules/nanoscroller/bin/javascripts/jquery.nanoscroller.js",  //optional: nanoscroller
-    "assets/layout/js/ripple.js",                                           //optional: ripple effect
     "../node_modules/moment/moment.js",                                     //optional: schedule and charts
     "../node_modules/chart.js/dist/Chart.js",                               //optional: charts
     "../node_modules/fullcalendar/dist/fullcalendar.js",                    //optional: schedule
@@ -248,13 +247,13 @@ export class AppMenuComponent implements OnInit &#123;
             <p>For an existing project that do not use CLI, setup steps are more or less similar. Start with installing the dependencies listed above in package.json</p>
             <p>Copy the <i>src/assets</i> folder to your application and include the resources listed above with a module bundler like webpack or using link-script tags.</p>
             <p>Finally copy the contents of app.component.html and app.component.ts to your application along with the all sub components like topbar.</p>
-                        
+
             <h1>Size</h1>
             <p>Barcelona uses EM units for scalability, default base font size is 14px and it can be changed with sass.</p>
-            
-            <h1>Theme</h1>    
+
+            <h1>Theme</h1>
             <p>Barcelona provides 10 PrimeNG themes out of the box, setup of a theme simple including the css of theme to your page that are located inside resources/theme folder.</p>
-            
+
             <ul>
                 <li>theme-blue</li>
                 <li>theme-blue-grey</li>
@@ -267,7 +266,7 @@ export class AppMenuComponent implements OnInit &#123;
                 <li>theme-light-blue</li>
                 <li>theme-teal</li>
             </ul>
-            
+
             <p>A custom theme can be developed by the following steps.</p>
             <ul>
                 <li>Choose a custom theme name such as theme-myown.</li>
@@ -276,10 +275,10 @@ export class AppMenuComponent implements OnInit &#123;
                 <li>Build the scss to generate css</li>
                 <li>Include the generated theme.css to your page.</li>
             </ul>
-            
-            <p>Here are the variables required to create a theme, you may need to change the last line according to the 
+
+            <p>Here are the variables required to create a theme, you may need to change the last line according to the
                 relative path of the sass folder in your application.</p>
-                
+
 <pre>
 $primaryColor: #1976d2;
 $primaryDarkColor: #0D47A1;
@@ -291,13 +290,13 @@ $accentLightColor: #FFECB3;
 $accentTextColor: #000000;
 
 @import '../sass/theme/_theme';
-</pre> 
-                
+</pre>
+
             <p> An example sass command to compile the css would be;</p>
-                
+
 <pre>
 sass src/assets/theme-myown/theme.scss src/assets/theme-myown/theme.css
-</pre> 
+</pre>
 
             <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
             so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
@@ -313,10 +312,10 @@ sass -w resources/ --sourcemap=none
                 <li>Build the scss to generate css</li>
                 <li>Serve the css by importing it using a link tag or a bundler.</li>
             </ul>
-            
-            <p>Here are the variables required to create a layout, you may need to change the last line according to the 
+
+            <p>Here are the variables required to create a layout, you may need to change the last line according to the
                 relative path of the sass folder in your application.</p>
-            
+
 <pre>
 $primaryColor:#607D8B;
 $primaryLightColor:#90A4AE;
@@ -334,15 +333,15 @@ $darkSidemenuBgColor:#343434;
 $darkMenuBgColor:#424242;
 
 @import '../../sass/layout/_layout';
-</pre> 
+</pre>
 
             <p>Check out the video tutorial that follows the steps above to create the dark-blue theme and layout. It is based on PrimeFaces version but generation part
                 applies to PrimeNG as well.</p>
-            
+
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/3dW61t1TKyc" frameborder="0"></iframe>
             </div>
-            
+
             <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the resources/sass folder in the distribution.</p>
             <p>In case you'd like to customize the structure not just the colors, the _variables.scss is where the structural variables (e.g. font size, paddings) for the layout are defined.</p>
 <pre>
@@ -400,18 +399,18 @@ $checkboxBorderColor:#757575;
 
 $dataTableBorderColor:#cacaca;
 $dataTableRowBgColorEven:#f4f4f4;
-</pre>        
+</pre>
             <h1>Menu Item Badges</h1>
             <p>Badges are numerical indicators of how many items are associated with a link.
                The badge property is value of the badge and badgeStyleClass is style class of the badge.</p>
 <pre>
 label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
-</pre>  
+</pre>
             <p>Barcelona layout has 2 different badge style.There is a default badge which uses the accent color of Barcelona layout. And there is 1 other badge class for menu items.</p>
             <ul>
                 <li>red-badge</li>
             </ul>
-                                    
+
             <h1>Menu Modes</h1>
             <p>Menu has 2 modes, static and overlay. Layout container element in application.html is used to define which mode to use by adding specific classes. List
             below indicates the style classes for each mode. In addition menu</p>
@@ -419,44 +418,44 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
                 <li>Static: "layout-wrapper"</li>
                 <li>Overlay: "layout-wrapper layout-overlay-menu"</li>
             </ul>
-            
+
             <p>It is also possible to leave the choice to the user by keeping the preference at a component and using an expression to bind it so that user can switch between modes. Sample
-            application has an example implementation of such use case. Refer to app.component.ts for an example.</p>          
+            application has an example implementation of such use case. Refer to app.component.ts for an example.</p>
 
             <h1>Dark Menu</h1>
             <p>Default color scheme of menu is light and alternative dark mode can be activated by adding layout-menu-dark style class to the sidebar element in app.sidebar.component.html.</p>
 <pre>
 &lt;div class="layout-sidebar layout-menu-dark"&gt;
 </pre>
-            
+
             <h1>Utilities</h1>
             <p>Barcelona provides various helper features such as material iconset compatible with PrimeNG components and helper classes. Visit <a [routerLink]="['/utils']">utils</a> page for details.</p>
-                    
+
             <h1>Grid CSS</h1>
             <p>Barcelona uses PrimeNG Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeNG. Grid CSS is
-            available inside primeng.css. However you may use another css layout utility as well.</p> 
-            
+            available inside primeng.css. However you may use another css layout utility as well.</p>
+
             <h1>Customizing Styles</h1>
             <p>It is suggested to write your customizations in styles.scss file or another file instead of adding them to the
                 scss files under sass folders to avoid maintenance issues after an update.</p>
-            
+
             <h1>PrimeNG 2 and Angular 2</h1>
             <p>Barcelona is distributed with PrimeNG 4 and Angular 4 however it is also possible to use Atlantis with PrimeNG 2 and Angular 2, to do so there are two parts to change to run Atlantis with Angular 2.</p>
             <ul>
                 <li>Use template element instead of ng-element in your application.</li>
-                <li>In Angular 4, animations have their own module so at app.menu.components.ts file import trigger,state,style,transition,animate apis from @angular/core instead of @angular/animations. Then remove 
+                <li>In Angular 4, animations have their own module so at app.menu.components.ts file import trigger,state,style,transition,animate apis from @angular/core instead of @angular/animations. Then remove
                 BrowserAnimationsModule from app.module.ts.</li>
             </ul>
-                
+
             <h1>Migration Guide</h1>
             <p>For seamless updates and easier maintenance, we suggest keeping your CSS customizations in a separate sass file so that your changes
             are not overriden with an update.</p>
-            
+
             <p>4.2.0 to 5.0.0</p>
             <ul>
                 <li>Update theme css files.</li>
             </ul>
-            
+
             <p>4.1.0 to 4.2.0</p>
             <ul>
                 <li>Update theme css files.</li>
@@ -468,23 +467,23 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
                 <li>Update theme css files.</li>
                 <li>Update AppSubmenu component in app.menu.component.ts.</li>
             </ul>
-            
+
             <p>4.0 to 4.0.1</p>
             <ul>
                 <li>Update theme css files.</li>
             </ul>
-            
+
             <p>1.0.2 to 4.0</p>
             <ul>
                 <li>Includes version updates to PrimeNG 4 and Angular 4.</li>
                 <li>Update theme css files.</li>
             </ul>
-            
+
             <p>1.0.1 to 1.0.2</p>
             <ul>
                 <li>Update theme-*.css files.</li>
             </ul>
-            
+
             <p>1.0.0 to 1.0.1</p>
             <ul>
                 <li>Update layout-*.css files.</li>
