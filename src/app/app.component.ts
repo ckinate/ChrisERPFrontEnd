@@ -81,7 +81,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
         const inkEl = document.createElement('span');
         this.addClass(inkEl, 'ink');
 
-        if (this.hasClass(element, 'ripplelink')) {
+        if (this.hasClass(element, 'ripplelink') && element.querySelector('span')) {
           element.querySelector('span').insertAdjacentHTML('afterend', '<span class=\'ink\'></span>');
         } else {
           element.appendChild(inkEl);
