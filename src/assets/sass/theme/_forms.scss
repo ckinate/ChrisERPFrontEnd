@@ -457,7 +457,7 @@ body {
             @include border-radius-left(0);
             @include border-radius-right($borderRadius);
         }
-        
+
         .ui-menu {
             min-width: 100%;
         }
@@ -1319,7 +1319,7 @@ body {
             margin-bottom: .125em;
         }
     }
-    
+
     .ui-fluid {
         .ui-inputgroup {
             .ui-button-icon-only {
@@ -1389,7 +1389,7 @@ body {
     .ui-inputtext.ng-dirty.ng-invalid,
     p-dropdown.ng-dirty.ng-invalid > .ui-dropdown,
     p-autocomplete.ng-dirty.ng-invalid > .ui-autocomplete > .ui-inputtext,
-    p-calendar.ng-dirty.ng-invalid > .ui-inputtext,
+    p-calendar.ng-dirty.ng-invalid > span > .ui-inputtext,
     p-inputmask.ng-dirty.ng-invalid > .ui-inputtext,
     p-checkbox.ng-dirty.ng-invalid .ui-chkbox-box,
     p-radiobutton.ng-dirty.ng-invalid .ui-radiobutton-box,
