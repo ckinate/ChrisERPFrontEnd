@@ -342,6 +342,11 @@ body {
             @include hover-element();
           }
         }
+
+        .ui-table-scrollable-header {
+            border: inherit;
+            color: $textColor;
+        }
     }
 
     .ui-datatable {
