@@ -1,19 +1,21 @@
 body {
     .ui-inputtext {
-        background: transparent;
-        border-width: 0 0 1px 0;
-        padding: 2px 2px 1px 2px;
+        background: transparent no-repeat;
+        background-image: linear-gradient(to bottom, $primaryColor, $primaryColor), linear-gradient(to bottom, $inputBorderColor, $inputBorderColor);
+        background-size: 0 2px, 100% 1px;
+        background-position: 50% 100%, 50% 100%;
+        transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        border-width: 0;
+        padding: 2px;
         font-size: $inputFontSize;
-        border-color: $inputBorderColor;
-        border-style: solid;
-        @include transition(border-color .3s);
         @include border-radius(0px);
 
         &:focus,
         &.ui-state-focus {
-            border-width: 0 0 2px 0;
-            border-color: $primaryColor;
-            padding-bottom: 0px;
+            border-width: 0;
+            background-size: 100% 2px, 100% 1px;
+            outline: none;
+            padding-bottom: 2px;
         }
 
         &:disabled {
@@ -22,10 +24,18 @@ body {
 
         &.ui-widget-content {
             border-width: 1px;
+            background: transparent;
+            background-image: none;
         }
 
         &.ui-state-error {
             border-color: $invalidInputBorderColor;
+        }
+    }
+
+    .ui-widget-header {
+        .ui-inputtext {
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, lighten($primaryColor,25%),  lighten($primaryColor,25%));
         }
     }
 
@@ -174,13 +184,8 @@ body {
             .ui-listbox-filter-container {
                 .ui-inputtext {
                     color: #ffffff;
-                    padding: 2px 2px 1px 2px;
+                    padding: 2px;
                     padding-left: 1.5em;
-
-                    &:focus {
-                        padding-bottom: 0;
-                        border-bottom-color: #ffffff;
-                    }
                 }
 
                 .fa {
@@ -611,11 +616,7 @@ body {
             .ui-autocomplete-multiple-container {
                 &.ui-inputtext {
                     box-sizing: border-box;
-                    padding: 2px 2px 1px 2px;
-                }
-
-                &.ui-state-focus {
-                    padding-bottom: 0;
+                    padding: 2px;
                 }
 
                 &.ui-state-disabled {
@@ -666,10 +667,15 @@ body {
     }
 
     .ui-dropdown {
-        border-bottom: 1px solid $inputBorderColor;
+        border-width: 0;
+        background: transparent no-repeat;
+        background-image: linear-gradient(to bottom, $primaryColor, $primaryColor), linear-gradient(to bottom, $inputBorderColor, $inputBorderColor);
+        background-size: 0 2px, 100% 1px;
+        background-position: 50% 100%, 50% 100%;
+        transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        padding-bottom: 2px;
         box-sizing: border-box;
         @include border-radius(0);
-        @include transition(border-color .3s);
 
         .ui-dropdown-trigger {
             height: 1.5em;
@@ -687,16 +693,19 @@ body {
         }
 
         .ui-dropdown-label {
+            background: none;
             &.ui-inputtext {
                 font: $inputFontSize "Roboto","Helvetica Neue",sans-serif;
             }
         }
 
         &.ui-state-focus {
-            border-bottom: 2px solid $primaryColor;
+            border-width: 0;
+            background-size: 100% 2px, 100% 1px;
+            padding-bottom: 2px;
 
             .ui-dropdown-label {
-                padding-bottom: 0;
+                padding-bottom: 2px;
             }
         }
     }
@@ -837,6 +846,7 @@ body {
 
                 .ui-inputtext {
                     color: #ffffff;
+                    padding: 2px;
                     padding-left: 1.5em;
                     width: 100%;
                     box-sizing: border-box;
@@ -1239,11 +1249,6 @@ body {
 
     .ui-chips {
         > ul.ui-inputtext {
-            padding: 2px 2px 1px 2px;
-
-            &.ui-state-focus {
-                padding-bottom: 0;
-            }
 
             .ui-chips-input-token {
                 padding-bottom: 2px;
