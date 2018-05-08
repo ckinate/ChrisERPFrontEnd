@@ -1416,7 +1416,8 @@ body {
     p-spinner.ng-dirty.ng-invalid > .ui-inputtext,
     p-selectbutton.ng-dirty.ng-invalid .ui-button,
     p-togglebutton.ng-dirty.ng-invalid .ui-button {
-        border-bottom-color: $invalidInputBorderColor;
+        background-image: linear-gradient(to bottom, $invalidInputBorderColor, $invalidInputBorderColor), linear-gradient(to bottom, $inputBorderColor, $inputBorderColor);
+
     }
 }
 
