@@ -10,7 +10,7 @@
     border-top-right-radius: $val;
     -moz-border-radius-bottomright: $val;
     -webkit-border-bottom-right-radius: $val;
-    border-bottom-right-radius: $val; 
+    border-bottom-right-radius: $val;
 }
 
 @mixin border-radius-left($val) {
@@ -97,18 +97,6 @@
   filter: alpha(opacity=$opacity-ie);
 }
 
-@mixin icon-override($icon) {    
-    &:before {
-        content: $icon;
-    }
-}
-
-@mixin border-box-sizing() {
-  -webkit-box-sizing: border-box; 
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @mixin material-icon($icon) {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -134,13 +122,25 @@
 
     /* Support for IE. */
     font-feature-settings: 'liga';
-    
+
     &:before {
         content: $icon;
     }
 }
 
-@mixin rotate($deg) {    
+@mixin icon-override($icon) {
+    &.fa {
+        @include material-icon($icon);
+    }
+}
+
+@mixin border-box-sizing() {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@mixin rotate($deg) {
     -webkit-transform: rotate($deg);
     -moz-transform: rotate($deg);
     -o-transform: rotate($deg);
@@ -148,7 +148,7 @@
     transform: rotate($deg);
 }
 
-@mixin scale($deg) {    
+@mixin scale($deg) {
     -webkit-transform: scale($deg);
     -moz-transform: scale($deg);
     -o-transform: scale($deg);
@@ -157,7 +157,7 @@
 }
 
 @mixin rippleitem() {
-    position: relative; 
+    position: relative;
     overflow: hidden;
 }
 

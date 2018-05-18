@@ -33,7 +33,7 @@
 .fa-arrow-circle-right {@include icon-override("play_circle_outline"); }
 .fa-arrow-circle-left {@include icon-override("play_circle_outline"); @include rotate(180deg);}
 .fa-calendar { @include icon-override("date_range"); }
-.fa-arrow-down{ @include icon-override("arrow_downward"); } 
+.fa-arrow-down{ @include icon-override("arrow_downward"); }
 .fa-arrow-up { @include icon-override("arrow_upward"); }
 
 .ui-icon-3d-rotation { @include icon-override("3d_rotation"); }
@@ -968,7 +968,7 @@
 .ui-icon-zoom-out { @include icon-override("zoom_out"); }
 .ui-icon-zoom-out-map { @include icon-override("zoom_out_map"); }
 
-.material-icons, .fa {
+.material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
