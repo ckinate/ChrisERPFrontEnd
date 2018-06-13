@@ -129,9 +129,7 @@
 }
 
 @mixin icon-override($icon) {
-    &.fa {
-        @include material-icon($icon);
-    }
+    @include material-icon($icon);
 }
 
 @mixin border-box-sizing() {

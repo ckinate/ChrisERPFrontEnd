@@ -157,11 +157,11 @@ body {
             margin-left: -.825em;
             color: darken($contentBorderColor, 10%);
 
-            .fa-chevron-down {
+            .pi-chevron-down {
                 @include material-icon("keyboard_arrow_down");
             }
 
-            .fa-chevron-up {
+            .pi-chevron-up {
                 @include material-icon("keyboard_arrow_up");
             }
         }
@@ -175,7 +175,7 @@ body {
             box-sizing: border-box;
             color: #ffffff;
 
-            .fa {
+            .pi {
                 display: none;
             }
 
@@ -394,7 +394,7 @@ body {
                         color: $accentTextColor;
                         border-top-color: $accentColor;
 
-                        .fa {
+                        .pi {
                             color: $accentTextColor;
                         }
 
@@ -579,7 +579,7 @@ body {
         .ui-datatable-loading-content {
             top: 30%;
 
-            .fa {
+            .pi {
                 @include material-icon('refresh');
                 font-size: 2em;
                 @include animation(0, 1000ms, spin);
@@ -599,7 +599,7 @@ body {
                 overflow: visible;
             }
 
-            .fa {
+            .pi {
                 color: #ffffff;
             }
 
@@ -625,7 +625,7 @@ body {
             .ui-chkbox {
                 margin-right: .5em;
 
-                .fa {
+                .pi {
                     color: #757575;
                 }
             }
@@ -748,7 +748,7 @@ body {
                     padding: .625em .875em;
                     border: 0 none;
 
-                    .fa {
+                    .pi {
                         color: $textSecondaryColor;
                     }
 
@@ -769,7 +769,7 @@ body {
                         background-color: $accentColor;
                         color: $accentTextColor;
 
-                        .fa {
+                        .pi {
                             color: $accentTextColor;
                         }
                     }
@@ -878,17 +878,17 @@ body {
                         }
                     }
 
-                    .fa-angle-right {
+                    .pi-angle-right {
                         @include icon-override("play_arrow"); @include rotate(90deg);
                     }
-                    .fa-angle-double-right {
+                    .pi-angle-double-right {
                         @include icon-override("skip_previous"); @include rotate(-90deg);
 
                     }
-                    .fa-angle-left {
+                    .pi-angle-left {
                         @include icon-override("play_arrow"); @include rotate(-90deg);
                     }
-                    .fa-angle-double-left {
+                    .pi-angle-double-left {
                         @include icon-override("skip_next"); @include rotate(-90deg);
                     }
                 }

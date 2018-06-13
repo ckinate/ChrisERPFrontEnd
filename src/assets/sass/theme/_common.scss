@@ -8,18 +8,18 @@ body {
     .ui-widget-content {
         background-color: $contentBgColor;
         border: 1px solid $contentBorderColor;
-        
-        .fa {
+
+        .pi {
             color: #757575;
         }
     }
-    
+
     .ui-widget-header {
         background-color: $primaryColor;
         color: $primaryTextColor;
         border: 1px solid $primaryColor;
-        
-        .fa {
+
+        .pi {
             color: $primaryTextColor;
         }
     }
@@ -27,8 +27,8 @@ body {
     .ui-state-active, .ui-state-highlight {
         background-color: $accentColor;
         color: $accentTextColor;
-        
-        .fa {
+
+        .pi {
             color: $accentTextColor;
         }
     }
@@ -65,7 +65,7 @@ body {
         background-color: #58575c;
         opacity: .8;
     }
-    
+
     a {
         color: $primaryColor;
     }

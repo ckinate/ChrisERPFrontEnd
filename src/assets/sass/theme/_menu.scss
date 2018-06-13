@@ -321,7 +321,7 @@ body {
                    a {
                        color: $textSecondaryColor;
 
-                       .fa {
+                       .pi {
                            color: $textSecondaryColor;
                        }
                    }
@@ -339,7 +339,7 @@ body {
                    a {
                        color: $primaryColor;
 
-                       .fa {
+                       .pi {
                            color: $primaryColor;
                        }
                    }
@@ -365,7 +365,7 @@ body {
             &.ui-state-active {
                 background-color: $accentColor;
                 @include border-radius-bottom(0);
-                a, .fa {
+                a, .pi {
                     color: $accentTextColor;
                 }
             }
@@ -403,7 +403,7 @@ body {
                         float: none;
                     }
 
-                    .fa {
+                    .pi {
                         position: static;
                         display: inline-block;
                         vertical-align: middle;
