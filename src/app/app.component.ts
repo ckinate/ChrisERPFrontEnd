@@ -199,6 +199,10 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
         event.preventDefault();
     }
+    
+    onTopbarSubItemClick(event) {
+        event.preventDefault();
+    }
 
     get overlay(): boolean {
         return this.layoutMode === MenuOrientation.OVERLAY;
