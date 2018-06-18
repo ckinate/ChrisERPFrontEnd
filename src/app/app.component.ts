@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, Renderer, OnDestroy, OnInit, NgZone} from '@angular/core';
+import {Component, AfterViewInit, Renderer2, OnDestroy, OnInit, NgZone} from '@angular/core';
 
 enum MenuOrientation {
     STATIC,
@@ -34,7 +34,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     rippleMouseDownListener: any;
 
-    constructor(public renderer: Renderer, public zone: NgZone) {}
+    constructor(public renderer: Renderer2, public zone: NgZone) {}
     ngOnInit() {
       this.zone.runOutsideAngular(() => {this.bindRipple(); });
     }
@@ -199,7 +199,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
         event.preventDefault();
     }
-    
+
     onTopbarSubItemClick(event) {
         event.preventDefault();
     }
