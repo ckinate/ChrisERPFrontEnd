@@ -148,7 +148,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
     }
 
     ngAfterViewInit() {
-        this.documentClickListener = this.renderer.listenGlobal('body', 'click', (event) => {
+        this.documentClickListener = this.renderer.listen('body', 'click', (event) => {
             if (!this.topbarItemClick) {
                 this.activeTopbarItem = null;
                 this.topbarMenuActive = false;

@@ -8,7 +8,9 @@ import {AppComponent} from './app.component';
 @Component({
     selector: 'app-menu',
     template: `
-        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true" parentActive="true"></ul>
+        <div class="menu-scroll-content">
+            <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true" parentActive="true"></ul>
+        </div>
     `
 })
 export class AppMenuComponent implements OnInit {

@@ -101,7 +101,7 @@
             }
 
             .layout-tabmenu-contents {
-                min-width: 250px;
+                width: 250px;
                 position: absolute;
                 top: 0;
                 left: 60px;
@@ -180,25 +180,29 @@
                             display: block;
                             visibility: hidden;
                           }
-                          .ui-scrollpanel-content {
-                            > *:last-child {
-                              overflow: visible;
+                            .ui-scrollpanel-content {
+                                overflow-x: hidden;
+                            }
+                          .menu-scroll-content {
+                                width: 268px;
                               padding-bottom: 170px;
                               padding-right: 22px;
-                            }
+                              .navigation-menu {
+                                  width: 268px;
+                              }
                           }
                         }
 
                         .navigation-menu {
                             margin: 0;
-                            padding: 0 22px 0 0;
+                            padding: 0;
                             list-style-type: none;
 
 
                             li {
                                 a {
                                     display: block;
-                                    padding: 8px 16px;
+                                    padding: 8px 32px 8px 16px;
                                     @include transition(background-color .3s);
 
                                     i:first-child {
@@ -247,37 +251,37 @@
 
                                     li {
                                         a {
-                                            padding: 8px 16px 8px 32px;
+                                            padding: 8px 32px 8px 32px;
                                         }
 
                                         ul {
                                             li {
                                                 a {
-                                                    padding: 8px 16px 8px 48px;
+                                                    padding: 8px 32px 8px 48px;
                                                 }
 
                                                 ul {
                                                     li {
                                                         a {
-                                                            padding: 8px 16px 8px 64px;
+                                                            padding: 8px 32px 8px 64px;
                                                         }
 
                                                         ul {
                                                             li {
                                                                 a {
-                                                                    padding: 8px 16px 8px 80px;
+                                                                    padding: 8px 32px 8px 80px;
                                                                 }
 
                                                                 ul {
                                                                     li {
                                                                         a {
-                                                                            padding: 8px 16px 8px 96px;
+                                                                            padding: 8px 32px 8px 96px;
                                                                         }
 
                                                                         ul {
                                                                             li {
                                                                                 a {
-                                                                                    padding: 8px 16px 8px 112px;
+                                                                                    padding: 8px 32px 8px 112px;
                                                                                 }
                                                                             }
                                                                         }
@@ -305,7 +309,7 @@
 
                             .menuitem-badge {
                                 position: absolute;
-                                right: 40px;
+                                right: 58px;
                                 top: 10px;
                                 display: inline-block;
                                 width: 16px;
