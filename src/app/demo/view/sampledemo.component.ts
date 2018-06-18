@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {CarService} from '../service/carservice';
 import {CountryService} from '../service/countryservice';
 import {NodeService} from '../service/nodeservice';
@@ -6,7 +6,13 @@ import {Car} from '../domain/car';
 import {SelectItem, MenuItem, TreeNode} from 'primeng/primeng';
 
 @Component({
-    templateUrl: './sampledemo.component.html'
+    templateUrl: './sampledemo.component.html',
+    styles: [`
+        .ui-dataview-layout-options .ui-button {
+            margin-left: .5em;
+        }
+    `],
+    encapsulation: ViewEncapsulation.None
 })
 export class SampleDemoComponent implements OnInit {
 

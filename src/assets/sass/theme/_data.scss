@@ -255,6 +255,30 @@ body {
         }
     }
 
+    .ui-dataview {
+        .ui-dataview-header {
+            background-color: #ffffff;
+            color: $textColor;
+            padding: $headerPadding;
+            border: 1px solid $dividerColor;
+            border-bottom: 0 none;
+        }
+
+        .ui-dataview-content {
+            background-color: #ffffff;
+            color: $textColor;
+            border: 1px solid $dividerColor;
+        }
+
+        .ui-dataview-footer {
+            background-color: #ffffff;
+            color: $textColor;
+            padding: $headerPadding;
+            border: 1px solid $dividerColor;
+            border-top: 0 none;
+        }
+    }
+
     .ui-table {
         .ui-table-caption,
         .ui-table-summary {
@@ -284,20 +308,50 @@ body {
           border: 1px solid $dataTableBorderColor;
         }
 
-        .ui-sortable-column {
-          .ui-sortable-column-icon {
-            vertical-align: middle;
-            color: #757575;
-          }
-          &:not(.ui-state-highlight):hover {
-            @include hover-element();
-          }
+        .ui-table-thead tr .ui-inputtext {
+            width: 100%;
+        }
 
-          &.ui-state-highlight {
-            background-color: $accentColor;
-            color: $accentTextColor;
-            border-top-color: $accentColor;
-          }
+        .ui-table-scrollable-header {
+            border: none;
+        }
+
+        .ui-table-loading-content {
+            .pi-spin {
+                -webkit-animation: 2s linear infinite fa-spin;
+                animation: 2s linear infinite fa-spin;
+                color: #ffffff;
+            }
+        }
+
+        .ui-sortable-column {
+            color: $textColor;
+
+            a, a:hover {
+                color: $textSecondaryColor;
+            }
+
+            &:not(.ui-state-highlight):hover {
+                @include hover-element();
+
+                a, a:hover {
+                    @include hover-element();
+                }
+            }
+
+            &.ui-state-highlight {
+                background-color: $accentColor;
+                color: $accentTextColor;
+                border-top-color: $accentColor;
+
+                a, a:hover {
+                    color: $accentTextColor;
+                }
+            }
+
+            .ui-sortable-column-icon {
+                vertical-align: middle;
+            }
         }
 
         .ui-table-tbody {
@@ -734,114 +788,130 @@ body {
     }
 
     .ui-treetable {
-        .ui-treetable-header {
+        .ui-treetable-caption,
+        .ui-treetable-summary {
             padding: $headerPadding;
-            font-size: $headerFontSize;
+            text-align: center;
+            font-weight: normal;
         }
 
-        thead {
-            tr {
-                border-bottom: 1px solid $dividerColor;
+        .ui-treetable-caption {
+            border-bottom: 0 none;
+        }
 
-                th {
-                    background-color: #ffffff;
-                    padding: .625em .875em;
-                    border: 0 none;
+        .ui-treetable-summary {
+            border-top: 0 none;
+        }
 
-                    .pi {
+        .ui-treetable-thead > tr > th,
+        .ui-treetable-tbody > tr > td,
+        .ui-treetable-tfoot > tr > td {
+            padding: $contentPadding;
+        }
+
+        .ui-treetable-thead > tr > th,
+        .ui-treetable-tfoot > tr > td {
+            font-weight: 400;
+            color: $textColor;
+            background-color: #ffffff;
+            border: 1px solid $dividerColor;
+        }
+
+        .ui-treetable-thead tr .ui-inputtext {
+            width: 100%;
+        }
+
+        .ui-treetable-scrollable-header {
+            border: none;
+        }
+
+        .ui-treetable-loading-content {
+            .pi-spin {
+                -webkit-animation: 2s linear infinite fa-spin;
+                animation: 2s linear infinite fa-spin;
+                color: #ffffff;
+            }
+        }
+
+        .ui-sortable-column {
+            color: $textColor;
+
+            a, a:hover {
+                color: $textSecondaryColor;
+            }
+
+            &:not(.ui-state-highlight):hover {
+                @include hover-element();
+
+                a, a:hover {
+                    @include hover-element();
+                }
+            }
+
+            &.ui-state-highlight {
+                background-color: $accentColor;
+                color: $accentTextColor;
+                border-top-color: $accentColor;
+
+                a, a:hover {
+                    color: $accentTextColor;
+                }
+            }
+
+            .ui-sortable-column-icon {
+                vertical-align: middle;
+            }
+        }
+
+        .ui-treetable-tbody {
+            > tr {
+                background: #ffffff;
+
+                > td {
+                    background: inherit;
+                    border: 1px solid $dividerColor;
+
+                    .ui-treetable-toggler {
                         color: $textSecondaryColor;
-                    }
-
-                    &:first-child {
-                        border-left: 1px solid $dividerColor;
-                    }
-
-                    &:last-child {
-                        border-right: 1px solid $dividerColor;
-                    }
-
-                    .ui-sortable-column-icon {
-                        vertical-align: middle;
-                        margin: -.25em 0 0 0;
-                    }
-
-                    &.ui-state-active {
-                        background-color: $accentColor;
-                        color: $accentTextColor;
-
-                        .pi {
-                            color: $accentTextColor;
+                        .pi.pi-chevron-right {
+                            vertical-align: middle;
+                        }
+                        .pi.pi-chevron-down {
+                            vertical-align: middle;
                         }
                     }
 
-                    .ui-column-resizer {
-                        @include material-icon("code");
-                        font-size: 1em;
-                        color: $textSecondaryColor;
-                    }
-                }
-            }
-        }
-
-        tfoot {
-            td {
-                border: 0 none;
-                padding: .625em .875em;
-            }
-        }
-
-        tbody {
-            .ui-treetable-row {
-                background-color: #ffffff;
-
-                td {
-                    border: 0 none;
-                    padding: .625em .875em;
-
-                    .ui-treetable-toggler {
-                        display: inline-block;
+                    .ui-treetable-chkbox {
                         vertical-align: middle;
-                        margin: 0 .167em;
-                        float: none;
+                        margin-right: .4em;
                     }
-
-                    .ui-chkbox {
-                        margin-right: .5em;
-                    }
-
-                    &.ui-treetable-child-table-container {
-                        padding: 0;
-                    }
-                }
-
-                &.ui-treetable-row-selectable:not(.ui-state-highlight):hover {
-                    @include hover-element();
                 }
 
                 &.ui-state-highlight {
                     background-color: $accentColor;
                     color: $accentTextColor;
 
-                    .ui-chkbox {
-                        .ui-chkbox-box {
-                            border-color: $accentTextColor;
+                    > td {
+                        background: inherit;
+                        border: $dividerColor;
+
+                        .ui-treetable-toggler {
+                            color: $accentTextColor;
                         }
+                    }
+
+                    &.ui-contextmenu-selected {
+                        background-color: $accentColor;
+                        color: $accentTextColor;
                     }
                 }
             }
         }
 
-        &.ui-treetable-scrollable {
-            .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
-                background-color: transparent;
-                border: 0 none;
-            }
-
-            thead {
-                th {
-                    background-color: #ffffff;
-                    color: $textColor;
-                }
+        &.ui-treetable-hoverable-rows {
+            .ui-treetable-tbody > tr:not(.ui-state-highlight):hover {
+                cursor: pointer;
+                @include hover-element();
             }
         }
     }

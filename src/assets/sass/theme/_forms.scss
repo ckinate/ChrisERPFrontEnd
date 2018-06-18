@@ -33,7 +33,7 @@ body {
         }
     }
 
-    .ui-widget-header {
+    .ui-widget-header:not(.ui-dataview-header) {
         .ui-inputtext {
             background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, lighten($primaryColor,25%),  lighten($primaryColor,25%));
         }
@@ -199,7 +199,7 @@ body {
                 }
 
                 .pi {
-                    top: 0;
+                    top: -2px;
                     left: 0;
                 }
             }
@@ -219,7 +219,7 @@ body {
     	box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
         @include transition(background-color .3s);
 
-        &:enabled:not(:focus):hover {
+        &:enabled:not(:focus):not(.ui-dataview-header .ui-state-active):hover {
             background-color: $primaryDarkColor;
         }
 
@@ -852,7 +852,7 @@ body {
                 margin-left: 0;
 
                 .pi {
-                    top: 0;
+                    top: -2px;
                     left: 0;
                     color: #ffffff;
                 }

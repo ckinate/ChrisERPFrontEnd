@@ -3,19 +3,36 @@ import {CarService} from '../service/carservice';
 import {NodeService} from '../service/nodeservice';
 import {EventService} from '../service/eventservice';
 import {Car} from '../domain/car';
-import {TreeNode} from 'primeng/primeng';
+import {TreeNode, SelectItem} from 'primeng/primeng';
 
 @Component({
     templateUrl: './datademo.component.html',
     styles: [`
-        .cars-datalist ul {
-            margin: 0;
-            padding: 0;
+        .ui-dataview-layout-options .ui-button {
+            margin-left: .5em;
+        }
+        .ui-dataview .filter-container {
+            text-align: center;
         }
 
-        @media (max-width:640px) {
-            .cars-datalist .text-column {
+        @media (max-width: 40em) {
+            .ui-dataview .car-details, .ui-dataview .search-icon{
                 text-align: center;
+                margin-top: 0;
+            }
+
+            .ui-dataview .filter-container {
+                text-align: left;
+            }
+            .ui-dataview-layout-options.ui-buttonset > .ui-button {
+                margin-left: 0;
+                display: inline-block;
+            }
+            .ui-dataview-layout-options.ui-buttonset > .ui-button:first-child {
+                border-radius: 50%;
+            }
+            .ui-dataview-layout-options.ui-buttonset > .ui-button:last-child {
+                border-radius: 50%;
             }
         }
     `],
@@ -27,13 +44,13 @@ export class DataDemoComponent implements OnInit {
 
     cars2: Car[];
 
-    cars3: Car[];
-
     cols: any[];
+
+    cols2: any[];
 
     data: TreeNode[];
 
-    selectedNode1: TreeNode;
+    selectedNodeOrg: TreeNode;
 
     selectedCar: Car;
 
@@ -49,11 +66,29 @@ export class DataDemoComponent implements OnInit {
 
     files2: TreeNode[];
 
+    files3: TreeNode[];
+
+    files4: TreeNode[];
+
     events: any[];
 
-    selectedNode: TreeNode;
+    selectedNode1: TreeNode;
+
+    selectedNode2: TreeNode;
+
+    selectedNode3: TreeNode;
+
+    selectedNodes: TreeNode[];
 
     scheduleHeader: any;
+
+    sortOptions: SelectItem[];
+
+    sortKey: string;
+
+    sortField: string;
+
+    sortOrder: number;
 
     constructor(private carService: CarService, private eventService: EventService, private nodeService: NodeService) { }
 
@@ -65,13 +100,19 @@ export class DataDemoComponent implements OnInit {
             { field: 'brand', header: 'Brand' },
             { field: 'color', header: 'Color' }
         ];
+        this.cols2 = [
+            { field: 'name', header: 'Name' },
+            { field: 'size', header: 'Size' },
+            { field: 'type', header: 'Type' }
+        ];
         this.carService.getCarsMedium().then(cars => this.cars2 = cars);
-        this.carService.getCarsMedium().then(cars => this.cars3 = cars);
         this.carService.getCarsMedium().then(cars => this.sourceCars = cars);
         this.targetCars = [];
         this.carService.getCarsSmall().then(cars => this.orderListCars = cars);
-        this.nodeService.getFilesystem().then(files => this.files1 = files);
+        this.nodeService.getFiles().then(files => this.files1 = files);
         this.nodeService.getFiles().then(files => this.files2 = files);
+        this.nodeService.getFiles().then(files => this.files3 = files);
+        this.nodeService.getFilesystem().then(files => this.files4 = files);
         this.eventService.getEvents().then(events => {this.events = events; });
 
         this.carouselCars = [
@@ -118,5 +159,23 @@ export class DataDemoComponent implements OnInit {
                 }
             ]
         }];
+
+        this.sortOptions = [
+            { label: 'Newest First', value: '!year' },
+            { label: 'Oldest First', value: 'year' },
+            { label: 'Brand', value: 'brand' }
+        ];
+    }
+
+    onSortChange(event) {
+        const value = event.value;
+
+        if (value.indexOf('!') === 0) {
+            this.sortOrder = -1;
+            this.sortField = value.substring(1, value.length);
+        } else {
+            this.sortOrder = 1;
+            this.sortField = value;
+        }
     }
 }
