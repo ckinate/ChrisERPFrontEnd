@@ -8,7 +8,7 @@ import {AppComponent} from './app.component';
 @Component({
     selector: 'app-menu',
     template: `
-        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true"></ul>
+        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true" parentActive="true"></ul>
     `
 })
 export class AppMenuComponent implements OnInit {
@@ -156,7 +156,7 @@ export class AppMenuComponent implements OnInit {
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
                     <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
                 </a>
-                <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ?
+                <ul app-submenu [item]="child" *ngIf="child.items" [parentActive]="isActive(i)" [@children]="isActive(i) ?
                 'visible' : 'hidden'" [visible]="isActive(i)"></ul>
             </li>
         </ng-template>
@@ -181,6 +181,8 @@ export class AppSubMenuComponent {
     @Input() root: boolean;
 
     @Input() visible: boolean;
+
+    _parentActive: boolean;
 
     activeIndex: number;
 
@@ -227,6 +229,18 @@ export class AppSubMenuComponent {
             for (const childItem of item.items) {
                 this.unsubscribe(childItem);
             }
+        }
+    }
+
+    @Input() get parentActive(): boolean {
+        return this._parentActive;
+    }
+
+    set parentActive(val: boolean) {
+        this._parentActive = val;
+
+        if (!this._parentActive) {
+            this.activeIndex = null;
         }
     }
 }
