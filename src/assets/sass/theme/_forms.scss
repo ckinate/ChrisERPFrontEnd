@@ -431,6 +431,83 @@ body {
         }
     }
 
+    .ui-button.ui-state-default.ui-button-secondary, .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default  {
+         color: $textColor;
+         background-color: #ffffff;
+
+         .ui-button-icon-left {
+             color: $textSecondaryColor;
+         }
+
+         .ui-button-icon-right {
+             color: $textSecondaryColor;
+         }
+
+         &:enabled:hover {
+             @include hover-element();
+         }
+
+         &:enabled:focus {
+             background-color: darken(#ffffff, 10%);
+         }
+     }
+
+    .ui-button.ui-state-default.ui-button-info, .ui-buttonset.ui-button-info > .ui-button.ui-state-default  {
+        color: #ffffff;
+        background-color: #03A9F4;
+
+        &:enabled:hover {
+            background-color: #0277BD;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken(#03A9F4,10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-success, .ui-buttonset.ui-button-success > .ui-button.ui-state-default  {
+        color: #ffffff;
+        background-color: #4CAF50;
+
+        &:enabled:hover {
+            background-color: #2E7D32;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken(#4CAF50,10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-warning, .ui-buttonset.ui-button-warning > .ui-button.ui-state-default  {
+        color: #212121;
+        background-color: #FFC107;
+
+        &:enabled:hover {
+            background-color: #FF8F00;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken(#FFC107,10%);
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-danger, .ui-buttonset.ui-button-danger > .ui-button.ui-state-default  {
+        color: #ffffff;
+        background-color: #F44336;
+
+        &:enabled:hover {
+            background-color: #C62828;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken(#F44336,10%);
+        }
+    }
+
     .ui-buttonset {
         .ui-button {
             &:not(.ui-state-disabled):not(.ui-state-active):hover {
