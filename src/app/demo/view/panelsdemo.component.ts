@@ -2,7 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/primeng';
 
 @Component({
-    templateUrl: './panelsdemo.component.html'
+    templateUrl: './panelsdemo.component.html',
+    styles: [`
+        :host ::ng-deep button {
+            margin-right: .25em;
+        }
+    `]
 })
 export class PanelsDemoComponent implements OnInit {
 

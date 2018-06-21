@@ -426,6 +426,19 @@ body {
             }
         }
 
+        &.blue-btn {
+            background-color: #03A9F4;
+
+            &:enabled:not(:focus):hover {
+                background-color: #0277BD;
+            }
+
+            &:focus {
+                outline: 0 none;
+                background-color: darken(#03A9F4,10%);
+            }
+        }
+
         &.flat {
             @include no-shadow();
         }
@@ -551,7 +564,8 @@ body {
         }
 
         .ui-menu {
-            min-width: 100%;
+            width: 100%;
+            min-width: 12.5em;
         }
     }
 
@@ -776,7 +790,7 @@ body {
             width: 1.5em;
             margin-top: -1px;
             padding: 0;
-            top: 0;
+            top: 2px;
             margin-right: 0;
 
             .pi {
@@ -873,7 +887,7 @@ body {
             margin-top: 0;
             padding: 0;
             bottom: 0;
-            top: auto;
+            top: -2px;
 
             .pi {
                 color: $textSecondaryColor;
