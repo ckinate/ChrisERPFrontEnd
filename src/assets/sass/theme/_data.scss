@@ -400,7 +400,7 @@ body {
         }
 
         &.ui-table-hoverable-rows {
-          .ui-table-tbody > tr:not(.ui-state-highlight):hover {
+          .ui-table-tbody > tr:not(.ui-state-highlight):not(.ui-contextmenu-selected):hover {
             cursor: pointer;
             @include hover-element();
           }
@@ -908,17 +908,26 @@ body {
                             color: $accentTextColor;
                         }
                     }
+                }
 
-                    &.ui-contextmenu-selected {
-                        background-color: $accentColor;
-                        color: $accentTextColor;
+                &.ui-contextmenu-selected {
+                    background-color: $accentColor;
+                    color: $accentTextColor;
+
+                    > td {
+                        background: inherit;
+                        border: $dividerColor;
+
+                        .ui-treetable-toggler {
+                            color: $accentTextColor;
+                        }
                     }
                 }
             }
         }
 
         &.ui-treetable-hoverable-rows {
-            .ui-treetable-tbody > tr:not(.ui-state-highlight):hover {
+            .ui-treetable-tbody > tr:not(.ui-state-highlight):not(.ui-contextmenu-selected):hover {
                 cursor: pointer;
                 @include hover-element();
             }
