@@ -19,6 +19,8 @@ export class FormsDemoComponent implements OnInit {
 
     selectedBrands: string[];
 
+    yesterday: Date = new Date();
+
     carOptions: SelectItem[];
 
     selectedMultiSelectCars: string[] = [];

@@ -223,7 +223,7 @@ body {
             background-color: $primaryDarkColor;
         }
 
-        &:focus {
+        &:enabled:focus {
             outline: 0 none;
             background-color: lighten($primaryColor,10%);
         }
@@ -569,6 +569,19 @@ body {
         }
     }
 
+    .ui-selectbutton {
+        .ui-button {
+            &:not(.ui-state-active):not(.ui-state-disabled):hover {
+                background-color: $primaryDarkColor;
+            }
+
+            &:not(.ui-state-disabled):not(.ui-state-active):focus {
+                outline: 0 none;
+                background-color: lighten($primaryColor,10%);
+            }
+        }
+    }
+
     .ui-fluid {
         .ui-splitbutton {
             .ui-button:first-child {
@@ -831,7 +844,7 @@ body {
             @include transition(background-color .3s);
             @include border-radius(0);
 
-            &:hover {
+            &:not(.ui-state-highlight):not(.ui-state-disabled):hover {
                 @include hover-element();
             }
 
@@ -894,7 +907,7 @@ body {
             }
         }
 
-        &.ui-state-focus {
+        &:not(.ui-state-disabled).ui-state-focus {
             border-bottom: 2px solid $primaryColor;
         }
     }
@@ -986,7 +999,7 @@ body {
             color: $textColor;
             @include border-radius(0);
 
-            &:not(.ui-state-highlight):hover {
+            &:not(.ui-state-highlight):not(.ui-state-disabled):hover {
                 @include hover-element();
             }
 
@@ -1152,6 +1165,10 @@ body {
     }
 
     .ui-calendar {
+        .ui-datepicker {
+            min-width: auto;
+        }
+
         .ui-datepicker-trigger {
             bottom: 2px;
             right: 0;
@@ -1189,6 +1206,31 @@ body {
             @include overlay-input-shadow();
         }
 
+        &:not(.ui-state-disabled) {
+            .ui-datepicker-header {
+                .ui-datepicker-prev,
+                .ui-datepicker-next {
+                    &:hover {
+                        background-color: $primaryLightColor;
+                    }
+                }
+            }
+
+            table {
+                td {
+                    a:not(.ui-state-active):not(.ui-state-highlight):hover {
+                        @include hover-element();
+                    }
+                }
+            }
+
+            .ui-monthpicker {
+                a.ui-monthpicker-month:not(.ui-state-active):hover {
+                    @include hover-element();
+                }
+            }
+        }
+
         .ui-datepicker-header {
             padding: $inputHeaderPadding;
             font-size: $inputHeaderFontSize;
@@ -1209,10 +1251,6 @@ body {
                 .pi {
                     display: none;
                 }
-
-                &:hover {
-                    background-color: $primaryLightColor;
-                }
             }
 
             .ui-datepicker-next {
@@ -1226,10 +1264,6 @@ body {
 
                 .pi {
                     display: none;
-                }
-
-                &:hover {
-                    background-color: $primaryLightColor;
                 }
             }
 
@@ -1288,10 +1322,6 @@ body {
                         color: $accentTextColor;
                     }
 
-                    &:not(.ui-state-active):not(.ui-state-highlight):hover {
-                        @include hover-element();
-                    }
-
                     span {
                         display: inline;
                         padding: 0;
@@ -1324,6 +1354,42 @@ body {
                             @include material-icon("keyboard_arrow_down");
                         }
                     }
+                }
+            }
+        }
+
+        .ui-monthpicker {
+            .ui-monthpicker-month {
+                color: $textColor;
+
+                &.ui-state-active {
+                    color: $accentTextColor;
+                    background-color: $accentColor;
+                }
+            }
+        }
+
+        &.ui-datepicker-multiple-month {
+            width: auto;
+            .ui-datepicker-group {
+                border-right: 1px solid $dividerColor;
+                padding-top: 0;
+                padding-bottom: 0;
+
+                .ui-datepicker-calendar-container {
+                    tbody {
+                        padding-right: .25em;
+                        padding-left: .25em;
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    border-right: 0 none;
                 }
             }
         }
