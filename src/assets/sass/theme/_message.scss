@@ -71,6 +71,71 @@ body {
         }
     }
 
+    .ui-message {
+
+        &.ui-message-info {
+            background-color: #2196F3;
+            border-color: #2196F3;
+            color: #ffffff;
+        }
+
+        &.ui-message-warn {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #ffffff;
+        }
+
+        &.ui-message-error {
+            background-color: #e62a10;
+            border-color: #e62a10;
+            color: #ffffff;
+        }
+
+        &.ui-message-fatal {
+            background-color: #212121;
+            border-color: #212121;
+            color: #ffffff;
+        }
+
+        &.ui-message-success {
+            background-color: #8BC34A;
+            border-color: #8BC34A;
+            color: #ffffff;
+        }
+
+        .ui-message-close {
+            text-decoration: none;
+            color: #fff;
+            right: .25em;
+        }
+    }
+
+    .ui-message .ui-message-icon {
+        background: none;
+        color: #fff;
+        margin-top: -2px;
+
+        &.pi-info-circle {
+            @include material-icon("info");
+            font-size: 1.75em;
+        }
+
+        &.pi-exclamation-triangle {
+            @include material-icon("warning");
+            font-size: 1.75em;
+        }
+
+        &.pi-times {
+            @include material-icon("error_outline");
+            font-size: 1.75em;
+        }
+
+        &.pi-check {
+            @include material-icon("check_circle");
+            font-size: 1.75em;
+        }
+    }
+
     .ui-growl {
         top: 90px;
 
@@ -137,6 +202,75 @@ body {
                 @include material-icon("close");
                 font-size: 24px;
                 color: #ffffff;
+            }
+        }
+    }
+
+    .ui-toast {
+        .ui-toast-message {
+            @include overlay-content-shadow();
+
+            &.ui-toast-message-info {
+                background-color: #2196F3;
+                border: 0 none;
+                color: #ffffff;
+
+                .ui-toast-close-icon {
+                    color: #ffffff;
+                }
+            }
+
+            &.ui-toast-message-success {
+                background-color: #8BC34A;
+                border: 0 none;
+                color: #ffffff;
+
+                .ui-toast-close-icon {
+                    color: #ffffff;
+                }
+            }
+
+            &.ui-toast-message-warn {
+                background-color: #ffc107;
+                border: 0 none;
+                color: #ffffff;
+
+                .ui-toast-close-icon {
+                    color: #ffffff;
+                }
+            }
+
+            &.ui-toast-message-error {
+                background-color: #e62a10;
+                border: 0 none;
+                color: #ffffff;
+
+                .ui-toast-close-icon {
+                    color: #ffffff;
+                }
+            }
+
+            .ui-toast-message-content {
+
+                &.pi-info-circle {
+                    @include material-icon("info");
+                    font-size: 1.75em;
+                }
+
+                &.pi-exclamation-triangle {
+                    @include material-icon("warning");
+                    font-size: 1.75em;
+                }
+
+                &.pi-times {
+                    @include material-icon("error_outline");
+                    font-size: 1.75em;
+                }
+
+                &.pi-check {
+                    @include material-icon("check_circle");
+                    font-size: 1.75em;
+                }
             }
         }
     }
