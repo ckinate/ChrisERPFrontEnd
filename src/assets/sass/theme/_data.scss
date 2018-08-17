@@ -262,6 +262,15 @@ body {
             padding: $headerPadding;
             border: 1px solid $dividerColor;
             border-bottom: 0 none;
+
+            .ui-button {
+                &.ui-state-active {
+                    &:hover {
+                        background-color: $accentColor;
+                        color: $accentTextColor;
+                    }
+                }
+            }
         }
 
         .ui-dataview-content {

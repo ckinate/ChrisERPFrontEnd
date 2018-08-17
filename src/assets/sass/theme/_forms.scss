@@ -219,7 +219,7 @@ body {
     	box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
         @include transition(background-color .3s);
 
-        &:enabled:not(:focus):not(.ui-dataview-header .ui-state-active):hover {
+        &:enabled:not(:focus):hover {
             background-color: $primaryDarkColor;
         }
 
@@ -291,7 +291,7 @@ body {
 
             &:focus {
                 outline: 0 none;
-                background-color: lighten(#00BCD4,10%);
+                background-color: lighten(#00BCD4,4%);
             }
         }
 
@@ -435,7 +435,7 @@ body {
 
             &:focus {
                 outline: 0 none;
-                background-color: darken(#03A9F4,10%);
+                background-color: lighten(#03A9F4,10%);
             }
         }
 
@@ -475,7 +475,7 @@ body {
 
         &:enabled:focus {
             outline: 0 none;
-            background-color: darken(#03A9F4,10%);
+            background-color: lighten(#03A9F4,10%);
         }
     }
 
@@ -489,7 +489,7 @@ body {
 
         &:enabled:focus {
             outline: 0 none;
-            background-color: darken(#4CAF50,10%);
+            background-color: lighten(#4CAF50,10%);
         }
     }
 
@@ -503,7 +503,7 @@ body {
 
         &:enabled:focus {
             outline: 0 none;
-            background-color: darken(#FFC107,10%);
+            background-color: lighten(#FFC107,10%);
         }
     }
 
@@ -517,7 +517,7 @@ body {
 
         &:enabled:focus {
             outline: 0 none;
-            background-color: darken(#F44336,10%);
+            background-color: lighten(#F44336,10%);
         }
     }
 
