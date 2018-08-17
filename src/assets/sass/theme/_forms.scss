@@ -1073,40 +1073,66 @@ body {
     .ui-inputswitch {
         height: 14px;
         width: 34px !important;
-        overflow: visible;
-        background-color: rgb(158,158,158);
-        border-color: rgb(158,158,158);
-        @include border-radius(8px);
 
-        .ui-inputswitch-handle {
-            top: -4px;
-            background-color: #ffffff;
-            @include border-radius(50%);
+        .ui-inputswitch-slider {
+            background-color: rgb(158,158,158);
+            @include border-radius(8px);
             @include transition(background-color .3s);
-            width: 20px !important;
-            height: 20px !important;
-            -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-            -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
-        }
 
-        .ui-inputswitch-on {
-            visibility: hidden;
-        }
-
-        .ui-inputswitch-off, .ui-inputswitch-on {
-            span {
-                visibility: hidden;
+            &:before {
+                background-color: #ffffff;
+                height: 1.429em;
+                width: 1.429em;
+                left: 0;
+                bottom: -0.214em;
+                border-radius: 50%;
+                -webkit-transition: .3s;
+                transition: .3s;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+                -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
             }
         }
 
         &.ui-inputswitch-checked {
-            background-color: $accentLightColor;
-            border-color: $accentLightColor;
+            .ui-inputswitch-slider:before {
+                -webkit-transform: translateX(1.250em);
+                -ms-transform: translateX(1.250em);
+                transform: translateX(1.250em);
+            }
+        }
 
-            .ui-inputswitch-handle {
-                background-color: $accentColor;
-                color: $accentTextColor;
+        &.ui-inputswitch-focus {
+            .ui-inputswitch-slider {
+                background-color: rgb(158,158,158);
+            }
+        }
+
+        &:not(.ui-state-disabled):hover {
+            .ui-inputswitch-slider {
+                background-color: rgb(158,158,158);
+            }
+        }
+
+        &.ui-inputswitch-checked {
+            .ui-inputswitch-slider {
+                background-color: $accentLightColor;
+
+                &:before {
+                    background-color: $accentColor
+                }
+            }
+
+            &:not(.ui-state-disabled):hover {
+                .ui-inputswitch-slider {
+                    background-color: $accentLightColor;
+                }
+            }
+
+            &.ui-inputswitch-focus {
+                .ui-inputswitch-slider {
+                    background: $accentLightColor;
+                }
             }
         }
     }
