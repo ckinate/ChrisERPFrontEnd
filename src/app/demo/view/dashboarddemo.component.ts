@@ -25,6 +25,8 @@ export class DashboardDemoComponent implements OnInit {
 
     items: MenuItem[];
 
+    fullcalendarOptions: any;
+
     constructor(private carService: CarService, private eventService: EventService) { }
 
     ngOnInit() {
@@ -69,5 +71,9 @@ export class DashboardDemoComponent implements OnInit {
             {label: 'New', icon: 'ui-icon-add'},
             {label: 'Open', icon: 'ui-icon-archive'}
         ];
+
+        this.fullcalendarOptions = {
+            defaultDate: '2016-01-12'
+        };
     }
 }
