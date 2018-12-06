@@ -333,6 +333,10 @@ body {
             }
         }
 
+        p-sortIcon {
+            display: inline-block;
+        }
+
         .ui-sortable-column {
             color: $textColor;
 
@@ -712,7 +716,7 @@ body {
                 vertical-align: middle;
             }
 
-            &.ui-treenode-selectable {
+            &.ui-treenode-selectable:not(.ui-state-highlight) {
                 .ui-treenode-label:not(.ui-state-highlight):hover {
                     @include hover-element();
                 }
@@ -740,12 +744,13 @@ body {
                 }
 
                 .ui-treenode-icon  {
-                    vertical-align: top;
                     margin-right: .25em;
                 }
 
-                &.ui-treenode-selectable:hover {
-                    @include hover-element();
+                &.ui-treenode-selectable:not(.ui-state-highlight) {
+                    .ui-treenode-label:not(.ui-state-highlight):hover {
+                        @include hover-element();
+                    }
                 }
 
                 &.ui-state-highlight {
@@ -930,6 +935,14 @@ body {
             .ui-treetable-tbody > tr:not(.ui-state-highlight):not(.ui-contextmenu-selected):hover {
                 cursor: pointer;
                 @include hover-element();
+            }
+        }
+    }
+
+    .ui-virtualscroller {
+        .ui-virtualscroller-list {
+            li {
+                border-bottom: 1px solid $dividerColor;
             }
         }
     }
