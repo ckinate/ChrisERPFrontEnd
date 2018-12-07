@@ -3,7 +3,7 @@
         <div class="card docs">
 
             <h1>Current Version</h1>
-            <p>Angular 6 and PrimeNG 6</p>
+            <p>Angular 7 and PrimeNG 7</p>
 
             <h1>Getting Started</h1>
             <p>Barcelona is a true native application template for Angular and is distributed as a CLI project. If you don't have CLI installed already run the following commands to set it up. In case
@@ -408,23 +408,25 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
 
             <h1>Grid CSS</h1>
             <p>Barcelona uses PrimeNG Grid CSS (ui-g-*) throughout the samples, we strongly suggest using Grid CSS as your layout framework as it is well tested and supported by PrimeNG. Grid CSS is
-            available inside primeng.css. However you may use another css layout utility as well.</p>
+                available inside primeng.css.</p>
 
             <h1>Customizing Styles</h1>
-            <p>It is suggested to write your customizations in styles.scss file or another file instead of adding them to the
-                scss files under sass folders to avoid maintenance issues after an update.</p>
+            <p>It is suggested to add your customizations in the following sass files under the override folder instead of adding them to the
+                scss files under sass folder to avoid maintenance issues after an update.</p>
 
-            <h1>PrimeNG 2 and Angular 2</h1>
-            <p>Barcelona is distributed with PrimeNG 4 and Angular 4 however it is also possible to use Atlantis with PrimeNG 2 and Angular 2, to do so there are two parts to change to run Atlantis with Angular 2.</p>
             <ul>
-                <li>Use template element instead of ng-element in your application.</li>
-                <li>In Angular 4, animations have their own module so at app.menu.components.ts file import trigger,state,style,transition,animate apis from @angular/core instead of @angular/animations. Then remove
-                BrowserAnimationsModule from app.module.ts.</li>
+                <li><b>_layout_variables</b>: Variables of the layout.</li>
+                <li><b>_layout_styles</b>: Styles for the layout.</li>
+                <li><b>_theme_variables</b>: Variables of the theme.</li>
+                <li><b>_theme_styles</b>: Styles for the theme.</li>
             </ul>
 
             <h1>Migration Guide</h1>
-            <p>For seamless updates and easier maintenance, we suggest keeping your CSS customizations in a separate sass file so that your changes
-            are not overriden with an update.</p>
+            <h4>6.1.0 to 7.0.0</h4>
+            <ul>
+                <li>Update layout css files.</li>
+                <li>Update theme css files.</li>
+            </ul>
 
             <h4>6.0.0 to 6.1.0</h4>
             <p>Adds support for new features in PrimeNG 6.1.x</p>

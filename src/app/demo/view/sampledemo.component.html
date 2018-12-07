@@ -5,7 +5,7 @@
                 <span class="ui-messages-icon pi pi-fw pi-check"></span>
                 <ul>
                     <li>
-                        <span class="ui-messages-summary" style="font-size:16px">Barcelona provides a theme for all 70+ PrimeNG Components. This page contains samples of the commonly used components for demo purposes.</span>
+                        <span class="ui-messages-summary" style="font-size:16px">Barcelona provides a theme for all 80+ PrimeNG Components. This page contains samples of the commonly used components for demo purposes.</span>
                     </li>
                 </ul>
             </div>
@@ -25,7 +25,7 @@
                         <label for="textarea">Textarea</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <textarea [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+                        <textarea id="textarea" [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
                     </div>
 
                     <div class="ui-g-12 ui-md-2">
@@ -38,7 +38,7 @@
                         <label for="autocomplete">AutoComplete</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <p-autoComplete [(ngModel)]="country" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name"
+                        <p-autoComplete id="autocomplete" [(ngModel)]="country" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name"
                             placeholder="Countries" [minLength]="1"></p-autoComplete>
                     </div>
 
@@ -59,13 +59,13 @@
                         <label for="mask">Mask</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <p-inputMask mask="99/99/9999" slotChar="dd/mm/yyyy" placeholder="Date"></p-inputMask>
+                        <p-inputMask id="mask" mask="99/99/9999" slotChar="dd/mm/yyyy" placeholder="Date"></p-inputMask>
                     </div>
                     <div class="ui-g-12 ui-md-2">
                         <label for="spinner">Spinner</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <p-spinner></p-spinner>
+                        <p-spinner id="spinner"></p-spinner>
                     </div>
 
                     <div class="ui-g-12 ui-md-2">
@@ -93,7 +93,7 @@
                         <label for="slider">Slider</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <p-slider></p-slider>
+                        <p-slider id="slider"></p-slider>
                     </div>
                     <div class="ui-g-12 ui-md-2">
                         Button
@@ -132,7 +132,7 @@
                         <label for="listbox">Listbox</label>
                     </div>
                     <div class="ui-g-12 ui-md-4">
-                        <p-listbox [options]="cities2" [(ngModel)]="selectedCity2"></p-listbox>
+                        <p-listbox id="listbox" [options]="cities2" [(ngModel)]="selectedCity2"></p-listbox>
                     </div>
                     <div class="ui-g-12 ui-md-2">
                         Dialog

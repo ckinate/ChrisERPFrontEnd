@@ -249,29 +249,28 @@ body {
                     color: #ffffff;
                 }
             }
+        }
+    }
 
-            .ui-toast-message-content {
+    .ui-toast .ui-toast-icon {
+        &.pi-info-circle {
+            @include material-icon("info");
+            font-size: 1.75em;
+        }
 
-                &.pi-info-circle {
-                    @include material-icon("info");
-                    font-size: 1.75em;
-                }
+        &.pi-exclamation-triangle {
+            @include material-icon("warning");
+            font-size: 1.75em;
+        }
 
-                &.pi-exclamation-triangle {
-                    @include material-icon("warning");
-                    font-size: 1.75em;
-                }
+        &.pi-times {
+            @include material-icon("error_outline");
+            font-size: 1.75em;
+        }
 
-                &.pi-times {
-                    @include material-icon("error_outline");
-                    font-size: 1.75em;
-                }
-
-                &.pi-check {
-                    @include material-icon("check_circle");
-                    font-size: 1.75em;
-                }
-            }
+        &.pi-check {
+            @include material-icon("check_circle");
+            font-size: 1.75em;
         }
     }
 }
