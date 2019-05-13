@@ -13,6 +13,7 @@ $iconFontSize:20px;
 $grayBgColor:#757575;
 $hoverBgColor:#e8e8e8;
 $hoverTextColor:#000000;
+$transitionDuration:.3s;
 
 /* Layout */
 $bodyBgColor:#fcfbfb;
@@ -27,30 +28,64 @@ $topbarSubmenuItemHoverBgColor:#e3e3e3;
 /******************************/
 /*           THEME            */
 /******************************/
-$headerPadding:.625em 1em;
-$headerFontSize:1em;
+$headerPadding:.714em 1em;
+$headerTextColor:#ffffff;
+$headerFontWeight:500;
 
-$contentPadding:.625em 1em;
+$contentPadding:.857em 1em;
 $contentBorderColor:#d8d8d8;
 $contentBgColor:#ffffff;
 
 $inputBorderColor:#bdbdbd;
-$inputFontSize:1em;
-$inputHeaderFontSize:1em;
-$inputOptionFontSize:1em;
-$inputHeaderPadding:.625em 1em;
-$invalidInputLabelColor:#e62a10;
-$invalidInputBorderColor:#e62a10;
-$inputGroupAddonBgColor:#e6e6e6;
+$inputInvalidBorderColor:#e62a10;
+$inputBgColor:#ffffff;
+$inputErrorTextColor:#e62a10;
+$inputHeaderPadding:.714em 1em;
+$inputBorderErrorColor:#e62a10;
+$inputFieldLabelTextColor:#999999;
+$inputFieldBoxBgColor:#f7f7f7;
+$inputFieldFillBgColor:#f7f7f7;
+$inputAutoFillBorderColor:#bdbdbd;
 $textboxBgColor:#f7f7f7;
 
-$buttonFontSize:1em;
+//inputs with lists
+$inputListPadding: .5em 0;
 
-$listItemPadding:.625em 1em;
+//groups
+$inputGroupBorderColor:#bdbdbd;
+$inputGroupBgColor:transparent;
+$inputGroupTextColor:$textSecondaryColor;
+$inputGroupIconColor:#bdbdbd;
+$inputGroupAddonMinWidth:2*$fontSize;
+$checkboxWidth:18px;
+$checkboxHeight:18px;
+$inputGroupPadding:2px 2px 1px 2px;
+$inputGroupIconFontSize: 1.5em;
+
+//panels
+$accordionHeaderBgColor:$primaryColor;
+$accordionHeaderTextColor:#ffffff;
+$accordionHeaderHoverBgColor:$primaryDarkColor;
+$accordionHeaderHoverTextColor:#ffffff;
+
+$panelContentLineHeight:1.5;
+
+$buttonTextColor:$primaryTextColor;
+
+$listItemPadding:.571em .857em;
 
 $radioButtonBorderColor:#757575;
 $checkboxBorderColor:#757575;
 
-$dataTableBorderColor:#cacaca;
+$errorMessageFontSize:11px;
+$errorMessageIconFontSize:13px;
+
+//data
+$dataTableHeaderPadding:.857em;
+$dataTableCellPadding:.714em .857em;
 $dataTableRowBgColorEven:#f4f4f4;
-$tableRowBgColorOdd:#f4f4f4;
+$paginatorPadding:.714em 1em;
+
+//menus
+$menuitemPadding:.571em .857em;
+$menuListPadding: .5em 0;

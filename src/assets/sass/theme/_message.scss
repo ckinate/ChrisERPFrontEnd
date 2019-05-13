@@ -1,7 +1,7 @@
 body {
     /* Messages */
     .ui-messages {
-        padding: $headerPadding;
+        padding: 1em;
 
         ul {
             display: inline-block;
@@ -12,30 +12,54 @@ body {
             background-color: #2196F3;
             border-color: #2196F3;
             color: #ffffff;
+
+            .ui-messages-close:hover {
+                background-color: lighten(#2196F3,15%);
+            }
         }
 
         &.ui-messages-warn {
             background-color: #ffc107;
             border-color: #ffc107;
-            color: #ffffff;
+            color: #212121;
+
+            .ui-messages-close{
+                color: #212121;
+
+                &:hover {
+                    background-color: lighten(#ffc107,15%);
+                }
+            }
         }
 
         &.ui-messages-error {
             background-color: #e62a10;
             border-color: #e62a10;
             color: #ffffff;
+
+            .ui-messages-close:hover {
+                background-color: lighten(#e62a10,15%);
+            }
         }
 
         &.ui-messages-fatal {
             background-color: #212121;
             border-color: #212121;
             color: #ffffff;
+
+            .ui-messages-close:hover {
+                background-color: lighten(#212121,15%);
+            }
         }
 
         &.ui-messages-success {
             background-color: #8BC34A;
             border-color: #8BC34A;
             color: #ffffff;
+
+            .ui-messages-close:hover {
+                background-color: lighten(#8BC34A,15%);
+            }
         }
 
         .ui-messages-close {
@@ -48,7 +72,6 @@ body {
     .ui-messages .ui-messages-icon {
         background: none;
         color: #fff;
-        margin-top: -2px;
 
         &.pi-info-circle {
             @include material-icon("info");
@@ -58,6 +81,7 @@ body {
         &.pi-exclamation-triangle {
             @include material-icon("warning");
             font-size: 1.75em;
+            color: #212121;
         }
 
         &.pi-times {
@@ -73,6 +97,10 @@ body {
 
     .ui-message {
 
+        .ui-message-text {
+            margin-left: 5px;
+        }
+
         &.ui-message-info {
             background-color: #2196F3;
             border-color: #2196F3;
@@ -82,7 +110,7 @@ body {
         &.ui-message-warn {
             background-color: #ffc107;
             border-color: #ffc107;
-            color: #ffffff;
+            color: #212121;
         }
 
         &.ui-message-error {
@@ -117,22 +145,23 @@ body {
 
         &.pi-info-circle {
             @include material-icon("info");
-            font-size: 1.75em;
+            font-size: 1.286em;
         }
 
         &.pi-exclamation-triangle {
             @include material-icon("warning");
-            font-size: 1.75em;
+            font-size: 1.286em;
+            color: #212121;
         }
 
         &.pi-times {
             @include material-icon("error_outline");
-            font-size: 1.75em;
+            font-size: 1.286em;
         }
 
         &.pi-check {
             @include material-icon("check_circle");
-            font-size: 1.75em;
+            font-size: 1.286em;
         }
     }
 
@@ -181,6 +210,7 @@ body {
                 &.pi-exclamation-triangle {
                     @include material-icon("warning");
                     font-size: 1.75em;
+                    color: #212121;
                 }
 
                 &.pi-times {
@@ -215,8 +245,13 @@ body {
                 border: 0 none;
                 color: #ffffff;
 
-                .ui-toast-close-icon {
-                    color: #ffffff;
+                .ui-toast-message-content {
+                    .ui-toast-close-icon {
+                        color: #ffffff;
+                        &:hover {
+                            background-color: lighten(#2196F3,15%);
+                        }
+                    }
                 }
             }
 
@@ -225,18 +260,28 @@ body {
                 border: 0 none;
                 color: #ffffff;
 
-                .ui-toast-close-icon {
-                    color: #ffffff;
+                .ui-toast-message-content {
+                    .ui-toast-close-icon {
+                        color: #ffffff;
+                        &:hover {
+                            background-color: lighten(#8BC34A,15%);
+                        }
+                    }
                 }
             }
 
             &.ui-toast-message-warn {
                 background-color: #ffc107;
                 border: 0 none;
-                color: #ffffff;
+                color: #212121;
 
-                .ui-toast-close-icon {
-                    color: #ffffff;
+                .ui-toast-message-content {
+                    .ui-toast-close-icon {
+                        color: #212121;
+                        &:hover {
+                            background-color: lighten(#ffc107,15%);
+                        }
+                    }
                 }
             }
 
@@ -245,8 +290,13 @@ body {
                 border: 0 none;
                 color: #ffffff;
 
-                .ui-toast-close-icon {
-                    color: #ffffff;
+                .ui-toast-message-content {
+                    .ui-toast-close-icon {
+                        color: #ffffff;
+                        &:hover {
+                            background-color: lighten(#e62a10,15%);
+                        }
+                    }
                 }
             }
         }
@@ -261,6 +311,7 @@ body {
         &.pi-exclamation-triangle {
             @include material-icon("warning");
             font-size: 1.75em;
+            color: #212121;
         }
 
         &.pi-times {

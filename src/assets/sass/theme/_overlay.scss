@@ -10,21 +10,17 @@ body {
             padding: $headerPadding;
 
             .ui-dialog-title {
-                font-size: 1.25em;
-                letter-spacing: .005em;
-                margin-top: .25em;
-                line-height: 2em;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 32px;
+                margin: 0;
             }
 
             .ui-dialog-titlebar-icon {
-                border: 0 none;
                 padding: 0;
+                margin-top: .4em;
                 @include border-radius(50%);
-                @include transition(background-color .3s);
-                height: 1.5em;
-                width: 1.5em;
-                text-align: center;
-                margin-top: .5em;
+                @include transition(background-color $transitionDuration);
 
                 &:hover, &:focus {
                     @include hover-element();
@@ -51,27 +47,37 @@ body {
 
         .ui-dialog-footer {
             text-align: right;
+            padding: $headerPadding;
             border: 0 none;
-            border-top: 1px solid $contentBorderColor;
 
             .ui-button {
-                background-color: #ffffff;
-                color: $textColor;
-                @include no-shadow();
                 width: auto;
+                margin-right: .5em;
 
-                .pi {
-                    color: $textSecondaryColor;
-                }
-
-                &:hover {
-                    @include hover-element();
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }
 
         .ui-confirm-dialog-severity {
             margin: 0px .75em;
+        }
+
+        p {
+            line-height: $panelContentLineHeight;
+        }
+    }
+
+    .ui-sidebar {
+        .ui-sidebar-close {
+            &:hover {
+                padding: 1px;
+            }
+        }
+
+        .ui-button {
+            width: auto;
         }
     }
 
@@ -89,16 +95,15 @@ body {
 
             .ui-lightbox-close {
                 @include border-radius(50%);
-                @include transition(background-color .3s);
+                @include transition(background-color $transitionDuration);
                 padding: 0;
                 margin: 0;
-                width: 1.5em;
-                height: 1.5em;
+                width: $iconWidth;
+                height: $iconHeight;
 
                 &:hover {
-                    background-color: $primaryLightColor;
-                    @include border-radius(50%);
-                    @include transition(background-color .3s);
+                    @include hover-element-primary();
+                    padding: 0;
                 }
             }
         }
@@ -108,9 +113,15 @@ body {
                 top: 40%;
 
                 .pi {
-                    @include transition(color .3s);
-                    font-size: 3em;
+                    @include transition(color $transitionDuration);
+                    font-size: 48px;
                     color: $primaryLightColor;
+                }
+
+                &:hover {
+                    .pi {
+                        color: #ffffff;
+                    }
                 }
             }
         }
@@ -127,8 +138,8 @@ body {
         }
 
         &:before {
-            border-color: rgba($contentBorderColor, 0);
-            border-bottom-color: $contentBorderColor;
+            border-color: rgba($dividerColor, 0);
+            border-bottom-color: $dividerColor;
         }
 
         &.ui-overlaypanel-flipped {
@@ -137,14 +148,14 @@ body {
             }
 
             &:before {
-                border-top-color: $contentBorderColor;
+                border-top-color: $dividerColor;
             }
         }
 
         .ui-overlaypanel-close {
             background-color: $accentColor;
             @include border-radius(50%);
-            @include transition(background-color .3s);
+            @include transition(background-color $transitionDuration);
             right: -16px;
             top: -16px;
             width: 2em;
@@ -166,9 +177,11 @@ body {
 
     .ui-tooltip {
         @include opacity(.9);
+        font-size: $fontSize - 2px;
 
         .ui-tooltip-text {
             background-color: #323232;
+            @include overlay-content-shadow();
         }
 
         &.ui-tooltip-top {
@@ -197,5 +210,12 @@ body {
                 border-right-color: #323232;
             }
         }
+    }
+
+    .ui-state-error,
+    .ui-widget.ui-state-error,
+    .ui-widget-content .ui-state-error,
+    .ui-widget-header .ui-state-error {
+        border-color: #e62a10;
     }
 }
