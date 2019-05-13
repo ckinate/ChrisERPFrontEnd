@@ -56,7 +56,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
         }
 
         // Element.matches() -> https://developer.mozilla.org/en-US/docs/Web/API/Element/matches
-        if (this.selectorMatches(target, '.ripplelink, .ui-button')) {
+        if (this.selectorMatches(target, '.ripplelink, .ui-button, .ui-listbox-item, .ui-multiselect-item, .ui-fieldset-toggler')) {
           const element = target;
           this.rippleEffect(element, e);
           break;

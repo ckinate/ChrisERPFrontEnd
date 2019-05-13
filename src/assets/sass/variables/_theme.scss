@@ -1,33 +1,5 @@
-/* Common */
-$fontSize:14px;
-$fontFamily:"Roboto","Helvetica Neue",sans-serif;
-$lineHeight:1.5em;
-$textColor:#424242;
-$textSecondaryColor:#757575;
-$borderRadius:3px;
-$dividerColor:#eaeaea;
-$dividerLightColor:#f8f8f8;
-$iconWidth:20px;
-$iconHeight:20px;
-$iconFontSize:20px;
-$grayBgColor:#757575;
-$hoverBgColor:#e8e8e8;
-$hoverTextColor:#000000;
-$transitionDuration:.3s;
+@import './common';
 
-/* Layout */
-$bodyBgColor:#fcfbfb;
-$menuItemHoverBgColor:#e8e8e8;
-$menuitemColor:#757575;
-$footerBgColor:#ffffff;
-
-/* Topbar */
-$topbarSubmenuBgColor:#f7f7f7;
-$topbarSubmenuItemHoverBgColor:#e3e3e3;
-
-/******************************/
-/*           THEME            */
-/******************************/
 $headerPadding:.714em 1em;
 $headerTextColor:#ffffff;
 $headerFontWeight:500;
@@ -71,8 +43,6 @@ $accordionHeaderHoverTextColor:#ffffff;
 $panelContentLineHeight:1.5;
 
 $buttonTextColor:$primaryTextColor;
-
-$listItemPadding:.571em .857em;
 
 $radioButtonBorderColor:#757575;
 $checkboxBorderColor:#757575;
