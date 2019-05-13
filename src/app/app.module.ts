@@ -73,7 +73,12 @@ import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 
-import {AppComponent} from './app.component';
+import { AppComponent} from './app.component';
+import { AppMainComponent } from './app.main.component';
+import { AppNotfoundComponent } from './pages/app.notfound.component';
+import { AppErrorComponent } from './pages/app.error.component';
+import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
+import { AppLoginComponent } from './pages/app.login.component';
 import {AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
 import {AppSideBarComponent} from './app.sidebar.component';
 import {AppSidebartabcontentComponent} from './app.sidebartabcontent.component';
@@ -175,6 +180,7 @@ import {NodeService} from './demo/service/nodeservice';
     ],
     declarations: [
         AppComponent,
+        AppMainComponent,
         AppMenuComponent,
         AppSubMenuComponent,
         AppSideBarComponent,
@@ -195,7 +201,11 @@ import {NodeService} from './demo/service/nodeservice';
         EmptyDemoComponent,
         FileDemoComponent,
         UtilsDemoComponent,
-        DocumentationComponent
+        DocumentationComponent,
+        AppNotfoundComponent,
+        AppErrorComponent,
+        AppAccessdeniedComponent,
+        AppLoginComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

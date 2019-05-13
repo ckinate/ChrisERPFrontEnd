@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AppComponent} from './app.component';
+import {AppMainComponent} from './app.main.component';
 
 @Component({
     selector: 'app-sidebar',
@@ -7,6 +7,6 @@ import {AppComponent} from './app.component';
 })
 export class AppSideBarComponent {
 
-    constructor(public app: AppComponent) {}
+    constructor(public app: AppMainComponent) {}
 
 }
