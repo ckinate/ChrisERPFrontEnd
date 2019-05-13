@@ -1,4 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 import {CarService} from '../service/carservice';
 import {NodeService} from '../service/nodeservice';
 import {EventService} from '../service/eventservice';
@@ -199,13 +202,13 @@ export class DataDemoComponent implements OnInit {
         ];
 
         this.fullcalendarOptions = {
+            plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
             defaultDate: '2016-01-12',
             header: {
-                left: 'prev,next',
+                left: 'prev,next, today',
                 center: 'title',
-                right: 'month,agendaWeek,agendaDay'
-            },
-            editable: true
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }
         };
 
         this.data = [{
