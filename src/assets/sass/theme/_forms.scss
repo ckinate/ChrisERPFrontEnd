@@ -846,6 +846,7 @@ body {
         .ui-dropdown-label {
             background: none;
             &.ui-inputtext {
+                color: $textColor;
                 font-family: $fontFamily;
             }
         }
