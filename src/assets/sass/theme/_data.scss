@@ -350,7 +350,7 @@ body {
                 margin: -4px 0 0 0;
                 color: $textSecondaryColor;
 
-                &.ui-icon-carat-2-n-s {
+                &.#{$iconPrefix}-carat-2-n-s {
                     margin-left: 4px;
                 }
             }
@@ -366,7 +366,7 @@ body {
                 color: $accentTextColor;
                 border-top-color: $accentColor;
 
-                .ui-icon {
+                .#{$iconPrefix} {
                     color: $accentTextColor;
                 }
 
@@ -769,7 +769,7 @@ body {
                 margin: -4px 0 0 0;
                 color: $textSecondaryColor;
 
-                &.ui-icon-carat-2-n-s {
+                &.#{$iconPrefix}-carat-2-n-s {
                     margin-left: 4px;
                 }
             }
@@ -785,7 +785,7 @@ body {
                 color: $accentTextColor;
                 border-top-color: $accentColor;
 
-                .ui-icon {
+                .#{$iconPrefix} {
                     color: $accentTextColor;
                 }
 
