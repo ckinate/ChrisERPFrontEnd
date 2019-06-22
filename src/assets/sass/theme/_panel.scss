@@ -184,15 +184,19 @@ body {
 
                 &.ui-state-active {
                     background-color: transparent;
-                    border-color: $primaryColor;
+                    border-color: $accentColor;
                     border-style: solid;
 
                     a {
-                        color: $textColor;
+                        color: $primaryColor;
+                    }
+
+                    .ui-tabview-left-icon, .ui-tabview-right-icon {
+                        color: $primaryColor;
                     }
 
                     > .pi-times {
-                        color: $primaryColor;
+                        color: $accentColor;
                     }
                 }
 
