@@ -59,6 +59,19 @@ body {
             -webkit-transition: $transitionDuration ease all;
         }
 
+        &.md-inputfield-fill {
+            input {
+                background-color: $textboxBgColor;
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-top: 4px;
+            }
+
+            label {
+                top: 2px;
+            }
+        }
+
         input:focus ~ label,
         input.ui-state-filled ~ label,
         .ui-inputwrapper-focus ~ label,
@@ -85,19 +98,6 @@ body {
                 margin: 0px;
                 color: $inputErrorTextColor;
                 font-size: $errorMessageFontSize;
-            }
-        }
-
-        &.md-inputfield-fill {
-            input {
-                background-color: $textboxBgColor;
-                padding-left: 4px;
-                padding-right: 4px;
-                padding-top: 4px;
-            }
-
-            label {
-                top: 2px;
             }
         }
 
