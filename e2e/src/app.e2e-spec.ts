@@ -1,11 +1,11 @@
-import { BarcelonaPage } from './app.po';
+import {BarcelonaPage} from './app.po';
 
-describe('BarcelonaPage', function() {
-  let page: BarcelonaPage;
+describe('BarcelonaPage', () => {
+    let page: BarcelonaPage;
 
-  beforeEach(() => {
-    page = new BarcelonaPage();
-  });
+    beforeEach(() => {
+        page = new BarcelonaPage();
+    });
 
     it('should display welcome message', () => {
         page.navigateTo();

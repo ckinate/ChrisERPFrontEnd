@@ -123,8 +123,8 @@ export class AppMenuComponent implements OnInit {
     }
 
     changeTheme(theme) {
-        const themeLink: HTMLLinkElement = <HTMLLinkElement> document.getElementById('theme-css');
-        const layoutLink: HTMLLinkElement = <HTMLLinkElement> document.getElementById('layout-css');
+        const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement ;
+        const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement ;
 
         themeLink.href = 'assets/theme/theme-' + theme + '.css';
         layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
@@ -204,7 +204,7 @@ export class AppSubMenuComponent {
 
         // execute command
         if (item.command) {
-            item.command({originalEvent: event, item: item});
+            item.command({originalEvent: event, item});
         }
 
         // prevent hash change
