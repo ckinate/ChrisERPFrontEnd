@@ -1,6 +1,6 @@
 {
     "name": "barcelona",
-    "version": "7.1.2-SNAPSHOT",
+    "version": "8.0.0",
     "license": "PrimeNG Commercial",
     "scripts": {
         "ng": "ng",
