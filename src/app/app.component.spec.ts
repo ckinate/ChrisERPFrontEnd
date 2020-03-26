@@ -9,12 +9,11 @@ import { AppSideBarComponent } from './app.sidebar.component';
 import { AppFooterComponent } from './app.footer.component';
 import {AppSidebartabcontentComponent} from './app.sidebartabcontent.component';
 import { AppMenuComponent } from './app.menu.component';
-import { ScrollPanelModule } from 'primeng/primeng';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-        imports: [ RouterTestingModule, ScrollPanelModule ],
+        imports: [ RouterTestingModule ],
         declarations: [ AppComponent,
             AppMainComponent,
                 AppTopbarComponent,
