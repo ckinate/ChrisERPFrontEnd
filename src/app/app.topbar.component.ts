@@ -11,7 +11,9 @@ import {AppMainComponent} from './app.main.component';
                 </a>
             </div>
 
-            <img src="assets/layout/images/logo-text.svg" class="app-name"/>
+			<a href="#">
+                <img src="assets/layout/images/logo-text.svg" class="app-name"/>
+            </a>
 
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
                 <i class="material-icons">menu</i>
