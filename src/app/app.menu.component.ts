@@ -121,14 +121,18 @@ export class AppMenuComponent implements OnInit {
     }
 
     changeTheme(theme) {
-        const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement ;
-        const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement ;
+        this.changeStyleSheetsColor('theme-css', 'theme-' + theme + '.css');
+        this.changeStyleSheetsColor('layout-css', 'layout-' + theme + '.css');
+    }
 
-        const themeHref = 'assets/theme/theme-' + theme + '.css';
-        this.replaceLink(themeLink, themeHref);
+    changeStyleSheetsColor(id, value) {
+        const element = document.getElementById(id);
+        const urlTokens = element.getAttribute('href').split('/');
+        urlTokens[urlTokens.length - 1] = value;
 
-        const layoutHref = 'assets/layout/css/layout-' + theme + '.css';
-        this.replaceLink(layoutLink, layoutHref);
+        const newURL = urlTokens.join('/');
+
+        this.replaceLink(element, newURL);
     }
 
     isIE() {
