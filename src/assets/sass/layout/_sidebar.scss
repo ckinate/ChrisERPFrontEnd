@@ -165,37 +165,12 @@
                     .layout-submenu-content {
                         padding: 8px 0;
                         height: 100%;
-                        overflow: visible;
-
-                        .ui-scrollpanel {
-                          background: transparent;
-                          border-radius: 0;
-                          border: none;
-
-                          .ui-scrollpanel-bar-y {
-                            background-color: #aaa;
-                            opacity: 0.4;
-                          }
-                          .ui-scrollpanel-hidden {
-                            display: block;
-                            visibility: hidden;
-                          }
-                            .ui-scrollpanel-content {
-                                overflow-x: hidden;
-                            }
-                          .menu-scroll-content {
-                                width: 268px;
-                              padding-bottom: 170px;
-                              padding-right: 22px;
-                              .navigation-menu {
-                                  width: 268px;
-                              }
-                          }
-                        }
+                        overflow: auto;
 
                         .navigation-menu {
                             margin: 0;
                             padding: 0;
+                            padding-bottom: 150px;
                             list-style-type: none;
 
 

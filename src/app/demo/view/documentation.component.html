@@ -3,18 +3,21 @@
         <div class="card docs">
 
             <h1>Current Version</h1>
-            <p>Angular 8 and PrimeNG 8</p>
+            <p>Angular 9 and PrimeNG 9</p>
+
+            <h1>Dependencies</h1>
+            <p>Barcelona has no direct dependency. More information about dependencies is available at <a href="https://www.primefaces.org/why-primeng-templates/">Why PrimeNG Templates</a> article.</p>
 
             <h1>Getting Started</h1>
             <p>Barcelona is a true native application template for Angular and is distributed as a CLI project. If you don't have CLI installed already run the following commands to set it up. In case
             you have an application that do not use CLI, skip the <a href="#noncli">Integration with an Existing Non CLI Application</a> part.</p>
-<pre>
+<pre class="doc-command">
 npm install -g @angular/cli
 </pre>
 
             <p>Once CLI is ready in your system, extract the contents of the Barcelona zip file distribution, cd to the directory,
             install the libraries from npm and then execute "ng serve" to run the application in your local environment at http://localhost:4200/.</p>
-<pre>
+<pre class="doc-command">
 cd barcelona
 npm install
 ng serve
@@ -24,7 +27,7 @@ ng serve
 
             <h1>Important CLI Commands</h1>
             <p>Following commands are derived from CLI.</p>
-<pre>
+<pre class="doc-command">
 Run 'ng serve' for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run 'ng generate component component-name' to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
@@ -48,6 +51,7 @@ Run 'ng help' for more options.
                 the main template. The component class app.component.ts implements the logic such as opening menus, layout modes and so on.
             </p>
 <pre>
+<code class="language-markup" pCode>
 &lt;div class="layout-wrapper" [ngClass]="&#123;'layout-wrapper-menu-active':sidebarActive,
                                         'layout-overlay-menu':overlay&#125;"&gt;
 
@@ -64,6 +68,7 @@ Run 'ng help' for more options.
     &lt;/div&gt;
 
 &lt;/div&gt;
+</code>
 </pre>
 
             <h1>Sidebar</h1>
@@ -72,37 +77,46 @@ Run 'ng help' for more options.
 
             <h1>Menu</h1>
             <p>Menu is a separate component defined in app.menu.component.ts file based on PrimeNG MenuModel API. In order to define the menuitems,
-            navigate to app.menu.component.ts and define your own model. Here is the menu component from the sample application. The helper
-            app-submenu component is also available in the same file. Behavior and the UI of the menu can be fully customized within this component.</p>
+            navigate to app.menu.component.ts and define your own model. Here is the menu component from the sample application.</p>
+
+<div style="height:400px;overflow: auto;">
 <pre>
+<code class="language-javascript" pCode>
+import &#123;Component, OnInit&#125; from '@angular/core';
+import &#123;AppMainComponent&#125; from './app.main.component';
+
 @Component(&#123;
     selector: 'app-menu',
     template: `
-        &lt;ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true"&gt;&lt;/ul&gt;
+        &lt;div class=&quot;menu-scroll-content&quot;&gt;
+			&lt;ul class=&quot;navigation-menu&quot;&gt;
+				&lt;li app-menuitem *ngFor=&quot;let item of model; let i = index;&quot; [item]=&quot;item&quot; [index]=&quot;i&quot; [root]=&quot;true&quot;&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+        &lt;/div&gt;
     `
 &#125;)
 export class AppMenuComponent implements OnInit &#123;
 
-    private model: any[];
+    public model: any[];
 
-    constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent) &#123;&#125;
+    constructor(public app: AppMainComponent) &#123;&#125;
 
     ngOnInit() &#123;
         this.model = [
             &#123;label: 'Dashboard', icon: 'dashboard', routerLink: ['/']&#125;,
             &#123;
-                label: 'Themes', icon: 'palette',
+                label: 'Themes', icon: 'palette', badge: '5',
                 items: [
-                    &#123;label: 'Blue - Amber', icon: 'brush', command: (event) => &#123;this.changeTheme('blue')&#125;&#125;,
-                    &#123;label: 'Teal - Amber', icon: 'brush', command: (event) => &#123;this.changeTheme('teal')&#125;&#125;,
-                    &#123;label: 'Blue Grey - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('blue-grey')&#125;&#125;,
-                    &#123;label: 'Cyan - Yellow', icon: 'brush', command: (event) => &#123;this.changeTheme('cyan')&#125;&#125;,
-                    &#123;label: 'Dark - Blue', icon: 'brush', command: (event) => &#123;this.changeTheme('dark-blue')&#125;&#125;,
-                    &#123;label: 'Dark - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('dark-green')&#125;&#125;,
-                    &#123;label: 'Light Blue - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('light-blue')&#125;&#125;,
-                    &#123;label: 'Indio - Cyan', icon: 'brush', command: (event) => &#123;this.changeTheme('indigo')&#125;&#125;,
-                    &#123;label: 'Deep Purple - Pink', icon: 'brush', command: (event) => &#123;this.changeTheme('deep-purple')&#125;&#125;,
-                    &#123;label: 'Green - Yellow', icon: 'brush', command: (event) => &#123;this.changeTheme('green')&#125;&#125;
+                    &#123;label: 'Blue - Amber', icon: 'brush', command: (event) => &#123;this.changeTheme('blue'); &#125;&#125;,
+                    &#123;label: 'Teal - Amber', icon: 'brush', command: (event) => &#123;this.changeTheme('teal'); &#125;&#125;,
+                    &#123;label: 'Blue Grey - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('blue-grey'); &#125;&#125;,
+                    &#123;label: 'Cyan - Yellow', icon: 'brush', command: (event) => &#123;this.changeTheme('cyan'); &#125;&#125;,
+                    &#123;label: 'Dark - Blue', icon: 'brush', command: (event) => &#123;this.changeTheme('dark-blue'); &#125;&#125;,
+                    &#123;label: 'Dark - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('dark-green'); &#125;&#125;,
+                    &#123;label: 'Light Blue - Green', icon: 'brush', command: (event) => &#123;this.changeTheme('light-blue'); &#125;&#125;,
+                    &#123;label: 'Indio - Cyan', icon: 'brush', command: (event) => &#123;this.changeTheme('indigo'); &#125;&#125;,
+                    &#123;label: 'Deep Purple - Pink', icon: 'brush', command: (event) => &#123;this.changeTheme('deep-purple'); &#125;&#125;,
+                    &#123;label: 'Green - Yellow', icon: 'brush', command: (event) => &#123;this.changeTheme('green'); &#125;&#125;
                 ]
             &#125;,
             &#123;
@@ -115,29 +129,29 @@ export class AppMenuComponent implements OnInit &#123;
                 ]
             &#125;,
             &#123;
-                label: 'Components', icon: 'list',
+                label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge', routerLink: ['/components'],
                 items: [
-                    &#123;label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/sample']&#125;,
-                    &#123;label: 'Forms', icon: 'input', routerLink: ['/forms']&#125;,
-                    &#123;label: 'Data', icon: 'grid_on', routerLink: ['/data']&#125;,
-                    &#123;label: 'Panels', icon: 'content_paste', routerLink: ['/panels']&#125;,
-                    &#123;label: 'Overlays', icon: 'content_copy', routerLink: ['/overlays']&#125;,
-                    &#123;label: 'Menus', icon: 'menu', routerLink: ['/menus']&#125;,
-                    &#123;label: 'Messages', icon: 'message', routerLink: ['/messages']&#125;,
-                    &#123;label: 'Charts', icon: 'insert_chart', routerLink: ['/charts']&#125;,
-                    &#123;label: 'File', icon: 'attach_file', routerLink: ['/file']&#125;,
-                    &#123;label: 'Misc', icon: 'toys', routerLink: ['/misc']&#125;
+                    &#123;label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/components/sample']&#125;,
+                    &#123;label: 'Forms', icon: 'input', routerLink: ['/components/forms']&#125;,
+                    &#123;label: 'Data', icon: 'grid_on', routerLink: ['/components/data']&#125;,
+                    &#123;label: 'Panels', icon: 'content_paste', routerLink: ['/components/panels']&#125;,
+                    &#123;label: 'Overlays', icon: 'content_copy', routerLink: ['/components/overlays']&#125;,
+                    &#123;label: 'Menus', icon: 'menu', routerLink: ['/components/menus']&#125;,
+                    &#123;label: 'Messages', icon: 'message', routerLink: ['/components/messages']&#125;,
+                    &#123;label: 'Charts', icon: 'insert_chart', routerLink: ['/components/charts']&#125;,
+                    &#123;label: 'File', icon: 'attach_file', routerLink: ['/components/file']&#125;,
+                    &#123;label: 'Misc', icon: 'toys', routerLink: ['/components/misc']&#125;
                 ]
             &#125;,
             &#123;
-                label: 'Template Pages', icon: 'get_app',
+                label: 'Template Pages', icon: 'get_app', routerLink: ['/pages'],
                 items: [
-                    &#123;label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/empty']&#125;,
+                    &#123;label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/pages/empty']&#125;,
                     &#123;label: 'Landing Page', icon: 'flight_land', url: 'assets/pages/landing.html', target: '_blank'&#125;,
-                    &#123;label: 'Login Page', icon: 'verified_user', url: 'assets/pages/login.html', target: '_blank'&#125;,
-                    &#123;label: 'Error Page', icon: 'error', url: 'assets/pages/error.html', target: '_blank'&#125;,
-                    &#123;label: '404 Page', icon: 'error_outline', url: 'assets/pages/404.html', target: '_blank'&#125;,
-                    &#123;label: 'Access Denied Page', icon: 'security', url: 'assets/pages/access.html', target: '_blank'&#125;
+                    &#123;label: 'Login Page', icon: 'verified_user', routerLink: ['/login'], target: '_blank'&#125;,
+                    &#123;label: 'Error Page', icon: 'error', routerLink: ['/error'], target: '_blank'&#125;,
+                    &#123;label: '404 Page', icon: 'error_outline', routerLink: ['/404'], target: '_blank'&#125;,
+                    &#123;label: 'Access Denied Page', icon: 'security', routerLink: ['/accessdenied'], target: '_blank'&#125;
                 ]
             &#125;,
             &#123;
@@ -189,16 +203,10 @@ export class AppMenuComponent implements OnInit &#123;
             &#123;label: 'Documentation', icon: 'find_in_page', routerLink: ['/documentation']&#125;
         ];
     &#125;
-
-    changeTheme(theme) &#123;
-        let themeLink: HTMLLinkElement = &lt;HTMLLinkElement&gt; document.getElementById('theme-css');
-        let layoutLink: HTMLLinkElement = &lt;HTMLLinkElement&gt; document.getElementById('layout-css');
-
-        themeLink.href = 'assets/theme/theme-' + theme +'.css';
-        layoutLink.href = 'assets/layout/css/layout-' + theme +'.css';
-    &#125;
 &#125;
+</code>
 </pre>
+</div>
 
 
             <h1>Integration with an Existing CLI Project</h1>
@@ -207,7 +215,7 @@ export class AppMenuComponent implements OnInit &#123;
             copy all the components included by app.component.html such as topbar, footer, sidebar and menu.</p>
 
           <p>Install PrimeNG</p>
-<pre>
+<pre class="doc-command">
 npm install primeng@latest --save
 npm install primeicons@latest --save
 </pre>
@@ -215,11 +223,13 @@ npm install primeicons@latest --save
           <p>Add PrimeNG CSS at styles section in angular.json.</p>
 
 <pre>
+<code class="language-json" pCode>
 "styles": [
     "../node_modules/primeng/resources/primeng.min.css",        //required: PrimeNG components
     "node_modules/primeicons/primeicons.css",                   //required: PrimeIcons
     "styles.scss"                                               //your styles and overrides
 ],
+</code>
 </pre>
 
             <p>Last part is adding theme and layout css files, in the CLI app they are defined using link tags in index.html so the demo can switch them on
@@ -262,6 +272,7 @@ npm install primeicons@latest --save
                 relative path of the sass folder in your application.</p>
 
 <pre>
+<code class="language-css" pCode>
 $primaryColor: #1976d2;
 $primaryDarkColor: #0D47A1;
 $primaryLightColor: #2196F3;
@@ -272,17 +283,18 @@ $accentLightColor: #FFECB3;
 $accentTextColor: #000000;
 
 @import '../sass/theme/_theme';
+</code>
 </pre>
 
             <p> An example sass command to compile the css would be;</p>
 
-<pre>
+<pre class="doc-command">
 sass src/assets/theme-myown/theme.scss src/assets/theme-myown/theme.css
 </pre>
 
             <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
             so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
-<pre>
+<pre class="doc-command">
 sass --watch src/:src/ --no-source-map
 </pre>
 
@@ -299,6 +311,7 @@ sass --watch src/:src/ --no-source-map
                 relative path of the sass folder in your application.</p>
 
 <pre>
+<code class="language-css" pCode>
 $primaryColor:#607D8B;
 $primaryLightColor:#90A4AE;
 $primaryTextColor:#CFD8DC;
@@ -315,6 +328,7 @@ $darkSidemenuBgColor:#343434;
 $darkMenuBgColor:#424242;
 
 @import '../../sass/layout/_layout';
+</code>
 </pre>
 
             <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the resources/sass folder in the distribution.</p>
@@ -324,6 +338,7 @@ $darkMenuBgColor:#424242;
 
 <h3>sass/variables/_common.scss</h3>
 <pre>
+<code class="language-css" pCode>
 /******************************/
 /*           Common           */
 /******************************/
@@ -344,10 +359,12 @@ $hoverTextColor:#000000;
 $transitionDuration:.3s;
 
 $listItemPadding:.571em .857em;
+</code>
 </pre>
 
 <h3>sass/variables/_theme.scss</h3>
 <pre>
+<code class="language-css" pCode>
 @import './common';
 
 $headerPadding:.714em 1em;
@@ -409,10 +426,12 @@ $paginatorPadding:.714em 1em;
 //menus
 $menuitemPadding:.571em .857em;
 $menuListPadding: .5em 0;
+</code>
 </pre>
 
 <h3>sass/variables/_layout.scss</h3>
 <pre>
+<code class="language-css" pCode>
 @import './common';
 
 /* Layout */
@@ -425,12 +444,15 @@ $inputBorderColor:#bdbdbd;
 /* Topbar */
 $topbarSubmenuBgColor:#f7f7f7;
 $topbarSubmenuItemHoverBgColor:#e3e3e3;
+</code>
 </pre>
             <h1>Menu Item Badges</h1>
             <p>Badges are numerical indicators of how many items are associated with a link.
                The badge property is value of the badge and badgeStyleClass is style class of the badge.</p>
 <pre>
+<code class="language-json" pCode>
 label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
+</code>
 </pre>
             <p>Barcelona layout has 2 different badge style.There is a default badge which uses the accent color of Barcelona layout. And there is 1 other badge class for menu items.</p>
             <ul>
@@ -451,7 +473,9 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
             <h1>Dark Menu</h1>
             <p>Default color scheme of menu is light and alternative dark mode can be activated by adding layout-menu-dark style class to the sidebar element in app.sidebar.component.html.</p>
 <pre>
+<code class="language-javascript" pCode>
 &lt;div class="layout-sidebar layout-menu-dark"&gt;
+</code>
 </pre>
 
             <h1>Utilities</h1>
@@ -473,6 +497,17 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
             </ul>
 
             <h1>Migration Guide</h1>
+            <h4>8.0.0 to 9.0.0</h4>
+            <p>Angular 9 and PrimeNG 9</p>
+            <ul>
+                <li>Update dependencies with <a href="https://angular.io/cli/update">ng update</a>.</li>
+                <li>Update theme.css and layout.css files.</li>
+                <li>Update app.sidebartabcontent.component.ts</li>
+                <li>Update app.menu.component.ts while retaining your MenuModel.</li>
+                <li>Include app.menuitem.component.ts under app folder and define it app.module.ts with declarations property.</li>
+                <li>Include app.menu.service.ts under app folder and define it app.module.ts with providers property.</li>
+            </ul>
+
             <h4>7.1.1 to 8.0.0</h4>
             <ul>
                 <li>Update your project to Angular 8 with ng update. View the official update guide -<a href="https://update.angular.io/">https://update.angular.io/</a>- for more information.</li>
