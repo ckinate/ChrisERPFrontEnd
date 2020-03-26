@@ -16,7 +16,7 @@ import {ScrollPanel} from 'primeng/primeng';
 })
 export class AppSidebartabcontentComponent implements AfterViewInit {
 
-    @ViewChild('scroller', {static: false}) layoutMenuScrollerViewChild: ScrollPanel;
+    @ViewChild('scroller') layoutMenuScrollerViewChild: ScrollPanel;
 
     ngAfterViewInit() {
       setTimeout(() => {this.layoutMenuScrollerViewChild.moveBar(); }, 100);

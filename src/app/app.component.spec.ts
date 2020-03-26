@@ -8,7 +8,7 @@ import { AppTopbarComponent } from './app.topbar.component';
 import { AppSideBarComponent } from './app.sidebar.component';
 import { AppFooterComponent } from './app.footer.component';
 import {AppSidebartabcontentComponent} from './app.sidebartabcontent.component';
-import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
+import { AppMenuComponent } from './app.menu.component';
 import { ScrollPanelModule } from 'primeng/primeng';
 
 describe('AppComponent', () => {
@@ -21,7 +21,6 @@ describe('AppComponent', () => {
                 AppSideBarComponent,
                 AppSidebartabcontentComponent,
                 AppMenuComponent,
-                AppSubMenuComponent,
                 AppFooterComponent
             ]
     });

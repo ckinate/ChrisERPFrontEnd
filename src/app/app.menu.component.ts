@@ -1,15 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations';
-import {Location} from '@angular/common';
-import {Router} from '@angular/router';
-import {MenuItem} from 'primeng/primeng';
+import {Component, OnInit} from '@angular/core';
 import {AppMainComponent} from './app.main.component';
 
 @Component({
     selector: 'app-menu',
     template: `
         <div class="menu-scroll-content">
-            <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true" parentActive="true"></ul>
+			<ul class="navigation-menu">
+				<li app-menuitem *ngFor="let item of model; let i = index;" [item]="item" [index]="i" [root]="true"></li>
+			</ul>
         </div>
     `
 })
@@ -47,24 +45,24 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge',
+                label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge', routerLink: ['/components'],
                 items: [
-                    {label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/sample']},
-                    {label: 'Forms', icon: 'input', routerLink: ['/forms']},
-                    {label: 'Data', icon: 'grid_on', routerLink: ['/data']},
-                    {label: 'Panels', icon: 'content_paste', routerLink: ['/panels']},
-                    {label: 'Overlays', icon: 'content_copy', routerLink: ['/overlays']},
-                    {label: 'Menus', icon: 'menu', routerLink: ['/menus']},
-                    {label: 'Messages', icon: 'message', routerLink: ['/messages']},
-                    {label: 'Charts', icon: 'insert_chart', routerLink: ['/charts']},
-                    {label: 'File', icon: 'attach_file', routerLink: ['/file']},
-                    {label: 'Misc', icon: 'toys', routerLink: ['/misc']}
+                    {label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/components/sample']},
+                    {label: 'Forms', icon: 'input', routerLink: ['/components/forms']},
+                    {label: 'Data', icon: 'grid_on', routerLink: ['/components/data']},
+                    {label: 'Panels', icon: 'content_paste', routerLink: ['/components/panels']},
+                    {label: 'Overlays', icon: 'content_copy', routerLink: ['/components/overlays']},
+                    {label: 'Menus', icon: 'menu', routerLink: ['/components/menus']},
+                    {label: 'Messages', icon: 'message', routerLink: ['/components/messages']},
+                    {label: 'Charts', icon: 'insert_chart', routerLink: ['/components/charts']},
+                    {label: 'File', icon: 'attach_file', routerLink: ['/components/file']},
+                    {label: 'Misc', icon: 'toys', routerLink: ['/components/misc']}
                 ]
             },
             {
-                label: 'Template Pages', icon: 'get_app',
+                label: 'Template Pages', icon: 'get_app', routerLink: ['/pages'],
                 items: [
-                    {label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/empty']},
+                    {label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/pages/empty']},
                     {label: 'Landing Page', icon: 'flight_land', url: 'assets/pages/landing.html', target: '_blank'},
                     {label: 'Login Page', icon: 'verified_user', routerLink: ['/login'], target: '_blank'},
                     {label: 'Error Page', icon: 'error', routerLink: ['/error'], target: '_blank'},
@@ -126,123 +124,33 @@ export class AppMenuComponent implements OnInit {
         const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement ;
         const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement ;
 
-        themeLink.href = 'assets/theme/theme-' + theme + '.css';
-        layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
-    }
-}
+        const themeHref = 'assets/theme/theme-' + theme + '.css';
+        this.replaceLink(themeLink, themeHref);
 
-@Component({
-    /* tslint:disable:component-selector */
-    selector: '[app-submenu]',
-    /* tslint:enable:component-selector */
-    template: `
-        <ng-template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
-            <li [ngClass]="{'active-menuitem': isActive(i)}" [class]="child.badgeStyleClass" *ngIf="child.visible === false ? false : true">
-                <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" class="ripplelink"
-                   *ngIf="!child.routerLink" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
-                    (mouseenter)="hover=true" (mouseleave)="hover=false">
-                    <i class="material-icons">{{child.icon}}</i>
-                    <span>{{child.label}}</span>
-                    <span class="ink" *ngIf="hover"></span>
-                    <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
-                    <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
-                </a>
-
-                <a (click)="itemClick($event,child,i)" class="ripplelink" *ngIf="child.routerLink"
-                    [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink"
-                   [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
-                    (mouseenter)="hover=true" (mouseleave)="hover=false">
-                    <i class="material-icons">{{child.icon}}</i>
-                    <span>{{child.label}}</span>
-                    <span class="ink" *ngIf="hover"></span>
-                    <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
-                    <i class="material-icons" *ngIf="child.items">keyboard_arrow_down</i>
-                </a>
-                <ul app-submenu [item]="child" *ngIf="child.items" [parentActive]="isActive(i)" [@children]="isActive(i) ?
-                'visible' : 'hidden'" [visible]="isActive(i)"></ul>
-            </li>
-        </ng-template>
-    `,
-    animations: [
-        trigger('children', [
-            state('hidden', style({
-                height: '0px'
-            })),
-            state('visible', style({
-                height: '*'
-            })),
-            transition('visible => hidden', animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')),
-            transition('hidden => visible', animate('400ms cubic-bezier(0.86, 0, 0.07, 1)'))
-        ])
-    ]
-})
-export class AppSubMenuComponent {
-
-    @Input() item: MenuItem;
-
-    @Input() root: boolean;
-
-    @Input() visible: boolean;
-
-    _parentActive: boolean;
-
-    activeIndex: number;
-
-    hover: boolean;
-
-    constructor(public app: AppMainComponent, public router: Router, public location: Location) {}
-
-    itemClick(event: Event, item: MenuItem, index: number) {
-        // avoid processing disabled items
-        if (item.disabled) {
-            event.preventDefault();
-            return true;
-        }
-
-        // activate current item and deactivate active sibling if any
-        this.activeIndex = (this.activeIndex === index) ? null : index;
-
-        // execute command
-        if (item.command) {
-            item.command({originalEvent: event, item});
-        }
-
-        // prevent hash change
-        if (item.items || (!item.url && !item.routerLink)) {
-            event.preventDefault();
-        }
-
-        // hide menu
-        if (!item.items && this.app.overlay) {
-            this.app.sidebarActive = false;
-        }
+        const layoutHref = 'assets/layout/css/layout-' + theme + '.css';
+        this.replaceLink(layoutLink, layoutHref);
     }
 
-    isActive(index: number): boolean {
-        return this.activeIndex === index;
+    isIE() {
+        return /(MSIE|Trident\/|Edge\/)/i.test(window.navigator.userAgent);
     }
 
-    unsubscribe(item: any) {
-        if (item.eventEmitter) {
-            item.eventEmitter.unsubscribe();
-        }
+    replaceLink(linkElement, href) {
+        if (this.isIE()) {
+            linkElement.setAttribute('href', href);
+        } else {
+            const id = linkElement.getAttribute('id');
+            const cloneLinkElement = linkElement.cloneNode(true);
 
-        if (item.items) {
-            for (const childItem of item.items) {
-                this.unsubscribe(childItem);
-            }
-        }
-    }
+            cloneLinkElement.setAttribute('href', href);
+            cloneLinkElement.setAttribute('id', id + '-clone');
 
-    @Input() get parentActive(): boolean {
-        return this._parentActive;
-    }
+            linkElement.parentNode.insertBefore(cloneLinkElement, linkElement.nextSibling);
 
-    set parentActive(val: boolean) {
-        this._parentActive = val;
-
-        if (!this._parentActive) {
-            this.activeIndex = null;
+            cloneLinkElement.addEventListener('load', () => {
+                linkElement.remove();
+                cloneLinkElement.setAttribute('id', id);
+            });
         }
     }
 }
