@@ -35,9 +35,9 @@
     &.pi-times {@include icon-override("close");}
     &.pi-th-large {@include icon-override("view_module");}
     &.pi-search {@include icon-override("search");}
-    &.pi-sort {@include icon-override("sort");}
-    &.pi-sort-up {@include icon-override("keyboard_arrow_up");}
-    &.pi-sort-down {@include icon-override("keyboard_arrow_down");}
+    &.pi-sort-alt {@include icon-override("sort");}
+    &.pi-sort-amount-up-alt {@include icon-override("keyboard_arrow_up");}
+    &.pi-sort-amount-down {@include icon-override("keyboard_arrow_down");}
 }
 
 .#{$iconPrefix}-3d-rotation { @include icon-override("3d_rotation"); }
