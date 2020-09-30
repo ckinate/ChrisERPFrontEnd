@@ -16,7 +16,7 @@ import {AppMainComponent} from './app.main.component';
             </a>
 
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
-                <i class="material-icons">menu</i>
+                <i class="pi pi-bars"></i>
             </a>
 
             <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-visible': app.topbarMenuActive}">
@@ -34,27 +34,27 @@ import {AppMainComponent} from './app.main.component';
                     <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">person</i>
+                                <i class="pi pi-user"></i>
                                 <span>Profile</span>
                                 <span class="topbar-submenuitem-badge">5</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">security</i>
+                                <i class="pi pi-lock"></i>
                                 <span>Privacy</span>
                                 <span class="topbar-submenuitem-badge">2</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">settings_applications</i>
+                                <i class="pi pi-cog"></i>
                                 <span>Settings</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">power_settings_new</i>
+                                <i class="pi pi-sign-out"></i>
                                 <span>Logout</span>
                             </a>
                         </li>
@@ -62,31 +62,31 @@ import {AppMainComponent} from './app.main.component';
                 </li>
                 <li #settings [ngClass]="{'active-topmenuitem':app.activeTopbarItem === settings}">
                     <a href="#" (click)="app.onTopbarItemClick($event,settings)">
-                        <i class="topbar-icon material-icons">settings</i>
+                        <i class="topbar-icon pi pi-cog"></i>
                         <span class="topbar-item-name">Settings</span>
                     </a>
                     <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">palette</i>
+                                <i class="pi pi-palette"></i>
                                 <span>Change Theme</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">favorite_border</i>
+                                <i class="pi pi-heart"></i>
                                 <span>Favorites</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">lock</i>
+                                <i class="pi pi-lock"></i>
                                 <span>Lock Screen</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">wallpaper</i>
+                                <i class="pi pi-image"></i>
                                 <span>Wallpaper</span>
                             </a>
                         </li>
@@ -94,7 +94,7 @@ import {AppMainComponent} from './app.main.component';
                 </li>
                 <li #messages [ngClass]="{'active-topmenuitem':app.activeTopbarItem === messages}">
                     <a href="#" (click)="app.onTopbarItemClick($event,messages)">
-                        <i class="topbar-icon material-icons">message</i>
+                        <i class="topbar-icon pi pi-envelope"></i>
                         <span class="topbar-badge">5</span>
                         <span class="topbar-item-name">Messages</span>
                     </a>
@@ -133,32 +133,32 @@ import {AppMainComponent} from './app.main.component';
                 </li>
                 <li #notifications [ngClass]="{'active-topmenuitem':app.activeTopbarItem === notifications}">
                     <a href="#" (click)="app.onTopbarItemClick($event,notifications)">
-                        <i class="topbar-icon material-icons">timer</i>
+                        <i class="topbar-icon pi pi-clock"></i>
                         <span class="topbar-badge">4</span>
                         <span class="topbar-item-name">Notifications</span>
                     </a>
                     <ul class="fadeInDown">
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">bug_report</i>
+                                <i class="pi pi-sliders-h"></i>
                                 <span>Pending tasks</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">event</i>
+                                <i class="pi pi-calendar"></i>
                                 <span>Meeting today at 3pm</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">file_download</i>
+                                <i class="pi pi-download"></i>
                                 <span>Download documents</span>
                             </a>
                         </li>
                         <li role="menuitem">
                             <a href="#" (click)="app.onTopbarSubItemClick($event)">
-                                <i class="material-icons">flight</i>
+                                <i class="pi pi-ticket"></i>
                                 <span>Book flight</span>
                             </a>
                         </li>
@@ -166,11 +166,10 @@ import {AppMainComponent} from './app.main.component';
                 </li>
                 <li #search class="search-item" [ngClass]="{'active-topmenuitem':app.activeTopbarItem === search}"
                     (click)="app.onTopbarItemClick($event,search)">
-                    <span class="md-inputfield">
-                        <input type="text" pInputText>
-                        <label>Search</label>
-                        <i class="topbar-icon material-icons">search</i>
-                    </span>
+                        <span class="p-input-icon-right">
+                            <input type="text" pInputText placeholder="Search">
+                            <i class="topbar-icon pi pi-search"></i>
+                        </span>
                 </li>
             </ul>
         </div>

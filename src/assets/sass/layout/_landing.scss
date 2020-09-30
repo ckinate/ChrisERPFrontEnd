@@ -1,6 +1,10 @@
 .landing-body {
     .landing-wrapper {
-        #header {            
+        .p-button {
+            box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+        }
+
+        #header {
             .pre-header {
                 background-color: $primaryColor;
                 height: 100px;
@@ -16,40 +20,44 @@
                     margin: 0 auto;
                     padding: 15px 30px;
                     @include border-box-sizing();
-                    
+
                     #menu-button {
                         display: none;
                         color: $primaryTextColor;
                         font-size: 28px;
                         float: right;
-                        margin-top: 14px;
+                        margin-top: 20px;
                         @include transition(color .3s);
-                        
+
                         &:hover {
                             color: $primaryTextHoverColor;
                         }
+
+                        i {
+                            font-size: 30px;
+                        }
                     }
-                    
+
                     .landing-logo {
                         width: 70px;
                         margin-right: 20px;
                     }
-                    
+
                     img {
                         display: inline-block;
                         vertical-align: middle;
                     }
-                    
+
                     #menu {
                         list-style-type: none;
                         float: right;
                         margin: 25px 0 0 0;
                         padding: 0;
-                        
+
                         li {
                             float: left;
                             padding-right: 12px;
-                            
+
                             a {
                                 font-size: 14px;
                                 font-weight: 600;
@@ -57,7 +65,7 @@
                                 color: $primaryTextColor;
                                 border-bottom: 1px solid transparent;
                                 @include transition(border-bottom-color .3s);
-                                
+
                                 &:hover {
                                     border-bottom-color: $primaryTextColor;
                                 }
@@ -66,20 +74,20 @@
                     }
                 }
             }
-            
+
             .header-content {
-                height: 250px; 
+                height: 400px;
                 text-align: center;
                 background: url('../images/landing/landing-main.png') no-repeat $primaryLightColor;
                 background-size: cover;
                 padding: 150px 15px 0 15px;
-                
+
                 h1 {
                     margin: 0;
                     color: #ffffff;
                     font-size: 22px;
                 }
-                
+
                 h2 {
                     margin: 10px 0 0 0;
                     color: #ffffff;
@@ -87,51 +95,51 @@
                     margin-bottom: 50px;
                     @include opacity(.8);
                 }
-                
+
             }
         }
-        
+
         #features {
             background: #f5f5f5;
-            
+
             .features-content {
                 text-align: center;
                 width: 960px;
                 margin: 0 auto;
                 padding: 60px 0;
-                
+
                 h2 {
                     margin: 0 0 60px 0;
                     font-size: 20px;
                     color: #424242;
                 }
-                
+
                 h3 {
                     color: #424242;
                     padding-bottom: 8px;
                     border-bottom: 1px solid #d8d8d8;
                 }
-                
+
                 p {
                     color: #757575;
                     line-height: 1.5;
                 }
-                
+
                 img {
                     height: 90px;
                 }
             }
         }
-        
+
         #showcase {
             background: #424242;
-            
+
             .showcase-header {
                 background: #424242;
                 width: 960px;
                 margin: 0 auto;
                 padding: 20px 0;
-                
+
                 .showcase-title {
                     color: #ffffff;
                     margin-bottom: 5px;
@@ -139,35 +147,35 @@
                     font-weight: 700;
                     font-size: 16px;
                 }
-                
+
                 .showcase-description {
                     color: #bdbdbd;
                     display: block;
                 }
-                
-                .ui-g-12:last-child {
+
+                .p-col-12:last-child {
                     text-align: right;
-                    
-                    .ui-button {
+
+                    .p-button {
                         display: inline-block;
                         margin-top: 5px;
                     }
                 }
             }
         }
-        
+
         #showcase-content-wrapper {
             background-color: #f5f5f5;
             position: relative;
             height: 530px;
             overflow: hidden;
-            
+
             .showcase-content {
                 width: 960px;
                 margin: 0 auto;
                 padding: 200px 0 0 100px;
                 @include border-box-sizing();
-                
+
                 h2 {
                     margin: 0;
                     padding: 0;
@@ -175,14 +183,14 @@
                     font-size: 22px;
                     margin: 0 auto;
                 }
-                
+
                 p {
                     color: #757575;
                     width: 400px;
                     line-height: 1.5;
                 }
             }
-            
+
             img {
                 position: absolute;
                 right: 0px;
@@ -190,7 +198,7 @@
                 width: 600px;
             }
         }
-        
+
         #pricing {
             background-color: #ffffff;
             -webkit-box-shadow: inset 0 4px 22px 0 rgba(0, 0, 0, 0.14);
@@ -202,78 +210,78 @@
                 width: 960px;
                 margin: 0 auto;
                 padding: 60px 0;
-                
+
                 h2 {
                     margin: 0 0 60px 0;
                     font-size: 20px;
                     color: #424242;
                 }
-                
+
                 .pricing-box {
                     display: inline-block;
                     vertical-align: top;
                     width: 460px;
-                    
+
                     .pricing-header {
                         font-size: 18px;
                         padding: 24px 18px;
-                        
+
                         h3 {
                             margin: 0;
                         }
-                        
+
                         p {
                             margin: 0;
                         }
-                        
-                        .ui-g-6:first-child {
+
+                        .p-col-6:first-child {
                             text-align: left;
                         }
-                        
-                        .ui-g-6:last-child {
+
+                        .p-col-6:last-child {
                             text-align: right;
                         }
                     }
-                    
+
                     .pricing-features {
                         min-height: 200px;
                         @include border-box-sizing();
                     }
-                    
+
                     .pricing-footer {
                         padding: 10px;
-                        
+
                         a {
                             @include transition(color .3s);
                         }
                     }
-                    
+
                     &.pricing-basic {
                         -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
                         -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
                         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-                                            
+
                         .pricing-header {
                             background-color: #ffffff;
-                            
+
                             h3 {
                                 color: #424242;
                             }
-                            
+
                             p {
                                 color: #bdbdbd;
                             }
                         }
-                        
+
                         .pricing-features {
                             background-color: #f5f5f5;
                             padding: 20px;
-                            
-                            .ui-g-12 {
+
+                            .p-col-12 {
                                 padding: 24px;
                                 text-align: left;
                             }
-                            
+
                             .pricing-feature-icon {
                                 background-color: $primaryLightColor;
                                 width: 32px;
@@ -284,58 +292,58 @@
                                 color: $primaryTextColor;
                                 @include border-radius(50%);
                                 margin-right: 8px;
-                                
+
                                 i {
                                     line-height: inherit;
                                 }
                             }
-                            
+
                             .pricing-feature-text {
                                 color: #2d353c;
                             }
                         }
-                        
+
                         .pricing-footer {
                             background-color: $primaryColor;
-                            
+
                             a {
                                 color: $primaryTextColor;
-                                
+
                                 &:hover {
                                     color: $primaryTextHoverColor;
-                                } 
+                                }
                             }
                         }
                     }
-                    
+
                     &.pricing-pro {
                         margin-left: 10px;
                         z-index: 2;
                         -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
                         -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
                         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-                                            
+
                         .pricing-header {
                             background-color: #000000;
-                            
+
                             h3 {
                                 color: #ffffff;
                             }
-                            
+
                             p {
                                 color: #bdbdbd;
                             }
                         }
-                        
+
                         .pricing-features {
                             background-color: #757575;
                             padding: 20px;
-                            
-                            .ui-g-12 {
+
+                            .p-col-12 {
                                 padding: 10px;
                                 text-align: left;
                             }
-                            
+
                             .pricing-feature-icon {
                                 background-color: #ffffff;
                                 width: 32px;
@@ -346,43 +354,43 @@
                                 color: #424242;
                                 @include border-radius(50%);
                                 margin-right: 8px;
-                                
+
                                 i {
                                     line-height: inherit;
                                 }
                             }
-                            
+
                             .pricing-feature-text {
                                 color: #ffffff;
                             }
                         }
-                        
-                        
+
+
                         .pricing-footer {
                             background-color: #ffffff;
-                            
+
                             a {
                                 color: #424242;
-                                
+
                                 &:hover {
                                     color: #757575;
-                                } 
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        
+
         #video {
             background-color: $primaryLightColor;
-            
+
             .video-content {
                 text-align: center;
                 width: 960px;
                 margin: 0 auto;
                 padding: 60px 0;
-                
+
                 h2 {
                     margin: 0 0 40px 0;
                     font-size: 20px;
@@ -390,36 +398,36 @@
                 }
             }
         }
-        
+
         #footer {
             background-color: #f5f5f5;
-            
+
             .footer-content {
                 width: 960px;
                 margin: 0 auto;
                 color: #424242;
                 padding: 30px;
                 @include border-box-sizing();
-                
+
                 img {
                     width: 30px;
                     display: block;
                     margin-bottom: 5px;
                 }
-                
+
                 div {
                     display: inline-block;
                 }
-                
+
                 .footer-left {
                     float:left;
                 }
-                
+
                 .footer-right {
                     float:right;
                     font-size: 24px;
                     margin-top: 6px;
-                    
+
                     a {
                         color: #424242;
                         margin-left: 24px;
@@ -427,23 +435,23 @@
                 }
             }
         }
-    }        
+    }
 }
 
 @media (max-width: 1024px) {
-    
+
     .landing-body {
-        
+
         .landing-wrapper {
-            #header {            
+            #header {
                 .pre-header {
                     .pre-header-content {
                         width: 100%;
-                        
+
                         #menu-button {
                             display: block;
                         }
-                        
+
                         #menu {
                             z-index: 100;
                             position: absolute;
@@ -462,12 +470,12 @@
                             -webkit-animation-duration: .5s;
                             -moz-animation-duration: .5s;
                             animation-duration: .5s;
-                                
+
                             li {
                                 float: none;
                                 margin-left: 0;
                                 padding-right: 0;
-                                
+
                                 a {
                                     font-size: 16px;
                                     display: block;
@@ -477,13 +485,13 @@
                                     overflow: hidden;
                                     @include border-box-sizing();
                                     @include transition(background-color .3s);
-                                                            
+
                                     &:hover {
                                         background-color: #e8e8e8;
                                     }
                                 }
                             }
-                            
+
                             &.lmenu-active {
                                 display: block;
                             }
@@ -491,69 +499,69 @@
                     }
                 }
             }
-            
+
             #features {
                 .features-content {
                     width: 100%;
                 }
             }
-            
+
             #showcase {
                 .showcase-header {
                     width: 100%;
                 }
             }
-            
-            #showcase-content-wrapper { 
-                height: 350px;              
+
+            #showcase-content-wrapper {
+                height: 350px;
                 .showcase-content {
                     width: 100%;
                     text-align: center;
                     padding: 60px 15px 0px 15px;
-                    
+
                     p {
                         width: auto;
                     }
                 }
-                
+
                 img {
                     position: absolute;
                     right: 0px;
                     top: 200px;
                     width: 200px;
                 }
-                
+
             }
-            
+
             #pricing {
                 .pricing-content {
                     width: 100%;
-                    
+
                     .pricing-box {
                         width: 100%;
-                        
+
                         &.pricing-basic {
                             margin-bottom: 36px;
                         }
-                        
+
                         &.pricing-pro {
                             margin-left: 0;
                         }
                     }
                 }
             }
-            
+
             #video {
                 .video-content {
                     width: 100%;
-                    
+
                     iframe {
                         width: 350px;
                         height: 220px;
                     }
                 }
             }
-            
+
             #footer {
                 .footer-content {
                     width: 100%;

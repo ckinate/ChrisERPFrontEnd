@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    font-size: $fontSize;
 }
 
 body {
@@ -18,5 +19,6 @@ body {
 
     a {
         text-decoration: none;
+        color: $primaryColor;
     }
 }

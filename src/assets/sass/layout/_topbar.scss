@@ -50,6 +50,7 @@
                 float: right;
                 position: relative;
                 margin-left: 1em;
+                margin-top: 2px;
 
                 > a {
                     position: relative;
@@ -128,42 +129,17 @@
                     position: relative;
                     color: #ffffff;
                     overflow: hidden;
-                    padding-top: 3px;
-
-                    i {
-                        position: absolute;
-                        right: 6px;
-                        top: -2px;
-                        color: $primaryTextColor;
-                    }
+                    margin-top: 0;
 
                     input {
-                        color: #ffffff;
-                        padding: 2px;
+                        padding: 6px;
                         padding-right: 20px;
-                        background-color: transparent;
-                        background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, lighten($primaryColor,25%),  lighten($primaryColor,25%));
-                        border-width: 0;
-
-                        &.ui-state-hover, &.ui-state-focus {
-                            border-color: #ffffff;
-                        }
-
-                        &.ui-state-focus {
-                            &+i {
-                                color: #ffffff;
-                            }
-                        }
-                    }
-
-                    label {
-                        color: $primaryTextColor;
                     }
                 }
 
                 > ul {
                     position: absolute;
-                    top: 45px;
+                    top: 42px;
                     right: 5px;
                     display: none;
                     width: 250px;
@@ -185,6 +161,7 @@
 
                         i {
                             margin-right: 8px;
+                            font-size: 16px;
                         }
 
                         img {

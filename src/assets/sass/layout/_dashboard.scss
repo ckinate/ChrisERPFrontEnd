@@ -67,11 +67,11 @@
     .task-list {
         overflow: hidden;
 
-        > .ui-panel {
+        > .p-panel {
             min-height: 360px;
         }
 
-        .ui-panel-content {
+        .p-panel-content {
             padding: 0px !important;
         }
 
@@ -89,7 +89,7 @@
                 }
             }
 
-            .ui-chkbox {
+            .p-checkbox {
                 vertical-align: middle;
                 margin-right: 5px;
             }
@@ -109,27 +109,23 @@
     .contact-form {
         overflow: hidden;
 
-        .ui-panel {
+        .p-panel {
             min-height: 360px;
         }
 
-        .ui-g-12 {
+        .p-col-12 {
             padding: 20px 10px;
-        }
-
-        .ui-button {
-            margin-top: 20px;
         }
     }
 
     .contacts {
         overflow: hidden;
 
-        > .ui-panel {
+        > .p-panel {
             min-height: 360px;
         }
 
-        .ui-panel-content{
+        .p-panel-content{
             padding: 0px !important;
         }
 
@@ -219,7 +215,11 @@
             font-size: 13px;
         }
 
-        .ui-g-12 {
+        .p-panel-title {
+            width: 100%;
+        }
+
+        .p-col-12 {
             padding: 20px;
 
             span {
@@ -268,40 +268,21 @@
 
         li {
             border-bottom: 1px solid $dividerColor;
-            padding: 15px 0 9px 9px;
+            padding: 16px 8px;
 
             .count {
-                display: inline-block;
-                font-size: 24px;
+                font-size: 20px;
                 color: #ffffff;
-                background-color: #03A9F4;
-                font-weight: bold;
-                padding: 6px;
-                @include border-radius(2px);
-            }
-
-            &:first-child {
-                border-top: 1px solid $dividerColor;
-            }
-
-            &:last-child {
-                border: 0;
-            }
-
-            .ui-g-6:first-child {
-                font-size: 18px;
-                padding-left: 0;
-            }
-
-            .ui-g-6:last-child {
-                text-align: right;
-                color: $textSecondaryColor;
+                background-color: #007be5;
+                font-weight: 700;
+                padding: .25em .5em;
+                display: inline-block;
+                border-radius: $borderRadius;
             }
         }
     }
 
     .user-card {
-        border:1px solid #c7c7c7;
         @include border-radius($borderRadius);
 
         .user-card-header {
@@ -322,7 +303,7 @@
                 margin: -40px 0 0 24px;
             }
 
-            .ui-button {
+            .p-button {
                 float: right;
                 width: 48px;
                 height: 48px;
@@ -390,7 +371,7 @@
     }
 
     .chat {
-        .ui-panel-content {
+        .p-panel-content {
             padding: 0 !important;
         }
         ul {
@@ -486,22 +467,22 @@
         height: 100%;
         box-sizing: border-box;
 
-        > .ui-g {
-            .ui-g-3 {
+        > .p-grid {
+            .p-col-3 {
                 font-size: 14px;
                 position: relative;
                 border-right: 1px solid #bdbdbd;
 
                 i {
                     background-color: #ffffff;
-                    font-size: 24px;
+                    font-size: 28px;
                     position: absolute;
                     top: 6px;
-                    right: -12px;
+                    right: -15px;
                 }
             }
 
-            .ui-g-9 {
+            .p-col-9 {
                 padding-left: 1.5em;
                 .event-owner {
 
@@ -523,7 +504,7 @@
         }
     }
 
-    .chart-panel .ui-panel-content {
+    .chart-panel .p-panel-content {
         overflow: auto;
     }
 }

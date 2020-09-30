@@ -41,7 +41,7 @@
                         i {
                             line-height: inherit;
                             @include transition(color .3s);
-                            font-size: 30px;
+                            font-size: 22px;
                         }
 
                         &:hover {
@@ -153,6 +153,7 @@
                             padding: 4px;
                             margin-top: -4px;
                             float: right;
+                            font-size: 20px;
                             @include border-radius(50%);
                             @include transition(background-color .3s);
 
@@ -177,6 +178,8 @@
                             li {
                                 a {
                                     display: block;
+                                    user-select: none;
+                                    cursor: pointer;
                                     padding: 8px 32px 8px 16px;
                                     @include transition(background-color .3s);
 
@@ -184,6 +187,7 @@
                                         margin-right: 8px;
                                         display: inline-block;
                                         vertical-align: middle;
+                                        font-size: 18px;
                                     }
 
                                     span {
@@ -191,8 +195,9 @@
                                         vertical-align: middle;
                                     }
 
-                                    i:last-child {
+                                    i.submenu-toggler {
                                         float: right;
+                                        font-size: 16px;
                                         @include transition(transform .3s);
                                     }
 
@@ -275,7 +280,7 @@
                                     > a {
                                         color: $activeMenuItemTextColor;
 
-                                        i:last-child {
+                                        i.submenu-toggler {
                                             @include rotate(-180deg);
                                         }
                                     }

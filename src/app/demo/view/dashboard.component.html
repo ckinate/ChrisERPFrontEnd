@@ -1,30 +1,30 @@
-<div class="ui-g dashboard">
-    <div class="ui-g-12 ui-md-6 ui-lg-3">
-        <div class="ui-g card overview-box overview-box-1">
+<div class="p-grid dashboard">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="p-grid p-nogutter card overview-box overview-box-1">
             <span class="overview-box-name">Unread Messages</span>
             <span class="overview-box-count">150</span>
             <span class="overview-box-badge">+30%</span>
             <img src="assets/layout/images/dashboard/chart-1.svg" />
         </div>
     </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-3">
-        <div class="ui-g card overview-box overview-box-2">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="p-grid p-nogutter card overview-box overview-box-2">
             <span class="overview-box-name">Check-Ins</span>
             <span class="overview-box-count">532</span>
             <span class="overview-box-badge">+45%</span>
             <img src="assets/layout/images/dashboard/chart-2.svg" />
         </div>
     </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-3">
-        <div class="ui-g card overview-box overview-box-3">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="p-grid p-nogutter card overview-box overview-box-3">
             <span class="overview-box-name">Files Synced</span>
             <span class="overview-box-count">640</span>
             <span class="overview-box-badge">-75%</span>
             <img src="assets/layout/images/dashboard/chart-3.svg" />
         </div>
     </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-3">
-        <div class="ui-g card overview-box overview-box-4">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="p-grid p-nogutter card overview-box overview-box-4">
             <span class="overview-box-name">Users Online</span>
             <span class="overview-box-count">5251</span>
             <span class="overview-box-badge">25%</span>
@@ -32,14 +32,14 @@
         </div>
     </div>
 
-    <div class="ui-g-12 ui-lg-4">
-        <div class="user-card ui-shadow-content">
+    <div class="p-col-12 p-lg-4">
+        <div class="user-card p-shadow-content">
             <div class="user-card-header">
                 <img src="assets/layout/images/dashboard/user-card-header.png"/>
             </div>
             <div class="user-card-content">
                 <img src="assets/layout/images/profile-image.png" />
-                <button pButton id="user-button" type="button" icon="ui-icon-add" (click)="menu.toggle($event)" class="secondary"></button>
+                <button pButton id="user-button" type="button" icon="pi pi-plus" (click)="menu.toggle($event)" class="secondary"></button>
 
                 <p-menu #menu popup="popup" [model]="items"></p-menu>
 
@@ -53,7 +53,7 @@
                          <div class="project-progressbar">
                              <div class="project-progressbar-value" style="width: 50%"></div>
                          </div>
-                         <i class="material-icons">list</i>
+                         <i class="pi pi-list"></i>
                          <span class="project-title">Tasks</span>
                          <span class="project-detail">3 open</span>
                      </li>
@@ -61,7 +61,7 @@
                          <div class="project-progressbar">
                              <div class="project-progressbar-value" style="width: 20%"></div>
                          </div>
-                         <i class="material-icons">attach_money</i>
+                         <i class="pi pi-dollar"></i>
                          <span class="project-title">Revenue</span>
                          <span class="project-detail">+20%</span>
                      </li>
@@ -69,7 +69,7 @@
                          <div class="project-progressbar">
                              <div class="project-progressbar-value" style="width: 65%"></div>
                          </div>
-                         <i class="material-icons">credit_card</i>
+                         <i class="pi pi-money-bill"></i>
                          <span class="project-title">Payments</span>
                          <span class="project-detail">24 new</span>
 
@@ -78,7 +78,7 @@
                          <div class="project-progressbar">
                              <div class="project-progressbar-value" style="width: 80%"></div>
                          </div>
-                         <i class="material-icons">face</i>
+                         <i class="pi pi-briefcase"></i>
                          <span class="project-title">Clients</span>
                          <span class="project-detail">+80%</span>
                      </li>
@@ -88,8 +88,8 @@
         </div>
     </div>
 
-    <div class="ui-g-12 ui-lg-8 chat">
-        <p-panel header="Chat" styleClass="ui-shadow-content">
+    <div class="p-col-12 p-lg-8 chat">
+        <p-panel header="Chat" styleClass="p-shadow-content">
             <ul>
                 <li class="clearfix message-from">
                     <img src="assets/layout/images/avatar2.png"/>
@@ -121,7 +121,7 @@
             </ul>
             <div class="new-message">
                 <div class="message-attachment">
-                    <i class="material-icons">link</i>
+                    <i class="pi pi-paperclip"></i>
                 </div>
                 <div class="message-input">
                     <input type="text" pInputText placeholder="Write a message" />
@@ -130,24 +130,24 @@
         </p-panel>
     </div>
 
-    <div class="ui-g-12 activity-feed">
-        <p-panel header="ACTIVITY FEED" styleClass="ui-shadow-content">
+    <div class="p-col-12 activity-feed">
+        <p-panel header="ACTIVITY FEED" styleClass="p-shadow-content">
             <h3>Last Activity</h3>
             <p>Updated 1 minute ago</p>
-            <div class="ui-g">
-                <div class="ui-g-12 ui-md-3">
+            <div class="p-grid">
+                <div class="p-col-12 p-md-3">
                     <span>INCOME</span>
                     <div class="knob income">$900</div>
                 </div>
-                <div class="ui-g-12 ui-md-3">
+                <div class="p-col-12 p-md-3">
                     <span>TAX</span>
                     <div class="knob tax">$250</div>
                 </div>
-                <div class="ui-g-12 ui-md-3">
+                <div class="p-col-12 p-md-3">
                     <span>INVOICES</span>
                     <div class="knob invoice">$125</div>
                 </div>
-                <div class="ui-g-12 ui-md-3">
+                <div class="p-col-12 p-md-3">
                     <span>EXPENSES</span>
                     <div class="knob expense">$250</div>
                 </div>
@@ -155,83 +155,77 @@
         </p-panel>
     </div>
 
-    <div class="ui-g-12 ui-md-6 ui-lg-4 task-list">
-        <p-panel header="Tasks" styleClass="ui-shadow-content">
+    <div class="p-col-12 p-md-6 p-lg-4 task-list">
+        <p-panel header="Tasks" styleClass="p-shadow-content">
             <ul>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Sales Reports</span>
-                    <i class="material-icons">&#xE8C9;</i>
+                    <i class="pi pi-briefcase"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Pay Invoices</span>
-                    <i class="material-icons">&#xE8A1;</i>
+                    <i class="pi pi-file"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Dinner with Tony</span>
-                    <i class="material-icons">&#xE561;</i>
+                    <i class="pi pi-comments"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Client Meeting</span>
-                    <i class="material-icons">&#xE7FB;</i>
+                    <i class="pi pi-users"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">New Theme</span>
-                    <i class="material-icons">&#xE3AE;</i>
+                    <i class="pi pi-palette"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Flight Ticket</span>
-                    <i class="material-icons">&#xE01B;</i>
+                    <i class="pi pi-ticket"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Generate Charts</span>
-                    <i class="material-icons">&#xE24B;</i>
+                    <i class="pi pi-chart-bar"></i>
                 </li>
                 <li>
                     <p-checkbox binary="true"></p-checkbox>
                     <span class="task-name">Call Client</span>
-                    <i class="material-icons">&#xE0B0;</i>
+                    <i class="pi pi-mobile"></i>
                 </li>
             </ul>
         </p-panel>
     </div>
-    <div class="ui-g-12 ui-md-6 ui-lg-4 ui-fluid contact-form">
-        <p-panel header="Contact Us" styleClass="ui-shadow-content">
-            <div class="ui-g">
-                <div class="ui-g-12">
+    <div class="p-col-12 p-md-6 p-lg-4 p-fluid contact-form">
+        <p-panel header="Contact Us" styleClass="p-shadow-content">
+            <div class="p-grid">
+                <div class="p-col-12">
                     <p-dropdown [options]="cities" [(ngModel)]="selectedCity"></p-dropdown>
                 </div>
-                <div class="ui-g-12">
-                    <span class="md-inputfield">
+                <div class="p-col-12">
+                    <span class="p-float-label">
                         <input id="name" type="text" pInputText />
                         <label for="name">Name</label>
                     </span>
                 </div>
-                <div class="ui-g-12">
-                    <span class="md-inputfield">
+                <div class="p-col-12">
+                    <span class="p-float-label">
                         <input id="age" type="text" pInputText />
                         <label for="age">Age</label>
                     </span>
                 </div>
-                <div class="ui-g-12">
-                    <span class="md-inputfield">
-                        <input id="message" type="text" pInputText />
-                        <label for="message">Message</label>
-                    </span>
-                </div>
             </div>
-            <button type="button" label="Send" icon="ui-icon-send" pButton></button>
+            <button type="button" label="Send" icon="pi pi-check" pButton></button>
         </p-panel>
     </div>
 
-    <div class="ui-g-12 ui-lg-4 contacts">
-        <p-panel header="Contacts" [style]="{'min-height':'360px'}" styleClass="ui-shadow-content">
+    <div class="p-col-12 p-lg-4 contacts">
+        <p-panel header="Contacts" [style]="{'min-height':'360px'}" styleClass="p-shadow-content">
             <ul>
                 <li class="clearfix">
                     <img src="assets/layout/images/profile-image.png" style="width: 45px"/>
@@ -241,8 +235,8 @@
                     </div>
                     <div class="contact-actions">
                         <span class="connection-status online">online</span>
-                        <i class="ui-icon-email"></i>
-                        <i class="ui-icon-local-phone"></i>
+                        <i class="pi pi-envelope"></i>
+                        <i class="pi pi-reply"></i>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -253,8 +247,8 @@
                     </div>
                     <div class="contact-actions">
                         <span class="connection-status online">online</span>
-                        <i class="ui-icon-email"></i>
-                        <i class="ui-icon-local-phone"></i>
+                        <i class="pi pi-envelope"></i>
+                        <i class="pi pi-reply"></i>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -265,8 +259,8 @@
                     </div>
                     <div class="contact-actions">
                         <span class="connection-status offline">offline</span>
-                        <i class="ui-icon-email"></i>
-                        <i class="ui-icon-local-phone"></i>
+                        <i class="pi pi-envelope"></i>
+                        <i class="pi pi-reply"></i>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -277,8 +271,8 @@
                     </div>
                     <div class="contact-actions">
                         <span class="connection-status online">online</span>
-                        <i class="ui-icon-email"></i>
-                        <i class="ui-icon-local-phone"></i>
+                        <i class="pi pi-envelope"></i>
+                        <i class="pi pi-reply"></i>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -289,22 +283,22 @@
                     </div>
                     <div class="contact-actions">
                         <span class="connection-status offline">offline</span>
-                        <i class="ui-icon-email"></i>
-                        <i class="ui-icon-local-phone"></i>
+                        <i class="pi pi-envelope"></i>
+                        <i class="pi pi-reply"></i>
                     </div>
                 </li>
             </ul>
         </p-panel>
     </div>
 
-    <div class="ui-g-12 ui-md-4">
-        <div class="card timeline ui-fluid">
-            <div class="ui-g">
-                <div class="ui-g-3">
+    <div class="p-col-12 p-md-4">
+        <div class="card timeline p-fluid">
+            <div class="p-grid">
+                <div class="p-col-3">
                     <span class="event-time">just now</span>
-                    <i class="material-icons" style="color:#009688">&#xE1BC;</i>
+                    <i class="pi pi-map-marker" style="color:#009688"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner" style="color:#009688">Katherine May</span>
                     <span class="event-text">Lorem ipsun dolor amet</span>
                     <div class="event-content">
@@ -312,29 +306,29 @@
                     </div>
                 </div>
 
-                <div class="ui-g-3">
+                <div class="p-col-3">
                     <span class="event-time">12h ago</span>
-                    <i class="material-icons" style="color:#E91E63">&#xE885;</i>
+                    <i class="pi pi-star-o" style="color:#E91E63"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner" style="color:#E91E63">Brandon Santos</span>
                     <span class="event-text">Ab nobis, magnam sunt eum. Laudantium, repudiandae, similique!.</span>
                 </div>
 
-                <div class="ui-g-3">
+                <div class="p-col-3">
                     <span class="event-time">15h ago</span>
-                    <i class="material-icons" style="color:#9c27b0">&#xE0C9;</i>
+                    <i class="pi pi-comment" style="color:#9c27b0"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner" style="color:#9c27b0">Stephan Ward</span>
                     <span class="event-text">Omnis veniam quibusdam ratione est repellat qui nam quisquam ab mollitia dolores ullam voluptates, similique, dignissimos.</span>
                 </div>
 
-                <div class="ui-g-3">
+                <div class="p-col-3">
                     <span class="event-time">2d ago</span>
-                    <i class="material-icons" style="color:#ff9800">&#xE0C8;</i>
+                    <i class="pi pi-globe" style="color:#ff9800"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner" style="color:#ff9800">Jason Smith</span>
                     <span class="event-text">Laudantium, repudiandae, similique!</span>
                     <div class="event-content">
@@ -342,53 +336,64 @@
                     </div>
                 </div>
 
-                <div class="ui-g-3">
+                <div class="p-col-3">
                     <span class="event-time">1w ago</span>
-                    <i class="material-icons" style="color:#607d8b">&#xE91B;</i>
+                    <i class="pi pi-heart" style="color:#607d8b"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner">Kevin Cox</span>
                     <span class="event-text">Quibusdam ratione est repellat qui nam quisquam veniam quibusdam ratione.</span>
                 </div>
 
-                <div class="ui-g-3">
+                <div class="p-col-3">
                     <span class="event-time">2w ago</span>
-                    <i class="material-icons" style="color:#FFC107">&#xE23A;</i>
+                    <i class="pi pi-compass" style="color:#FFC107"></i>
                 </div>
-                <div class="ui-g-9">
+                <div class="p-col-9">
                     <span class="event-owner" style="color:#FFC107">Walter White</span>
                     <span class="event-text">I am the one who knocks!</span>
                 </div>
 
-                <div class="ui-g-12">
-                    <button type="button" label="Refresh" icon="ui-icon-refresh" pButton></button>
+                <div class="p-col-12">
+                    <button type="button" label="Refresh" icon="pi pi-refresh" pButton></button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="ui-g-12 ui-md-8">
+    <div class="p-col-12 p-md-8">
         <div class="card">
-          <p-table [columns]="cols" [value]="cars" selectionMode="single" dataKey="vin" [(selection)]="selectedCar" [style]="{'margin-bottom': '20px'}">
-            <ng-template pTemplate="caption">
-              Recent Sales
-            </ng-template>
-            <ng-template pTemplate="header" let-columns>
-              <tr>
-                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
-                  {{col.header}}
-                  <p-sortIcon [field]="col.field"></p-sortIcon>
-                </th>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
-              <tr [pSelectableRow]="rowData">
-                <td *ngFor="let col of columns">
-                  {{rowData[col.field]}}
-                </td>
-              </tr>
-            </ng-template>
-          </p-table>
+            <p-table [value]="products" [paginator]="true" [rows]="5">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Logo</th>
+                        <th pSortableColumn="name">Name
+                            <p-sortIcon field="name"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="category">Category
+                            <p-sortIcon field="category"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="price">Price
+                            <p-sortIcon field="price"></p-sortIcon>
+                        </th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>
+                            <img [src]="'assets/demo/images/product/' + product.image" [alt]="product.image" width="50px" />
+                        </td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.price | currency:'USD'}}</td>
+                        <td style="text-align: center">
+                            <button pButton type="button" icon="pi pi-search" class="p-button-success p-mr-2 p-mb-1"></button>
+                            <button pButton type="button" icon="pi pi-times" class="p-button-danger p-mb-1"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
 
             <p-panel header="Sales Graph">
                 <div style="overflow:auto">
@@ -398,66 +403,66 @@
         </div>
     </div>
 
-    <div class="ui-g-12 ui-md-8">
+    <div class="p-col-12 p-md-8">
         <p-panel header="Calendar" [style]="{'height':'100%'}">
             <p-fullCalendar [events]="events" [options]="fullcalendarOptions" ></p-fullCalendar>
         </p-panel>
     </div>
-    <div class="ui-g-12 ui-md-4">
+    <div class="p-col-12 p-md-4">
         <p-panel header="Activity" [style]="{'height':'100%'}">
             <div class="activity-header">
-                <div class="ui-g">
-                    <div class="ui-g-6">
+                <div class="p-grid">
+                    <div class="p-col-6">
                         <span style="font-weight:bold">Last Activity</span>
                         <p>Updated 1 minute ago</p>
                     </div>
-                    <div class="ui-g-6" style="text-align:right">
-                        <button type="button" label="Update" icon="ui-icon-update" pButton></button>
+                    <div class="p-col-6" style="text-align:right">
+                        <button type="button" label="Update" icon="pi pi-refresh" pButton></button>
                     </div>
                 </div>
             </div>
             <ul class="activity-list">
                 <li>
-                    <div class="count">$900</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Income</div>
-                        <div class="ui-g-6">95%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Income</h5>
+                        <div class="count">$900</div>
                     </div>
+                    <p-progressBar value="95" [showValue]="false"></p-progressBar>
                 </li>
                 <li>
-                    <div class="count" style="background-color:#e91e63">$250</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Tax</div>
-                        <div class="ui-g-6">24%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Tax</h5>
+                        <div class="count" style="background-color:#f9c851">$250</div>
                     </div>
+                    <p-progressBar value="24" [showValue]="false"></p-progressBar>
                 </li>
                 <li>
-                    <div class="count" style="background-color:#673ab7">$125</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Invoices</div>
-                        <div class="ui-g-6">55%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Invoices</h5>
+                        <div class="count" style="background-color:#20d077">$125</div>
                     </div>
+                    <p-progressBar value="55" [showValue]="false"></p-progressBar>
                 </li>
                 <li>
-                    <div class="count" style="background-color:#00796b">$250</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Expenses</div>
-                        <div class="ui-g-6">15%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Expenses</h5>
+                        <div class="count" style="background-color:#f9c851">$250</div>
                     </div>
+                    <p-progressBar value="15" [showValue]="false"></p-progressBar>
                 </li>
                 <li>
-                    <div class="count" style="background-color:#3f51b5">$350</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Bonus</div>
-                        <div class="ui-g-6">5%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Bonus</h5>
+                        <div class="count" style="background-color:#007be5">$350</div>
                     </div>
+                    <p-progressBar value="5" [showValue]="false"></p-progressBar>
                 </li>
                 <li>
-                    <div class="count" style="background-color:#e91e63">$500</div>
-                    <div class="ui-g">
-                        <div class="ui-g-6">Revenue</div>
-                        <div class="ui-g-6">25%</div>
+                    <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
+                        <h5 class="activity p-m-0">Revenue</h5>
+                        <div class="count" style="background-color:#ef6262">$500</div>
                     </div>
+                    <p-progressBar value="25" [showValue]="false"></p-progressBar>
                 </li>
             </ul>
         </p-panel>

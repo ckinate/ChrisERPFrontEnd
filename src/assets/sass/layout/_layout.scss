@@ -1,6 +1,6 @@
-@import '../variables/_layout';
+@import './_variables';
 @import '../overrides/layout_variables';
-@import '../_mixins';
+@import './_mixins';
 @import '../_fonts';
 @import './_utils';
 @import './_dashboard';
@@ -12,8 +12,12 @@
 @import './_sidebar';
 @import './_content';
 @import './_footer';
-@import './_rtl';
+@import './_config';
 @import './_media_queries';
 @import './_menu_demo';
 @import './_splash';
+@import './_help';
+@import './_invoice';
+@import './_typography';
+@import './_widgets';
 @import '../overrides/layout_styles';

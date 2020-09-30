@@ -18,7 +18,7 @@
         -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
-        .ui-button {
+        .p-button {
             background-color: #ffffff;
             display: block;
             @include no-shadow();
@@ -42,7 +42,7 @@
             position: relative;
             padding: 15px 30px;
 
-            h1 {
+            h3 {
                 padding: 0;
                 margin: 0;
             }
@@ -68,10 +68,10 @@
                 width: 100%;
             }
 
-            .ui-button {
+            .p-button {
                 color: #f44336;
 
-                &.ui-state-hover {
+                &:hover {
                     @include hover-element();
                     color: #f44336;
                 }
@@ -99,11 +99,11 @@
                 top: 4px;
             }
 
-            .ui-button {
+            .p-button {
                 color: #00796b;
                 margin-top: 105px;
 
-                &.ui-state-hover {
+                &:hover {
                     @include hover-element();
                     color: #00796b;
                 }
@@ -131,11 +131,11 @@
                 top: 6px;
             }
 
-            .ui-button {
+            .p-button {
                 color: #f57c00;
                 margin-top: 110px;
 
-                &.ui-state-hover {
+                &:hover {
                     @include hover-element();
                     color: #f57c00;
                 }
@@ -176,7 +176,7 @@
 
         &.error-body {
             .exception-panel {
-                .ui-button {
+                .p-button {
                     margin-top: 111px;
                 }
             }
@@ -188,7 +188,7 @@
                     width: 175px;
                 }
 
-                .ui-button {
+                .p-button {
                     margin-top: 117px;
                 }
             }
@@ -201,7 +201,7 @@
                     width: 262px;
                 }
 
-                .ui-button {
+                .p-button {
                     margin-top: 120px;
                 }
             }

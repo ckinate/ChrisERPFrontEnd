@@ -15,12 +15,8 @@
                 margin-left: 310px;
             }
 
-
-            &.layout-rtl {
-                .layout-main {
-                    margin-left: 0px;
-                    margin-right: 310px;
-                }
+            .footer {
+                margin-left: 310px;
             }
         }
 
@@ -29,12 +25,8 @@
                 .layout-main {
                     margin-left: 65px;
                 }
-
-                &.layout-rtl {
-                    .layout-main {
-                        margin-left: 0px;
-                        margin-right: 65px;
-                    }
+                .footer {
+                    margin-left: 65px;
                 }
             }
         }
@@ -46,6 +38,10 @@
         .topbar {
             #topbar-menu-button {
                 display: block;
+
+                i {
+                    font-size: 18px;
+                }
             }
 
             .topbar-menu {
@@ -177,23 +173,10 @@
                     }
 
                     &.search-item {
-                        input {
-                            background-image: linear-gradient(to bottom, $primaryColor, $primaryColor), linear-gradient(to bottom, desaturate(lighten($primaryColor,25%), 25%), desaturate(lighten($primaryColor,25%), 25%));
-                        }
-                    }
-
-                    &.search-item {
                         text-align: center;
 
-                        .fa, i {
+                        i {
                             color: $textColor;
-                            left: 14px;
-                            width: 20px;
-                        }
-
-                        label {
-                            color: lighten($primaryColor,25%);
-                            padding-left: 10px;
                         }
 
                         input {
@@ -203,18 +186,6 @@
                             box-sizing: border-box;
                             padding-left: 10px;
                             padding-right: 2px;
-
-                            &.ui-state-hover {
-                                border-color: $inputBorderColor;
-                            }
-
-                            &:focus {
-                                border-width: 0;
-                            }
-
-                            &:focus ~ .fa, &:focus ~ i {
-                                color: $primaryColor;
-                            }
                         }
                     }
                 }
@@ -232,58 +203,6 @@
                 .layout-tabmenu {
                     .layout-tabmenu-contents {
                         display: block;
-                    }
-                }
-            }
-        }
-
-        &.layout-rtl {
-            .topbar {
-                #topbar-menu-button {
-                    float: left;
-                    margin: 12px 0px 0px 20px;
-                }
-
-                .topbar-menu {
-                    right: auto;
-                    left: 15px;
-                    margin: 0px;
-
-                    > li {
-                        margin: 0px;
-
-                        > a {
-                            .topbar-icon {
-                                margin-right: 0px;
-                                margin-left: 8px;
-                            }
-
-                            .topbar-badge {
-                                left: 10px;
-                            }
-                        }
-
-                        > ul {
-                            padding: 0px 18px 0px 0px;
-                        }
-
-                        &.profile-item {
-                            img {
-                                margin-right: 0;
-                            }
-                        }
-                    }
-
-                    > li.search-item {
-                        input {
-                            padding-left: 0px;
-                            padding-right: 30px;
-                        }
-
-                        .fa, i {
-                            left: auto;
-                            right: 12px;
-                        }
                     }
                 }
             }
@@ -347,42 +266,8 @@
             margin-left:40px;
         }
 
-        &.layout-rtl {
-            .layout-sidebar {
-                .layout-tabmenu {
-                    .layout-tabmenu-nav {
-                        li {
-                            .layout-tabmenu-tooltip {
-                                left: auto;
-                                right: 40px;
-
-                                .layout-tabmenu-tooltip-arrow {
-                                    left: auto;
-                                    right: 0px;
-                                    border-width: 5px 0px 5px 5px;
-                                    border-left-color: #424242;
-                                }
-                            }
-
-                            &.active-item {
-                                .layout-tabmenu-tooltip {
-                                    right: 36px;
-                                }
-                            }
-                        }
-                    }
-
-                    .layout-tabmenu-contents {
-                        left: auto;
-                        right: 40px;
-                    }
-                }
-            }
-
-            .layout-main {
-                margin-left: 0px;
-                margin-right: 40px;
-            }
+        .footer {
+            margin-left:40px;
         }
     }
 }

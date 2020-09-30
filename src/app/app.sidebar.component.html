@@ -3,35 +3,35 @@
     <div class="layout-tabmenu">
         <ul class="layout-tabmenu-nav">
             <li [ngClass]="{'active-item':app.activeTabIndex === 0}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 0)"><i class="material-icons">home</i></a>
+                <a href="#" pRipple class="tabmenuitem-link" (click)="app.onTabClick($event, 0)"><i class="pi pi-fw pi-home"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Features</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 1}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 1)"><i class="material-icons">inbox</i></a>
+                <a href="#" pRipple class="tabmenuitem-link" (click)="app.onTabClick($event, 1)"><i class="pi pi-fw pi-inbox"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Inbox</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 2}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 2)"><i class="material-icons">event</i></a>
+                <a href="#" pRipple class="tabmenuitem-link" (click)="app.onTabClick($event, 2)"><i class="pi pi-fw pi-calendar"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Calendar</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 3}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 3)"><i class="material-icons">insert_chart</i></a>
+                <a href="#" pRipple class="tabmenuitem-link" (click)="app.onTabClick($event, 3)"><i class="pi pi-fw pi-chart-bar"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Projects</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 4}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 4)"><i class="material-icons">people</i></a>
+                <a href="#" pRipple class="tabmenuitem-link" (click)="app.onTabClick($event, 4)"><i class="pi pi-user"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Team</div>
@@ -42,7 +42,7 @@
             <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 0}">
                 <div class="layout-submenu-title clearfix">
                     <span>Features</span>
-                    <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+                    <a href="#" class="menu-button pi pi-bars" (click)="app.closeSidebar($event)"></a>
                 </div>
                 <app-sidebarTabContent>
                     <app-menu></app-menu>
@@ -51,7 +51,7 @@
             <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 1}">
                 <div class="layout-submenu-title clearfix">
                     <span>Inbox</span>
-                    <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+                    <a href="#" class="menu-button pi pi-bars" (click)="app.closeSidebar($event)"></a>
                 </div>
                 <app-sidebarTabContent>
                     <div class="inbox-tab">
@@ -109,7 +109,7 @@
             <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 2}">
                 <div class="layout-submenu-title clearfix">
                     <span>Calendar</span>
-                    <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+                    <a href="#" class="menu-button pi pi-bars" (click)="app.closeSidebar($event)"></a>
                 </div>
                 <app-sidebarTabContent>
                     <div class="calendar-tab">
@@ -121,7 +121,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Project Meeting</span>
-                                    <i class="material-icons">place</i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">Chicago</span>
                                 </div>
                             </li>
@@ -132,7 +132,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Presentation 1</span>
-                                    <i class="material-icons">place</i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">New York</span>
                                 </div>
                             </li>
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Presentation 2</span>
-                                    <i class="material-icons">place</i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">New York</span>
                                 </div>
                             </li>
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">New Year Party</span>
-                                    <i class="material-icons">place</i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">San Francisco</span>
                                 </div>
                             </li>
@@ -165,13 +165,13 @@
             <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 3}">
                 <div class="layout-submenu-title clearfix">
                     <span>Projects</span>
-                    <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+                    <a href="#" class="menu-button pi pi-bars" (click)="app.closeSidebar($event)"></a>
                 </div>
                 <app-sidebarTabContent>
                     <div class="projects-tab">
                         <ul>
                             <li class="clearfix">
-                                <i class="material-icons">playlist_add_check</i>
+                                <i class="pi pi-sliders-h"></i>
                                 <span class="project-title">Current Tasks</span>
                                 <span>3 open, 4 closed</span>
                                 <div class="project-progressbar">
@@ -179,7 +179,7 @@
                                 </div>
                             </li>
                             <li class="clearfix">
-                                <i class="material-icons">videocam</i>
+                                <i class="pi pi-video"></i>
                                 <span class="project-title">Latest Videos</span>
                                 <span>12 new, 2 subscribers</span>
                                 <div class="project-progressbar">
@@ -187,7 +187,7 @@
                                 </div>
                             </li>
                             <li class="clearfix">
-                                <i class="material-icons">message</i>
+                                <i class="pi pi-comment"></i>
                                 <span class="project-title">Unread Posts</span>
                                 <span>24 new messages</span>
                                 <div class="project-progressbar">
@@ -195,7 +195,7 @@
                                 </div>
                             </li>
                             <li class="clearfix">
-                                <i class="material-icons">favorite</i>
+                                <i class="pi pi-heart"></i>
                                 <span class="project-title">Favorite Contacts</span>
                                 <span>8 total, 4 approved</span>
                                 <div class="project-progressbar">
@@ -203,7 +203,7 @@
                                 </div>
                             </li>
                             <li class="clearfix">
-                                <i class="material-icons">verified_user</i>
+                                <i class="pi pi-lock"></i>
                                 <span class="project-title">Verified Users</span>
                                 <span>90 total, 45 pending</span>
                                 <div class="project-progressbar">
@@ -217,7 +217,7 @@
             <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 4}">
                 <div class="layout-submenu-title clearfix">
                     <span>Team</span>
-                    <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+                    <a href="#" class="menu-button pi pi-bars" (click)="app.closeSidebar($event)"></a>
                 </div>
                 <app-sidebarTabContent>
                     <div class="team-tab">
