@@ -20,6 +20,18 @@
     &.card-w-title {
         padding-bottom: 2em;
     }
+
+    .card-header {
+        @include flex();
+        @include flex-align-center();
+        @include flex-justify-between();
+    }
+
+    .card-subtitle {
+        color: $textSecondaryColor;
+        font-weight: 600;
+        margin: -1rem 0 1rem 0;
+    }
 }
 
 .p-shadow-content {
