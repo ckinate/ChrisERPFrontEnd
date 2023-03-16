@@ -1,4 +1,4 @@
-# PrimeNG Barcelona
+# ChrisTech ERP FrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
