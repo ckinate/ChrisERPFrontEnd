@@ -1043,32 +1043,27 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@fullcalendar/core@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-4.0.2.tgz#59ef822ba0c4bda60609d8b2d9f71bee8875505b"
-  integrity sha512-5DBjqoQretok6L0GNpcqkr0HnCNDzRH0REWJDeTTyHGi62V+8MC3IqZkpmDrFITTkIyDrvf8GHl3WhTI0bjYPQ==
+"@fullcalendar/core@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-4.1.0.tgz#9f09c4c35e308a81a97e4d62c05f64548d0e5666"
+  integrity sha512-pyBRbNnppQH5iPnhENrNIkvOxjPdR46o7HMuSx3M+OlGVZLygbb97sKg5XuJx6Bn3hFP0EJXKmA9/GCfeP9PPQ==
 
-"@fullcalendar/daygrid@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-4.0.1.tgz#383bfd51dd55bbec2ccc90926e9dbdf710aa3789"
-  integrity sha512-nKFFKgTm5eijOukD6pjsQSLlsBoMrKuHXc00zaHaMWSeJndGHxtseR8oeHOnclNNScMKLXLNZthzEduSqqyuRw==
+"@fullcalendar/daygrid@4.1.0", "@fullcalendar/daygrid@~4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-4.1.0.tgz#058b02585d17a63f448e2ab42f65db7bacca2296"
+  integrity sha512-y2w+js+cr0SFC3f88QIS91V8LeZ5TEG/W6hX+CcokP+KTZdepW0uCjPzf9QwVE0LM904tZ2kjCe209hZGfSNGg==
 
-"@fullcalendar/daygrid@^4.0.1":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-4.4.2.tgz#568bfb3c7cc97f83b57cf3aef0fa3ed1bf6eda16"
-  integrity sha512-axjfMhxEXHShV3r2TZjf+2niJ1C6LdAxkHKmg7mVq4jXtUQHOldU5XsjV0v2lUAt1urJBFi2zajfK8798ukL3Q==
+"@fullcalendar/interaction@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-4.1.0.tgz#5d0c4c2c407934ff8bd45071ff76fb6736937da3"
+  integrity sha512-s9679mbLnBqvQJpIqj4CJi36yGCOXKYshasW7PL5a/BgNXYEScHtdSNZubJx26zHlgGOh8S0wIvBlYQUihMcLQ==
 
-"@fullcalendar/interaction@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-4.0.2.tgz#8459f3d89f9e0e56405e35c25513edf573e5a096"
-  integrity sha512-AlOkSmeVI7fDGIGlbaqxHRXxL38SDEMUv6BW/2Cvu8eC7JsrshsHhCIAJE4N17M0RnTTkRwUjtroLZqnkPCHhg==
-
-"@fullcalendar/timegrid@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-4.0.1.tgz#26454567a256af70b2aa6dae7f6351d0c0a92a32"
-  integrity sha512-gCtQ+xjVY5K3TV8o05KuAE9pCizoRIk/pCOueSkkQG8eSOFud34/LMB9OOQKb/yOQcMHx9UXEpup+xodEJC5ow==
+"@fullcalendar/timegrid@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-4.1.0.tgz#6e825f0cab79d81875a73fbb563cc69844ff0ecf"
+  integrity sha512-UGAXN5qHnL8mDMr/+Zfrn7jh4GMO2WpOCLTUB8GmiSTbewVD+iHjhJuJKhkdrL8CEinEjHidsux3qXKSrFreYQ==
   dependencies:
-    "@fullcalendar/daygrid" "^4.0.1"
+    "@fullcalendar/daygrid" "~4.1.0"
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"

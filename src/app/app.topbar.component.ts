@@ -12,7 +12,9 @@ import {AppMainComponent} from './app.main.component';
             </div>
 
 			<a href="#">
-                <img src="assets/layout/images/logo-text.svg" class="app-name"/>
+                <!-- <img src="assets/layout/images/logo-text.svg" class="app-name"/> -->
+                <span style="color: white;">ChrisTech</span>
+
             </a>
 
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
